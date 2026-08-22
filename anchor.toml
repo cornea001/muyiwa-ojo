@@ -1,0 +1,10 @@
+[lcl-host]
+realm-apid = 'localhost'
+
+[org]
+apid = 'unique0123'
+
+[service]
+apid = 'muyiwa-ojo-campaign-2-1'
+category = 'javascript'
+cert-style = 'mkcert'

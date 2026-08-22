@@ -1,0 +1,21 @@
+{
+  "Navbar": {
+    "home": "Accueil",
+    "priorities": "Priorités",
+    "about": "À Propos",
+    "community": "Communauté",
+    "volunteer": "Bénévolat",
+    "donate": "Faire un don"
+  },
+  "Hero": {
+    "title1_top": "La bonne gouvernance fait",
+    "title1_bottom": "Partie de la Démocratie",
+    "desc1": "Votre voisin dans le quartier 22 - à vos portes, dans vos rues, et d'abord à l'écoute. Engagé envers la communauté, la transparence et l'action.",
+    "title2_top": "Des Solutions Pratiques",
+    "title2_bottom": "Pour une Meilleure Ville.",
+    "desc2": "Au cœur de la démocratie réside le pouvoir du peuple. En contribuant à la mission, vous devenez un élément essentiel pour favoriser un changement positif dans le Quartier 22.",
+    "join_btn": "REJOINDRE LA CAMPAGNE",
+    "learn_btn": "EN SAVOIR PLUS",
+    "eyebrow": "Muyiwa Ojo pour Riverside South et Findlay Creek"
+  }
+}

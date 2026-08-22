@@ -1,0 +1,71 @@
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
+
+  --navy: #0B1F3A;
+  --navy-light: #122847;
+  --gold: #D4A537;
+  --gold-light: #F0C668;
+  --gold-pale: #FAF0D7;
+  --forest: #1F5E4E;
+  --cream: #F7F5EF;
+  --gray: #6B7280;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* Modal scrollbar */
+.custom-modal-scroll::-webkit-scrollbar { width: 6px; }
+.custom-modal-scroll::-webkit-scrollbar-track { background: transparent; }
+.custom-modal-scroll::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* Selection */
+::selection {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* Smooth nav offset for anchor links */
+section[id] {
+  scroll-margin-top: 72px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  }
+}

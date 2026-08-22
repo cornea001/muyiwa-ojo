@@ -1,0 +1,21 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "priorities": "Priorities",
+    "about": "About Muyiwa",
+    "community": "Community",
+    "volunteer": "Volunteer",
+    "donate": "Donate"
+  },
+  "Hero": {
+    "title1_top": "Good Governance is",
+    "title1_bottom": "Part of Democracy",
+    "desc1": "Your neighbour in Ward 22 - at your doors, on your streets, and listening first. Committed to community, transparency, and action.",
+    "title2_top": "Practical Solutions",
+    "title2_bottom": "For a Better City.",
+    "desc2": "At the heart of democracy lies the power of the people. By contributing to the mission, you become an essential part of driving positive change in Ward 22.",
+    "join_btn": "JOIN THE CAMPAIGN",
+    "learn_btn": "LEARN MORE",
+    "eyebrow": "Muyiwa Ojo for Riverside South and Findlay Creek"
+  }
+}
