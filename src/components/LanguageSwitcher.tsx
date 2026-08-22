@@ -1,7 +1,7 @@
 'use client'
 
 import { useLocale } from 'next-intl'
-import { useRouter, usePathname } from '@/i18n/routing'
+import { useRouter, usePathname } from 'next/navigation'
 import { useTransition } from 'react'
 
 export default function LanguageSwitcher() {
@@ -12,8 +12,13 @@ export default function LanguageSwitcher() {
 
   const toggleLanguage = () => {
     const nextLocale = locale === 'en' ? 'fr' : 'en'
+    
+    // Replace the current locale prefix with the next locale prefix
+    // (e.g., /en/about -> /fr/about, or /en -> /fr)
+    const newPathname = pathname.replace(`/${locale}`, `/${nextLocale}`)
+
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale, scroll: false })
+      router.replace(newPathname, { scroll: false })
     })
   }
 
