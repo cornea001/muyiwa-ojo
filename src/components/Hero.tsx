@@ -13,19 +13,22 @@ import {
 import { motion } from "framer-motion";
 import MagneticButton from "@/components/MagneticButton";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/parallax";
 
 export default function Hero() {
+  const t = useTranslations('Hero');
+
   const slides = [
     {
-      titleTop: "Good Governance is",
-      titleOutline: "Part of Democracy",
+      titleTop: t('title1_top'),
+      titleOutline: t('title1_bottom'),
       breakText: true,
       solidBottom: false,
-      desc: "Your neighbour in Ward 22 - at your doors, on your streets, and listening first. Committed to community, transparency, and action.",
+      desc: t('desc1'),
       bgImage: "/bg-rally.avif",
       bgClass: "bg-top", // Added to show the flag at the top
       portraitImage: "/portrait.avif",
@@ -35,11 +38,11 @@ export default function Hero() {
         "w-full h-full md:w-auto md:h-full max-w-none max-h-full object-cover object-top md:object-contain md:object-right-bottom",
     },
     {
-      titleTop: "Practical Solutions",
-      titleOutline: "For a Better City.",
+      titleTop: t('title2_top'),
+      titleOutline: t('title2_bottom'),
       breakText: true,
       solidBottom: false,
-      desc: "At the heart of democracy lies the power of the people. By contributing to the mission, you become an essential part of driving positive change in Ward 22.",
+      desc: t('desc2'),
       bgImage: "/bg-neighborhood.avif",
       bgClass: "bg-bottom", // Default to bottom for the second slide
       portraitImage: "/portrait2.avif",
@@ -122,7 +125,7 @@ export default function Hero() {
                   className="max-md:!transform-none mb-4 md:mb-6"
                 >
                   <span className="block text-gold font-display font-bold uppercase tracking-[0.2em] text-[0.65rem] sm:text-xs mb-3 md:mb-4">
-                    Muyiwa Ojo for Riverside South and Findlay Creek
+                    {t('eyebrow')}
                   </span>
                   <h2 className="font-display text-4xl sm:text-5xl md:text-[4.5rem] leading-[1.15] text-white font-bold capitalize">
                     {slide.titleTop}
@@ -163,7 +166,7 @@ export default function Hero() {
                       scroll={false}
                       className="flex justify-center items-center gap-2 bg-gold text-navy px-6 md:px-8 py-3 md:py-4 font-display font-bold text-xs md:text-sm tracking-widest hover:bg-white transition-colors duration-300"
                     >
-                      <Heart size={16} fill="currentColor" /> JOIN THE CAMPAIGN
+                      <Heart size={16} fill="currentColor" /> {t('join_btn')}
                     </Link>
                   </MagneticButton>
                   <MagneticButton>
@@ -171,7 +174,7 @@ export default function Hero() {
                       href="/about"
                       className="flex justify-center items-center gap-2 border border-white/30 text-white px-6 md:px-8 py-3 md:py-4 font-display font-medium text-xs md:text-sm tracking-widest hover:bg-white/10 transition-colors duration-300"
                     >
-                      <User size={16} /> LEARN MORE
+                      <User size={16} /> {t('learn_btn')}
                     </a>
                   </MagneticButton>
                 </div>
