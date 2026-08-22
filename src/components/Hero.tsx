@@ -111,7 +111,7 @@ export default function Hero() {
               />
             </div>
             {/* Content Container */}
-            <div className="max-w-7xl mx-auto px-6 md:px-24 h-full flex items-start md:items-center pt-20 md:pt-24 relative z-20">
+            <div className="max-w-7xl mx-auto px-6 md:px-24 h-full flex items-start md:items-center pt-20 md:pt-12 relative z-20">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
