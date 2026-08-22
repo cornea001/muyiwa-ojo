@@ -1,56 +1,56 @@
-import Link from 'next/link'
-
-export const metadata = {
-  title: 'Terms of Service — Muyiwa Ojo Ward 22',
-  description: 'Terms of Service for the Muyiwa Ojo Ward 22 Campaign website.',
-}
+import { Link } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 
 export default function TermsPage() {
+  const t = useTranslations('Terms')
+
   return (
-    <main className="max-w-3xl mx-auto px-6 py-36 font-body text-navy">
-      <h1 className="font-display font-bold text-4xl uppercase tracking-tight mb-2">Terms of Service</h1>
-      <p className="text-navy/50 text-sm mb-10">Last updated: August 2026</p>
+    <main className="max-w-3xl mx-auto px-6 py-36 font-body text-navy dark:text-gray-200 transition-colors duration-300">
+      <h1 className="font-display font-bold text-4xl uppercase tracking-tight mb-2 text-navy dark:text-white transition-colors duration-300">{t('title')}</h1>
+      <p className="text-navy/50 dark:text-gray-400 text-sm mb-10 transition-colors duration-300">{t('last_updated')}</p>
 
-      <section className="space-y-8 text-[15px] leading-relaxed text-navy/80">
+      <section className="space-y-8 text-[15px] leading-relaxed text-navy/80 dark:text-gray-300 transition-colors duration-300">
         <div>
-          <h2 className="font-display font-bold text-xl uppercase text-navy mb-3">1. Acceptance of Terms</h2>
-          <p>By accessing and using this website (muyiwaojo.ca), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use this website.</p>
+          <h2 className="font-display font-bold text-xl uppercase text-navy dark:text-white mb-3 transition-colors duration-300">{t('section1_title')}</h2>
+          <p>{t('section1_body')}</p>
         </div>
 
         <div>
-          <h2 className="font-display font-bold text-xl uppercase text-navy mb-3">2. Use of This Website</h2>
-          <p>This website is operated by the Muyiwa Ojo 2026 Municipal Election Campaign for Ward 22, Ottawa. The content is for informational and campaign purposes only. You may not use this website for any unlawful purpose, to submit false information, or to interfere with the operation of the site.</p>
+          <h2 className="font-display font-bold text-xl uppercase text-navy dark:text-white mb-3 transition-colors duration-300">{t('section2_title')}</h2>
+          <p>{t('section2_body')}</p>
         </div>
 
         <div>
-          <h2 className="font-display font-bold text-xl uppercase text-navy mb-3">3. Campaign Donations</h2>
-          <p>Donations made through this website are subject to Ontario municipal election campaign finance rules. Contributions are limited to individuals — corporations and trade unions are not permitted to donate under the Municipal Elections Act, 1996. By donating, you confirm that you are an individual and that the contribution comes from your own funds.</p>
+          <h2 className="font-display font-bold text-xl uppercase text-navy dark:text-white mb-3 transition-colors duration-300">{t('section3_title')}</h2>
+          <p>{t('section3_body')}</p>
         </div>
 
         <div>
-          <h2 className="font-display font-bold text-xl uppercase text-navy mb-3">4. Intellectual Property</h2>
-          <p>All content on this website, including text, images, logos, and campaign materials, is the property of the Muyiwa Ojo Campaign and may not be reproduced without express written permission.</p>
+          <h2 className="font-display font-bold text-xl uppercase text-navy dark:text-white mb-3 transition-colors duration-300">{t('section4_title')}</h2>
+          <p>{t('section4_body')}</p>
         </div>
 
         <div>
-          <h2 className="font-display font-bold text-xl uppercase text-navy mb-3">5. Disclaimer</h2>
-          <p>This website is provided "as is" without any warranties. The campaign makes no guarantee that the website will be error-free or uninterrupted. Campaign positions and policies described are subject to change.</p>
+          <h2 className="font-display font-bold text-xl uppercase text-navy dark:text-white mb-3 transition-colors duration-300">{t('section5_title')}</h2>
+          <p>{t('section5_body')}</p>
         </div>
 
         <div>
-          <h2 className="font-display font-bold text-xl uppercase text-navy mb-3">6. Governing Law</h2>
-          <p>These Terms are governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein.</p>
+          <h2 className="font-display font-bold text-xl uppercase text-navy dark:text-white mb-3 transition-colors duration-300">{t('section6_title')}</h2>
+          <p>{t('section6_body')}</p>
         </div>
 
         <div>
-          <h2 className="font-display font-bold text-xl uppercase text-navy mb-3">7. Contact</h2>
-          <p>Questions about these Terms may be directed to <a href="mailto:info@muyiwaojo.ca" className="text-gold underline">info@muyiwaojo.ca</a>.</p>
+          <h2 className="font-display font-bold text-xl uppercase text-navy dark:text-white mb-3 transition-colors duration-300">{t('section7_title')}</h2>
+          <p>{t.rich('section7_body', {
+            emailLink: (chunks) => <a href="mailto:info@muyiwaojo.ca" className="text-gold underline">{chunks}</a>
+          })}</p>
         </div>
       </section>
 
-      <div className="mt-12 pt-8 border-t border-navy/10">
-        <Link href="/" className="text-sm font-bold font-display uppercase tracking-widest text-navy hover:text-gold transition-colors">
-          &larr; Back to Home
+      <div className="mt-12 pt-8 border-t border-navy/10 dark:border-white/10 transition-colors duration-300">
+        <Link href="/" className="text-sm font-bold font-display uppercase tracking-widest text-navy dark:text-white hover:text-gold dark:hover:text-gold transition-colors">
+          &larr; {t('back')}
         </Link>
       </div>
     </main>

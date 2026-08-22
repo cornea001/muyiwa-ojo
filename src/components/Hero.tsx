@@ -54,7 +54,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative h-[100svh] md:h-[calc(100svh-40px)] w-full bg-navy overflow-hidden group/hero">
+    <section className="relative h-[105svh] md:h-[calc(100svh-40px)] w-full bg-navy overflow-hidden group/hero">
       <Swiper
         speed={1500}
         parallax={true}

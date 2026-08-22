@@ -9,12 +9,12 @@
     "donate": "Faire un don"
   },
   "Hero": {
-    "title1_top": "La bonne gouvernance fait",
-    "title1_bottom": "partie de la démocratie",
+    "title1_top": "Une bonne gouvernance",
+    "title1_bottom": "c'est la démocratie",
     "desc1": "Votre voisin dans le quartier 22 - à vos portes, dans vos rues, à l'écoute en premier. Engagé envers la communauté, la transparence et l'action.",
     "title2_top": "Des solutions pratiques",
     "title2_bottom": "pour une meilleure ville.",
-    "desc2": "Au cœur de la démocratie réside le pouvoir du peuple. En contribuant à la mission, vous devenez un élément essentiel pour apporter des changements positifs dans le quartier 22.",
+    "desc2": "Au cœur de la démocratie réside le pouvoir du peuple. Rejoignez notre mission aujourd'hui pour apporter des changements positifs dans le quartier 22.",
     "join_btn": "REJOINDRE LA CAMPAGNE",
     "learn_btn": "EN SAVOIR PLUS",
     "eyebrow": "Muyiwa Ojo pour Riverside South et Findlay Creek"
@@ -181,5 +181,41 @@
     "line2_4": "MEILLEUR TRANSPORT",
     "line2_5": "RUES PLUS SÛRES",
     "line2_6": "ÉCONOMIE FORTE"
+  },
+  "Privacy": {
+    "title": "Politique de confidentialité",
+    "last_updated": "Dernière mise à jour : Août 2026",
+    "section1_title": "1. Informations que nous recueillons",
+    "section1_body": "Lorsque vous utilisez ce site ou soumettez un formulaire (comme le formulaire d'intérêt pour la campagne), nous pouvons recueillir des informations personnelles telles que votre nom, adresse électronique, numéro de téléphone et adresse domiciliaire. Ces informations sont fournies volontairement par vous.",
+    "section2_title": "2. Comment nous utilisons vos informations",
+    "section2_body": "Nous utilisons vos informations uniquement à des fins de campagne, notamment : pour vous contacter concernant les événements de la campagne, pour vous livrer des pancartes ou des documents à votre adresse, et pour répondre à vos questions. Nous ne vendons, ne louons ni n'échangeons vos informations personnelles avec des tiers.",
+    "section3_title": "3. Services tiers",
+    "section3_body": "Ce site n'utilise aucun SDK publicitaire ou de suivi comportemental tiers (pas de pixels publicitaires, pas d'enregistrement de session). Les polices sont auto-hébergées et ne font aucune requête CDN externe. Le sondage du quartier renvoie à une page <googleLink>Google Forms</googleLink> ; en suivant ce lien, vous êtes soumis à la <googleLink>Politique de confidentialité de Google</googleLink> — aucune donnée ne nous est partagée automatiquement par Google. Les dons sont traités par <stripeLink>Stripe</stripeLink>, un processeur de paiement tiers. Stripe peut recueillir des informations de paiement conformément à sa propre <stripeLink>Politique de confidentialité</stripeLink>. Nous ne stockons pas les détails complets des cartes de crédit sur nos serveurs. Toutes les données de paiement sont traitées conformément aux normes PCI-DSS. Les dossiers de dons peuvent être soumis à des exigences de divulgation en vertu des règles de financement des élections municipales de l'Ontario.",
+    "section4_title": "4. Cookies",
+    "section4_body": "Ce site web peut utiliser des cookies essentiels pour fonctionner correctement. Nous n'utilisons pas de cookies publicitaires ou de suivi. Aucune donnée personnelle n'est collectée via les cookies.",
+    "section5_title": "5. Conservation des données",
+    "section5_body": "Nous conservons les informations personnelles pour la durée de la campagne électorale de 2026 et selon les exigences de la réglementation ontarienne. Après cette période, les informations seront supprimées en toute sécurité.",
+    "section6_title": "6. Contact",
+    "section6_body": "Pour toute question liée à la confidentialité, veuillez contacter la campagne de Muyiwa Ojo à <emailLink>info@muyiwaojo.ca</emailLink> ou appeler le <phoneLink>343-576-0956</phoneLink>.",
+    "back": "Retour à l'accueil"
+  },
+  "Terms": {
+    "title": "Conditions d'utilisation",
+    "last_updated": "Dernière mise à jour : Août 2026",
+    "section1_title": "1. Acceptation des conditions",
+    "section1_body": "En accédant et en utilisant ce site web (muyiwaojo.ca), vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser ce site web.",
+    "section2_title": "2. Utilisation de ce site web",
+    "section2_body": "Ce site web est géré par la campagne électorale municipale 2026 de Muyiwa Ojo pour le quartier 22, Ottawa. Le contenu est fourni à des fins d'information et de campagne uniquement. Vous ne pouvez pas utiliser ce site web à des fins illégales, pour soumettre de fausses informations ou pour interférer avec le fonctionnement du site.",
+    "section3_title": "3. Dons pour la campagne",
+    "section3_body": "Les dons effectués par le biais de ce site web sont soumis aux règles de financement des campagnes électorales municipales de l'Ontario. Les contributions sont limitées aux particuliers — les entreprises et les syndicats ne sont pas autorisés à faire des dons en vertu de la Loi de 1996 sur les élections municipales. En faisant un don, vous confirmez que vous êtes un particulier et que la contribution provient de vos propres fonds.",
+    "section4_title": "4. Propriété intellectuelle",
+    "section4_body": "Tout le contenu de ce site web, y compris les textes, les images, les logos et les documents de campagne, est la propriété de la campagne de Muyiwa Ojo et ne peut être reproduit sans autorisation écrite expresse.",
+    "section5_title": "5. Avis de non-responsabilité",
+    "section5_body": "Ce site web est fourni \"tel quel\" sans aucune garantie. La campagne ne garantit pas que le site web sera exempt d'erreurs ou ininterrompu. Les positions et politiques de la campagne décrites sont sujettes à modification.",
+    "section6_title": "6. Loi applicable",
+    "section6_body": "Ces conditions sont régies par les lois de la province de l'Ontario et les lois fédérales du Canada qui s'y appliquent.",
+    "section7_title": "7. Contact",
+    "section7_body": "Les questions concernant ces conditions peuvent être adressées à <emailLink>info@muyiwaojo.ca</emailLink>.",
+    "back": "Retour à l'accueil"
   }
 }

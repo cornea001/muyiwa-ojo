@@ -14,7 +14,7 @@
     "desc1": "Your neighbour in Ward 22 - at your doors, on your streets, and listening first. Committed to community, transparency, and action.",
     "title2_top": "Practical Solutions",
     "title2_bottom": "For a Better City.",
-    "desc2": "At the heart of democracy lies the power of the people. By contributing to the mission, you become an essential part of driving positive change in Ward 22.",
+    "desc2": "At the heart of democracy lies the power of the people. Join our mission today and help drive positive change across Ward 22.",
     "join_btn": "JOIN THE CAMPAIGN",
     "learn_btn": "LEARN MORE",
     "eyebrow": "Muyiwa Ojo for Riverside South and Findlay Creek"
@@ -181,5 +181,41 @@
     "line2_4": "BETTER TRANSIT",
     "line2_5": "SAFER STREETS",
     "line2_6": "STRONG ECONOMY"
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last updated: August 2026",
+    "section1_title": "1. Information We Collect",
+    "section1_body": "When you use this website or submit a form (such as the campaign interest form), we may collect personal information including your name, email address, phone number, and home address. This information is provided voluntarily by you.",
+    "section2_title": "2. How We Use Your Information",
+    "section2_body": "We use your information solely for campaign purposes, including: contacting you about campaign events and updates, delivering lawn signs or campaign materials to your address, and responding to your inquiries. We do not sell, rent, or trade your personal information to any third party.",
+    "section3_title": "3. Third-Party Services",
+    "section3_body": "This website does not use any third-party advertising or behavioural tracking SDKs (no ad pixels, no session recording, no heatmap tools). Fonts are self-hosted and do not make any external CDN requests. The ward survey links to a <googleLink>Google Forms</googleLink> page hosted by Google; by following that link you are subject to <googleLink>Google's Privacy Policy</googleLink> — no data is shared with us automatically by Google. Donations are processed through <stripeLink>Stripe</stripeLink>, a third-party payment processor. Stripe may collect payment information in accordance with their own <stripeLink>Privacy Policy</stripeLink>. We do not store full credit card details on our servers. All payment data is handled in accordance with PCI-DSS standards. Donation records may be subject to disclosure requirements under Ontario municipal election finance rules.",
+    "section4_title": "4. Cookies",
+    "section4_body": "This website may use essential cookies to operate correctly. We do not use advertising or tracking cookies. No personal data is collected through cookies.",
+    "section5_title": "5. Data Retention",
+    "section5_body": "We retain personal information for the duration of the 2026 election campaign and as required by Ontario election finance regulations. After this period, information will be securely deleted.",
+    "section6_title": "6. Contact",
+    "section6_body": "For any privacy-related questions, please contact the Muyiwa Ojo Campaign at <emailLink>info@muyiwaojo.ca</emailLink> or call <phoneLink>343-576-0956</phoneLink>.",
+    "back": "Back to Home"
+  },
+  "Terms": {
+    "title": "Terms of Service",
+    "last_updated": "Last updated: August 2026",
+    "section1_title": "1. Acceptance of Terms",
+    "section1_body": "By accessing and using this website (muyiwaojo.ca), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use this website.",
+    "section2_title": "2. Use of This Website",
+    "section2_body": "This website is operated by the Muyiwa Ojo 2026 Municipal Election Campaign for Ward 22, Ottawa. The content is for informational and campaign purposes only. You may not use this website for any unlawful purpose, to submit false information, or to interfere with the operation of the site.",
+    "section3_title": "3. Campaign Donations",
+    "section3_body": "Donations made through this website are subject to Ontario municipal election campaign finance rules. Contributions are limited to individuals — corporations and trade unions are not permitted to donate under the Municipal Elections Act, 1996. By donating, you confirm that you are an individual and that the contribution comes from your own funds.",
+    "section4_title": "4. Intellectual Property",
+    "section4_body": "All content on this website, including text, images, logos, and campaign materials, is the property of the Muyiwa Ojo Campaign and may not be reproduced without express written permission.",
+    "section5_title": "5. Disclaimer",
+    "section5_body": "This website is provided \"as is\" without any warranties. The campaign makes no guarantee that the website will be error-free or uninterrupted. Campaign positions and policies described are subject to change.",
+    "section6_title": "6. Governing Law",
+    "section6_body": "These Terms are governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein.",
+    "section7_title": "7. Contact",
+    "section7_body": "Questions about these Terms may be directed to <emailLink>info@muyiwaojo.ca</emailLink>.",
+    "back": "Back to Home"
   }
 }
