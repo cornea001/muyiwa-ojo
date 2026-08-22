@@ -135,5 +135,21 @@
     "footer_year": "2026",
     "join_btn": "Join Campaign",
     "contact_btn": "Get in Touch"
+  },
+  "Testimonials": {
+    "eyebrow": "What People Say",
+    "title": "Voices from Across the Ward.",
+    "quote1": "Muyiwa shows up, listens, and follows through. That's exactly what Ward 22 needs at the council table.",
+    "name1": "A. Thompson",
+    "role1": "Community Volunteer",
+    "initials1": "AT",
+    "quote2": "He's focused on the practical things — the services, the streets, the everyday issues that too often get ignored.",
+    "name2": "S. Patel",
+    "role2": "Local Resident",
+    "initials2": "SP",
+    "quote3": "A steady, thoughtful voice. Muyiwa understands that good government is in the details.",
+    "name3": "J. Bélanger",
+    "role3": "Small Business Owner",
+    "initials3": "JB"
   }
 }

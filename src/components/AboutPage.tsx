@@ -31,7 +31,7 @@ export default function AboutPage() {
 
               <div className="relative  overflow-hidden  bg-navy aspect-[4/5] w-full">
                 <Image
-                  src="/portrait.JPG"
+                  src="/portrait.avif"
                   alt="Muyiwa Ojo"
                   fill
                   className="object-cover object-top"

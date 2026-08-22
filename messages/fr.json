@@ -135,5 +135,21 @@
     "footer_year": "2026",
     "join_btn": "Rejoindre",
     "contact_btn": "Nous Contacter"
+  },
+  "Testimonials": {
+    "eyebrow": "Ce Que Disent Les Gens",
+    "title": "Des Voix De Tout Le Quartier.",
+    "quote1": "Muyiwa se présente, écoute et va jusqu'au bout. C'est exactement ce dont le Quartier 22 a besoin à la table du conseil.",
+    "name1": "A. Thompson",
+    "role1": "Bénévole de la Communauté",
+    "initials1": "AT",
+    "quote2": "Il se concentre sur les choses pratiques — les services, les rues, les problèmes quotidiens qui sont trop souvent ignorés.",
+    "name2": "S. Patel",
+    "role2": "Résident Local",
+    "initials2": "SP",
+    "quote3": "Une voix stable et réfléchie. Muyiwa comprend que le bon gouvernement réside dans les détails.",
+    "name3": "J. Bélanger",
+    "role3": "Propriétaire de Petite Entreprise",
+    "initials3": "JB"
   }
 }

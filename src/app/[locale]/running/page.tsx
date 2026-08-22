@@ -26,7 +26,7 @@ export default function RunningPage() {
           <div className="bg-navy dark:bg-gray-800 px-6 sm:px-10 py-6 flex items-center gap-4 transition-colors duration-300">
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 overflow-hidden border border-gold/40 flex-shrink-0">
               <Image
-                src="/portrait.JPG"
+                src="/portrait.avif"
                 alt="Muyiwa Ojo"
                 fill
                 className="object-cover"
