@@ -2,9 +2,8 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Instagram, Facebook, ChevronDown, Phone, Mail } from 'lucide-react'
-import Link from 'next/link'
 import Image from 'next/image'
-import { useRouter, usePathname } from '@/i18n/routing'
+import { Link, useRouter, usePathname } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 import MagneticButton from '@/components/MagneticButton'
 import ThemeSwitcher from './ThemeSwitcher'
@@ -96,6 +95,9 @@ export default function Navbar() {
             <Link href="/about" className={`text-sm font-bold hover:text-gold transition-colors font-display uppercase tracking-wider ${pathname === '/about' ? 'text-gold' : 'text-navy dark:text-gray-100'}`}>
               {t('about')}
             </Link>
+            <Link href="/running" className={`text-sm font-bold hover:text-gold transition-colors font-display uppercase tracking-wider ${pathname === '/running' ? 'text-gold' : 'text-navy dark:text-gray-100'}`}>
+              {t('running')}
+            </Link>
             <button
               onClick={scrollToInvolved}
               className="text-sm font-bold text-navy dark:text-gray-100 hover:text-gold transition-colors font-display uppercase tracking-wider"
@@ -165,6 +167,14 @@ export default function Navbar() {
                   {t('home')}
                 </Link>
               )}
+              
+              <Link 
+                href="/running" 
+                onClick={() => setMobileOpen(false)}
+                className={`text-2xl font-bold font-display uppercase tracking-wider ${scrolled ? (pathname === '/running' ? 'text-gold' : 'text-navy dark:text-white') : (pathname === '/running' ? 'text-gold' : 'text-white')}`}
+              >
+                {t('running')}
+              </Link>
               
               <Link 
                 href="/about" 

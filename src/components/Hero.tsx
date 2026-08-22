@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import MagneticButton from "@/components/MagneticButton";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -170,12 +170,12 @@ export default function Hero() {
                     </Link>
                   </MagneticButton>
                   <MagneticButton>
-                    <a
+                    <Link
                       href="/about"
                       className="flex justify-center items-center gap-2 border border-white/30 text-white px-6 md:px-8 py-3 md:py-4 font-display font-medium text-xs md:text-sm tracking-widest hover:bg-white/10 transition-colors duration-300"
                     >
                       <User size={16} /> {t('learn_btn')}
-                    </a>
+                    </Link>
                   </MagneticButton>
                 </div>
               </motion.div>
