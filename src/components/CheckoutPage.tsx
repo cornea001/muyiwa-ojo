@@ -65,7 +65,6 @@ export default function CheckoutPage({
   };
 
   return (
-  return (
     <form
       onSubmit={handleSubmit}
       className="bg-white dark:bg-gray-900 p-4 rounded-md shadow transition-colors duration-300"
