@@ -2,7 +2,7 @@
 
 import { useLocale } from 'next-intl'
 import { useRouter, usePathname } from 'next/navigation'
-import { useTransition } from 'react'
+import { useTransition, useEffect } from 'react'
 
 export default function LanguageSwitcher() {
   const locale = useLocale()
@@ -10,12 +10,24 @@ export default function LanguageSwitcher() {
   const pathname = usePathname()
   const [isPending, startTransition] = useTransition()
 
+  useEffect(() => {
+    const storedScroll = sessionStorage.getItem('scrollPosition')
+    if (storedScroll) {
+      const y = parseInt(storedScroll, 10)
+      window.scrollTo(0, y)
+      requestAnimationFrame(() => {
+        window.scrollTo(0, y)
+        setTimeout(() => window.scrollTo(0, y), 50)
+        sessionStorage.removeItem('scrollPosition')
+      })
+    }
+  }, [])
+
   const toggleLanguage = () => {
     const nextLocale = locale === 'en' ? 'fr' : 'en'
-    
-    // Replace the current locale prefix with the next locale prefix
-    // (e.g., /en/about -> /fr/about, or /en -> /fr)
     const newPathname = pathname.replace(`/${locale}`, `/${nextLocale}`)
+
+    sessionStorage.setItem('scrollPosition', window.scrollY.toString())
 
     startTransition(() => {
       router.replace(newPathname, { scroll: false })

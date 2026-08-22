@@ -75,11 +75,11 @@ export default function Navbar() {
           
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.svg" alt="Muyiwa Ojo Logo" width={180} height={40} className="h-10 w-auto" />
-            <div className="hidden sm:block">
-              <div className="font-display font-bold text-xl text-navy dark:text-white uppercase leading-none tracking-tight transition-colors duration-300">
+            <div>
+              <div className="font-display font-bold text-base sm:text-xl text-navy dark:text-white uppercase leading-none tracking-tight transition-colors duration-300 whitespace-nowrap">
                 Muyiwa Ojo
               </div>
-              <div className="text-[10px] font-bold uppercase tracking-widest text-gold mt-1">
+              <div className="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-gold mt-1 whitespace-nowrap">
                 Ward 22 Candidate
               </div>
             </div>
@@ -162,7 +162,7 @@ export default function Navbar() {
                 <Link 
                   href="/" 
                   onClick={() => setMobileOpen(false)}
-                  className={`text-2xl font-bold font-display uppercase tracking-wider ${scrolled ? (pathname === '/' ? 'text-gold' : 'text-navy dark:text-white') : (pathname === '/' ? 'text-gold' : 'text-white')}`}
+                  className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? (pathname === '/' ? 'text-gold' : 'text-navy dark:text-white') : (pathname === '/' ? 'text-gold' : 'text-white')}`}
                 >
                   {t('home')}
                 </Link>
@@ -171,7 +171,7 @@ export default function Navbar() {
               <Link 
                 href="/running" 
                 onClick={() => setMobileOpen(false)}
-                className={`text-2xl font-bold font-display uppercase tracking-wider ${scrolled ? (pathname === '/running' ? 'text-gold' : 'text-navy dark:text-white') : (pathname === '/running' ? 'text-gold' : 'text-white')}`}
+                className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? (pathname === '/running' ? 'text-gold' : 'text-navy dark:text-white') : (pathname === '/running' ? 'text-gold' : 'text-white')}`}
               >
                 {t('running')}
               </Link>
@@ -179,21 +179,21 @@ export default function Navbar() {
               <Link 
                 href="/about" 
                 onClick={() => setMobileOpen(false)}
-                className={`text-2xl font-bold font-display uppercase tracking-wider ${scrolled ? (pathname === '/about' ? 'text-gold' : 'text-navy dark:text-white') : (pathname === '/about' ? 'text-gold' : 'text-white')}`}
+                className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? (pathname === '/about' ? 'text-gold' : 'text-navy dark:text-white') : (pathname === '/about' ? 'text-gold' : 'text-white')}`}
               >
                 {t('about')}
               </Link>
               
               <button
                 onClick={() => { scrollToInvolved(); setMobileOpen(false); }}
-                className={`text-2xl font-bold font-display uppercase tracking-wider ${scrolled ? 'text-navy dark:text-white' : 'text-white'}`}
+                className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? 'text-navy dark:text-white' : 'text-white'}`}
               >
                 {t('volunteer')}
               </button>
               
               <button
                 onClick={() => { scrollToFooter(); setMobileOpen(false); }}
-                className={`text-2xl font-bold font-display uppercase tracking-wider ${scrolled ? 'text-navy dark:text-white' : 'text-white'}`}
+                className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? 'text-navy dark:text-white' : 'text-white'}`}
               >
                 Contact
               </button>

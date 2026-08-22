@@ -8,6 +8,7 @@ import { Suspense } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import BackToTop from '@/components/BackToTop'
 import { Manrope, Cormorant_Garamond } from 'next/font/google'
 
 const manrope = Manrope({
@@ -70,6 +71,7 @@ export default async function RootLayout({
               <Suspense fallback={null}>
                 <JoinModal />
               </Suspense>
+              <BackToTop />
             </SmoothScroll>
           </ThemeProvider>
         </NextIntlClientProvider>
