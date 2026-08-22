@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
   const toggleLanguage = () => {
     const nextLocale = locale === 'en' ? 'fr' : 'en'
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale })
+      router.replace(pathname, { locale: nextLocale, scroll: false })
     })
   }
 
