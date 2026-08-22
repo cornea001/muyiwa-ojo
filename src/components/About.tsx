@@ -3,10 +3,12 @@
 import { motion } from 'framer-motion'
 import { Quote } from 'lucide-react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 export default function About() {
+  const t = useTranslations('About');
   return (
-    <section id="about" className="py-28 bg-white">
+    <section id="about" className="py-28 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
         {/* Image/Portrait side */}
@@ -43,9 +45,9 @@ export default function About() {
           </div>
 
           {/* Floating stat card */}
-          <div className="absolute -bottom-5 -right-2 bg-white border border-slate-100   p-4 min-w-[160px]">
-            <div className=" flex text-navy/50 text-[10px] font-bold uppercase tracking-wider mb-1 items-center justify-center">Campaign Slogan</div>
-            <div className="flex text-navy font-display font-bold text-md leading-snug items-center justify-center">
+          <div className="absolute -bottom-5 -right-2 bg-white dark:bg-gray-900 border border-slate-100 dark:border-gray-800 p-4 min-w-[160px] transition-colors duration-300">
+            <div className=" flex text-navy/50 dark:text-gray-400 text-[10px] font-bold uppercase tracking-wider mb-1 items-center justify-center">Campaign Slogan</div>
+            <div className="flex text-navy dark:text-gray-100 font-display font-bold text-md leading-snug items-center justify-center transition-colors duration-300">
               "Listen First"
             </div>
           </div>
@@ -59,55 +61,38 @@ export default function About() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           className="order-1 lg:order-2"
         >
-          <div className="text-gold text-xs font-bold tracking-widest uppercase mb-3">About the Candidate</div>
-          <h2 className="font-display font-bold text-4xl xl:text-5xl text-navy leading-tight mb-6">
-            A Practical Voice<br />for Ward 22.
-          </h2>
+          <div className="text-gold text-xs font-bold tracking-widest uppercase mb-3">{t('eyebrow')}</div>
+          <h2 className="font-display font-bold text-4xl xl:text-5xl text-navy dark:text-white leading-tight mb-6 transition-colors duration-300" dangerouslySetInnerHTML={{ __html: t('title_home') }} />
 
-          <div className="space-y-4 text-gray text-[15px] leading-relaxed mb-8">
-           <p>
-                I was born and raised in Nigeria, where I developed a deep appreciation for community, hard work, and the belief that where you come from does not determine where you can go.
-              </p>
-              <p>
-                In 2019, my family and I moved to Canada, settling first in the Greater Toronto Area. Two years later, my wife was presented with a career opportunity in Ottawa. As we explored the city and considered where we wanted to raise our children and build our future, the answer became clear: Ward 22.
-              </p>
-              <p>
-                We chose this community deliberately — not by default.
-              </p>
-              <p>
-                Professionally, I work in finance and hold an Executive MBA from the Ivey Business School. My career has taught me how to analyze complex problems, plan for the long term, and make responsible decisions that stand up to scrutiny.
-              </p>
-              <p>
-                But more than any credential, I am a husband, a father, and a neighbour. Our children are growing up here. Our friendships are here. Our future is here.
-              </p>
-              <p>
-                Like so many families, we came to Canada to build a life filled with opportunity, purpose, and possibility. We found those opportunities here, and in Ward 22, we found something even more important — a place to call home.
-              </p>
-            <p>
-              Ward 22 is where we live, work, and raise our families. It deserves a councillor who treats it like home — because it is.
-            </p>
+          <div className="space-y-4 text-gray dark:text-gray-300 text-[15px] leading-relaxed mb-8 transition-colors duration-300">
+           <p>{t('p1')}</p>
+           <p>{t('p2')}</p>
+           <p>{t('p3')}</p>
+           <p>{t('p4')}</p>
+           <p>{t('p5')}</p>
+           <p>{t('p6')}</p>
+           <p>{t('p7')}</p>
           </div>
 
           {/* Blockquote */}
           <div className="relative pl-6 border-l-2 border-gold mb-10">
             <Quote size={24} className="text-gold/30 mb-2" />
-            <p className="font-display text-xl text-navy italic font-bold leading-snug mb-3">
-              "Steady attention, honest listening, and follow-through on the things that actually matter."
+            <p className="font-display text-xl text-navy dark:text-white italic font-bold leading-snug mb-3 transition-colors duration-300">
+              {t('quote_home')}
             </p>
-            <div className="text-sm text-gray">— Muyiwa Ojo, Candidate for Ward 22</div>
+            <div className="text-sm text-gray dark:text-gray-400">{t('quote_home_author')}</div>
           </div>
 
-          {/* Key traits */}
           <div className="grid grid-cols-2 gap-3">
             {[
-              { icon: '🏘️', label: 'Community-focused' },
-              { icon: '👂', label: 'Honest listener' },
-              { icon: '✅', label: 'Practical results' },
-              { icon: '📅', label: 'Year-round presence' },
+              { icon: '🏘️', label: t('trait1') },
+              { icon: '👂', label: t('trait2') },
+              { icon: '✅', label: t('trait3') },
+              { icon: '📅', label: t('trait4') },
             ].map((trait) => (
-              <div key={trait.label} className="flex items-center gap-3 bg-cream  p-3">
+              <div key={trait.label} className="flex items-center gap-3 bg-cream dark:bg-gray-900 p-3 transition-colors duration-300">
                 <span className="text-lg">{trait.icon}</span>
-                <span className="text-navy text-sm font-semibold">{trait.label}</span>
+                <span className="text-navy dark:text-gray-100 text-sm font-semibold transition-colors duration-300">{trait.label}</span>
               </div>
             ))}
           </div>

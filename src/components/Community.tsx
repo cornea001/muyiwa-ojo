@@ -1,22 +1,26 @@
 "use client";
 import { motion } from "framer-motion";
 import { Home, Users } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const impacts = [
-  {
-    icon: <Home size={28} />,
-    label: "Riverside South - Findlay Creek",
-    desc: "Ensuring the fastest-growing part of the ward has the infrastructure and services to match.",
-  },
-  {
-    icon: <Users size={28} />,
-    label: "Community Voice",
-    desc: "Every resident deserves to be heard. Regular open hours and ward meetings, always.",
-  },
-];
 export default function Community() {
+  const t = useTranslations('Community')
+
+  const impacts = [
+    {
+      icon: <Home size={28} />,
+      label: t('c1_label'),
+      desc: t('c1_desc'),
+    },
+    {
+      icon: <Users size={28} />,
+      label: t('c2_label'),
+      desc: t('c2_desc'),
+    },
+  ];
+
   return (
-    <section id="community" className="py-28 bg-navy relative overflow-hidden group">
+    <section id="community" className="py-28 bg-navy dark:bg-gray-950 relative overflow-hidden group transition-colors duration-300">
       {/* Background */}
       <div className="absolute inset-0 bg-navy/80 mix-blend-multiply z-0" />
       <div className="absolute inset-0 z-0">
@@ -35,14 +39,13 @@ export default function Community() {
           className="text-center mb-16"
         >
           <div className="text-gold text-xs font-bold tracking-widest uppercase mb-3">
-            Ward 22 · Built Around Community
+            {t('eyebrow')}
           </div>
           <h2 className="font-display font-bold text-4xl xl:text-5xl text-white mb-4">
-            Your Ward. Your Priorities.
+            {t('title')}
           </h2>
           <p className="text-white/55 text-lg max-w-xl mx-auto leading-relaxed">
-            Ward 22 is where we live, work, and raise our families. It deserves
-            a councillor who treats it like home — because it is.
+            {t('desc')}
           </p>
         </motion.div>
         {/* Impact cards */}
@@ -56,7 +59,7 @@ export default function Community() {
               transition={{ delay: i * 0.1, duration: 0.6 }}
               className="bg-white/5 border border-white/10 p-6 hover:bg-white/8 hover:border-gold/25 transition-all duration-300"
             >
-              <div className="text-3xl mb-4">{item.icon}</div>
+              <div className="text-3xl mb-4 text-white dark:text-gray-100">{item.icon}</div>
               <h3 className="text-white font-display font-bold text-lg mb-2">
                 {item.label}
               </h3>

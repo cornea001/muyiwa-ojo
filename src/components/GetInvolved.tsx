@@ -1,10 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
 import { Heart, Handshake, ArrowRight } from 'lucide-react'
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import SpotlightCard from "@/components/SpotlightCard";
+import { useTranslations } from "next-intl";
 export default function GetInvolved() {
   const router = useRouter();
+  const t = useTranslations('GetInvolved');
   const handleClick = (type: "donate" | "volunteer") => {
     if (type === "donate") {
       router.push("/donate");
@@ -14,7 +16,7 @@ export default function GetInvolved() {
   };
 
   return (
-    <section id="involved" className="py-24 bg-cream relative">
+    <section id="involved" className="py-24 bg-cream dark:bg-gray-900 relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         {/* Title */}
         <div className="text-center mb-16">
@@ -24,17 +26,17 @@ export default function GetInvolved() {
             viewport={{ once: true }}
             className="block text-gold font-body font-bold text-sm tracking-[0.2em] uppercase mb-4"
           >
-            Take Action
+            {t('eyebrow')}
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-display font-bold text-navy leading-tight uppercase"
+            className="text-4xl md:text-5xl font-display font-bold text-navy dark:text-white leading-tight uppercase transition-colors duration-300"
           >
-            Together, we turn aspirations <br />
-            <span className="text-gold">into reality.</span>
+            {t('title_top')} <br />
+            <span className="text-gold">{t('title_bottom')}</span>
           </motion.h2>
         </div>
         {/* Action Cards */}
@@ -57,14 +59,13 @@ export default function GetInvolved() {
                 <Heart size={32} />
               </div>
               <h3 className="font-display font-bold text-3xl uppercase mb-4 text-white">
-                Make a Donation
+                {t('donate_title')}
               </h3>
               <p className="font-body mb-8 text-white/80">
-                Every contribution funds outreach and community engagement
-                across Ward 22.
+                {t('donate_desc')}
               </p>
               <span className="inline-flex items-center gap-2 font-display font-bold uppercase tracking-widest text-sm mt-auto text-gold group-hover:text-white transition-colors duration-300">
-                Donate Now <ArrowRight size={16} />
+                {t('donate_btn')} <ArrowRight size={16} />
               </span>
             </SpotlightCard>
           </motion.div>
@@ -86,14 +87,13 @@ export default function GetInvolved() {
                 <Handshake size={32} />
               </div>
               <h3 className="font-display font-bold text-3xl uppercase mb-4 text-white">
-                Get Involved
+                {t('volunteer_title')}
               </h3>
               <p className="font-body mb-8 text-white/80">
-                Show your support, request a lawn sign, or volunteer to join the
-                movement.
+                {t('volunteer_desc')}
               </p>
               <span className="inline-flex items-center gap-2 font-display font-bold uppercase tracking-widest text-sm mt-auto text-gold group-hover:text-white transition-colors duration-300">
-                Join Us <ArrowRight size={16} />
+                {t('volunteer_btn')} <ArrowRight size={16} />
               </span>
             </SpotlightCard>
           </motion.div>

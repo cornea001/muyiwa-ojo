@@ -1,8 +1,10 @@
 import { Phone, Mail, Globe, Instagram, Facebook, MapPin } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 export default function Footer() {
+  const t = useTranslations('Footer');
   return (
-    <footer id="footer" className="bg-navy pt-20">
+    <footer id="footer" className="bg-navy dark:bg-gray-950 pt-20 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         {/* Footer Top */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -15,8 +17,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/70 font-body text-sm leading-relaxed mb-6">
-              Candidate for Ward 22 · Riverside South–Findlay Creek. Committed
-              to community, transparency, and action.
+              {t('candidate_info')}
             </p>
             <a
               href="tel:3435760956"
@@ -29,7 +30,7 @@ export default function Footer() {
           {/* Column 2: Quick Links */}
           <div>
             <h4 className="text-white font-display font-bold uppercase tracking-widest text-sm mb-6 relative">
-              Overview
+              {t('col1_title')}
               <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-gold" />
             </h4>
             <ul className="space-y-4">
@@ -38,7 +39,7 @@ export default function Footer() {
                   href="/about"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
-                  About Me
+                  {t('link_about')}
                 </Link>
               </li>
               <li>
@@ -46,24 +47,24 @@ export default function Footer() {
                   href="/running"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
-                  Why I'm Running
+                  {t('link_running')}
                 </Link>
               </li>
               <li>
-                <a
-                  href="#priorities"
+                <Link
+                  href="/#priorities"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
-                  Priorities
-                </a>
+                  {t('link_priorities')}
+                </Link>
               </li>
               <li>
-                <a
-                  href="#involved"
+                <Link
+                  href="/#involved"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
-                  Volunteer
-                </a>
+                  {t('link_volunteer')}
+                </Link>
               </li>
             </ul>
           </div>
@@ -71,25 +72,25 @@ export default function Footer() {
           {/* Column 3: Resources */}
           <div>
             <h4 className="text-white font-display font-bold uppercase tracking-widest text-sm mb-6 relative">
-              Resources
+              {t('col2_title')}
               <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-gold" />
             </h4>
             <ul className="space-y-4">
               <li>
-                <a
-                  href="#involved"
+                <Link
+                  href="/#involved"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
-                  Donate
-                </a>
+                  {t('link_donate')}
+                </Link>
               </li>
               <li>
-                <a
-                  href="#involved"
+                <Link
+                  href="/#involved"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
-                  Request Lawn Sign
-                </a>
+                  {t('link_lawn')}
+                </Link>
               </li>
               <li>
                 <a
@@ -98,7 +99,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
-                  Official Website
+                  {t('link_website')}
                 </a>
               </li>
             </ul>
@@ -107,7 +108,7 @@ export default function Footer() {
           {/* Column 4: Contact & Socials */}
           <div>
             <h4 className="text-white font-display font-bold uppercase tracking-widest text-sm mb-6 relative">
-              Contact Us
+              {t('col3_title')}
               <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-gold" />
             </h4>
             <ul className="space-y-4 mb-8">
@@ -161,24 +162,21 @@ export default function Footer() {
 
         <div className="border-t border-white/10 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 font-body text-xs text-center md:text-left">
-            Copyright © {new Date().getFullYear()} Muyiwa Ojo Campaign. All
-            Rights Reserved.
+            Copyright © {new Date().getFullYear()} {t('copyright')}
             <br />
-            <span className="mt-1 block">Paid for by Muyiwa Ojo Ward 22</span>
+            <span className="mt-1 block">{t('paid_for')}</span>
           </p>
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="text-white/40 hover:text-gold font-body text-xs transition-colors">
-              Privacy Policy
+              {t('privacy')}
             </Link>
             <span className="text-white/20">·</span>
             <Link href="/terms" className="text-white/40 hover:text-gold font-body text-xs transition-colors">
-              Terms of Service
+              {t('terms')}
             </Link>
           </div>
           <p className="text-white/40 font-body text-xs text-center md:text-right max-w-sm">
-            Authorized by the Official Agent for the Muyiwa Ojo Campaign.
-            Contributions processed in compliance with the Municipal Elections
-            Act (Ontario).
+            {t('disclaimer')}
           </p>
         </div>
       </div>

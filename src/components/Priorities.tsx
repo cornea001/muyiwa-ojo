@@ -2,48 +2,53 @@
 import { motion } from 'framer-motion'
 import { Home, Truck, Bus, Shield, MessageCircle, Trees, ArrowRight } from 'lucide-react'
 import SpotlightCard from '@/components/SpotlightCard'
-const priorities = [
- {
- num: '01',
- icon: Home,
- title: 'Affordable Housing',
- desc: 'Push for housing options residents can actually afford — from purpose-built rentals to support for first-time buyers.',
- },
- {
- num: '02',
- icon: Truck,
- title: 'Reliable City Services',
- desc: 'Snow clearing, garbage collection, road repairs — the basics done well and done on time, every single time.',
- },
- {
- num: '03',
- icon: Bus,
- title: 'Better Transit & Roads',
- desc: 'Practical investments in transit reliability, traffic calming, and safer streets for pedestrians and cyclists alike.',
- },
- {
- num: '04',
- icon: Trees,
- title: 'Parks & Green Spaces',
-desc: 'Maintain and grow the parks, trails, and green spaces that make neighbourhoods worth living in.',
- },
- {
- num: '05',
- icon: Shield,
- title: 'Safer Neighbourhoods',
- desc: 'Community-led safety, better lighting, and responsive partnerships with local police and emergency services.',
- },
- {
- num: '06',
- icon: MessageCircle,
- title: 'Listening to Residents',
- desc: 'Regular ward meetings, open office hours, and a council voice that actually shows up and follows through.',
- },
-]
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 export default function Priorities() {
- return (
- <section id="priorities" className="py-24 bg-cream">
- <div className="max-w-7xl mx-auto px-6">
+  const t = useTranslations('Priorities')
+
+  const priorities = [
+    {
+      num: '01',
+      icon: Home,
+      title: t('p1_title'),
+      desc: t('p1_desc'),
+    },
+    {
+      num: '02',
+      icon: Truck,
+      title: t('p2_title'),
+      desc: t('p2_desc'),
+    },
+    {
+      num: '03',
+      icon: Bus,
+      title: t('p3_title'),
+      desc: t('p3_desc'),
+    },
+    {
+      num: '04',
+      icon: Trees,
+      title: t('p4_title'),
+      desc: t('p4_desc'),
+    },
+    {
+      num: '05',
+      icon: Shield,
+      title: t('p5_title'),
+      desc: t('p5_desc'),
+    },
+    {
+      num: '06',
+      icon: MessageCircle,
+      title: t('p6_title'),
+      desc: t('p6_desc'),
+    },
+  ]
+
+  return (
+  <section id="priorities" className="py-24 bg-cream dark:bg-gray-900 transition-colors duration-300">
+  <div className="max-w-7xl mx-auto px-6">
   {/* Top Split Section */}
   <div className="flex flex-col lg:flex-row gap-12 lg:items-center mb-20">
     <div className="lg:w-1/2 flex flex-col gap-6">
@@ -54,17 +59,17 @@ export default function Priorities() {
           viewport={{ once: true }}
           className="block text-gold font-body font-bold text-sm tracking-[0.2em] uppercase mb-4"
         >
-          The Campaign
+          {t('eyebrow')}
         </motion.span>
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-4xl md:text-5xl font-display font-bold text-navy leading-tight uppercase"
+          className="text-4xl md:text-5xl font-display font-bold text-navy dark:text-white leading-tight uppercase transition-colors duration-300"
         >
-          Priorities for a <br/>
-          <span className="text-gold">Better Ward 22</span>
+          {t('title_top')} <br/>
+          <span className="text-gold">{t('title_bottom')}</span>
         </motion.h2>
       </div>
       
@@ -73,9 +78,9 @@ export default function Priorities() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
-        className="text-navy/70 text-lg font-body leading-relaxed border-l-4 border-gold pl-6"
+        className="text-navy/70 dark:text-gray-300 text-lg font-body leading-relaxed border-l-4 border-gold pl-6 transition-colors duration-300"
       >
-        Concrete, achievable goals that will make a real difference in daily life across the community. From housing to transit, we are focused on the basics.
+        {t('desc')}
       </motion.p>
     </div>
 
@@ -107,20 +112,20 @@ export default function Priorities() {
  transition={{ delay: i * 0.1, duration: 0.5 }}
  className="h-full"
  >
- <SpotlightCard className="group bg-white p-8 border border-gray-100 hover: hover:border-gold/30 transition-all duration-300 relative h-full ">
+ <SpotlightCard className="group bg-white dark:bg-gray-800 p-8 border border-gray-100 dark:border-gray-700 hover:border-gold/30 dark:hover:border-gold/30 transition-all duration-300 relative h-full ">
  <div className="flex justify-between items-start mb-6">
- <div className="w-16 h-16 bg-cream -full flex items-center justify-center text-navy group-hover:bg-gold group-hover:text-white transition-colors duration-300">
+ <div className="w-16 h-16 bg-cream dark:bg-gray-900 rounded-full flex items-center justify-center text-navy dark:text-gray-100 group-hover:bg-gold dark:group-hover:bg-gold group-hover:text-white transition-colors duration-300">
  <Icon size={28} />
  </div>
- <span className="font-display text-4xl font-bold text-gray-100 group-hover:text-gold/20 transition-colors duration-300">
+ <span className="font-display text-4xl font-bold text-gray-100 dark:text-gray-700 group-hover:text-gold/20 dark:group-hover:text-gold/20 transition-colors duration-300">
  {p.num}
  </span>
  </div>
  
- <h3 className="font-display text-2xl font-bold text-navy uppercase mb-4 group-hover:text-gold transition-colors duration-300">
+ <h3 className="font-display text-2xl font-bold text-navy dark:text-white uppercase mb-4 group-hover:text-gold dark:group-hover:text-gold transition-colors duration-300">
  {p.title}
  </h3>
- <p className="text-navy/70 font-body">
+ <p className="text-navy/70 dark:text-gray-300 font-body transition-colors duration-300">
  {p.desc}
  </p>
  </SpotlightCard>
@@ -136,8 +141,8 @@ export default function Priorities() {
  viewport={{ once: true }}
  className="text-center"
  >
- <p className="text-navy font-body text-lg font-medium">
- Be the change your community needs - <a href="#involved" className="text-gold font-bold hover:underline">get involved with us today!</a>
+ <p className="text-navy dark:text-gray-100 font-body text-lg font-medium transition-colors duration-300">
+ {t('footer')}<Link href="/#involved" className="text-gold font-bold hover:underline">{t('footer_link')}</Link>
  </p>
  </motion.div>
  </div>

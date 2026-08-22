@@ -1,27 +1,29 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 
 export default function RunningPage() {
+  const t = useTranslations('Running');
   return (
-    <section  className="py-16 sm:py-24 bg-cream">
+    <section  className="py-16 sm:py-24 bg-cream dark:bg-gray-950 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-3">
-            Why I'm Running
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy dark:text-white mb-3 transition-colors duration-300">
+            {t('title')}
           </h2>
 
-          <p className="text-gray-600">
-            This wasn't a decision made at a desk. It came from living here.
+          <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
+            {t('subtitle')}
           </p>
         </div>
 
         {/* Card */}
-        <div className="bg-white border border-navy/10 overflow-hidden">
+        <div className="bg-white dark:bg-gray-900 border border-navy/10 dark:border-gray-800 overflow-hidden transition-colors duration-300">
           {/* Header */}
-          <div className="bg-navy px-6 sm:px-10 py-6 flex items-center gap-4">
+          <div className="bg-navy dark:bg-gray-800 px-6 sm:px-10 py-6 flex items-center gap-4 transition-colors duration-300">
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 overflow-hidden border border-gold/40 flex-shrink-0">
               <Image
                 src="/portrait.JPG"
@@ -34,122 +36,62 @@ export default function RunningPage() {
 
             <div>
               <div className="text-white font-bold">
-                Muyiwa Ojo
+                {t('name')}
               </div>
 
               <div className="text-gold text-xs">
-                Candidate — Ward 22
+                {t('role')}
               </div>
             </div>
           </div>
 
           {/* Content */}
-          <div className="px-6 sm:px-10 py-10 space-y-5 text-[15px] text-gray-700 leading-relaxed">
-            <p>
-              I am Muyiwa Ojo — a husband, father of two, and proud Ward 22
-              resident who calls this community home with my wife and our two
-              children.
-            </p>
-
-            <p>
-              Like many of you, we chose Ward 22 because of what it promised:
-              safe streets, strong schools, and a place where families could put
-              down roots and thrive. In many ways, it has delivered on that
-              promise.
-            </p>
-
-            <p>
-              Over the years, I have also seen where we can do better.
-            </p>
-
-            <p>
-              As our community grows, young families need more parks, programs,
-              and spaces where children can learn, play, and thrive. Residents
-              spend too much time commuting when better transit connections
-              could make the journey shorter and less stressful. And our ward is
-              expanding faster than some of the infrastructure and services
-              needed to support it.
-            </p>
-
-            <p>
-              My professional background has given me the tools to analyse
-              problems, plan for the long term, and make decisions that stand up
-              to scrutiny. But my decision to run wasn't made at a desk. It came
-              from living here.
-            </p>
-
-            <p>
-              It came from conversations with neighbours. From seeing families
-              navigate crowded parks and growing communities. From hearing
-              residents talk about traffic, housing, local services, and the
-              future they want for Ward 22.
-            </p>
-
-            <p>
-              Those conversations led me to file my nomination on May 1, 2026.
-            </p>
+          <div className="px-6 sm:px-10 py-10 space-y-5 text-[15px] text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-300">
+            <p>{t('p1')}</p>
+            <p>{t('p2')}</p>
+            <p>{t('p3')}</p>
+            <p>{t('p4')}</p>
+            <p>{t('p5')}</p>
+            <p>{t('p6')}</p>
+            <p>{t('p7')}</p>
 
             <div className="border-l-4 border-gold pl-6 py-1 my-8">
-              <p className="text-navy font-display italic font-bold text-lg sm:text-xl leading-snug">
-                "I am not running because I have all the answers. I am running
-                because I believe the best solutions come from the people who
-                live here."
+              <p className="text-navy dark:text-white font-display italic font-bold text-lg sm:text-xl leading-snug transition-colors duration-300">
+                {t('quote')}
               </p>
             </div>
 
-            <p>
-              My role is to listen, bring people together, and ensure residents
-              have a strong voice at City Hall.
-            </p>
-
-            <p>
-              Since filing my nomination, I have spent my time where it matters
-              most — at your doors, on your streets, and in your
-              neighbourhoods, listening to your concerns, ideas, and aspirations
-              for our community.
-            </p>
-
-            <p>
-              I am not a career politician. I am a neighbour who cares deeply
-              about Ward 22 and its future. Ward 22 deserves a councillor who is
-              present, practical, accountable, and committed to serving every
-              resident.
-            </p>
-
-            <p className="font-semibold text-navy">
-              This community is our home. Together, we can build a Ward 22 that
-              keeps pace with growth, protects what makes our neighbourhood
-              special, and creates real opportunities for every family who calls
-              it home.
-            </p>
+            <p>{t('p8')}</p>
+            <p>{t('p9')}</p>
+            <p>{t('p10')}</p>
+            <p className="font-semibold text-navy dark:text-white transition-colors duration-300">{t('p11')}</p>
           </div>
 
           {/* Footer */}
-          <div className="px-6 sm:px-10 py-5 border-t border-navy/10 flex flex-col sm:flex-row sm:justify-between gap-2">
-            <div className="font-bold text-navy">
-              — Muyiwa Ojo
+          <div className="px-6 sm:px-10 py-5 border-t border-navy/10 dark:border-gray-800 flex flex-col sm:flex-row sm:justify-between gap-2 transition-colors duration-300">
+            <div className="font-bold text-navy dark:text-white transition-colors duration-300">
+              {t('footer_name')}
             </div>
 
-            <div className="text-gray-500 text-xs">
-                2026
+            <div className="text-gray-500 dark:text-gray-400 text-xs transition-colors duration-300">
+              {t('footer_year')}
             </div>
           </div>
         </div>
 
-        {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 px-4">
           <Link
             href="/#involved"
-            className="bg-gold text-navy px-8 py-4 font-bold text-sm text-center w-full sm:w-auto"
+            className="bg-gold text-navy px-8 py-4 font-bold text-sm text-center w-full sm:w-auto hover:bg-gold/90 transition-colors"
           >
-            Join Campaign
+            {t('join_btn')}
           </Link>
 
           <Link
             href="/#footer"
-            className="border border-navy/20 text-navy px-8 py-4 text-sm text-center w-full sm:w-auto hover:bg-navy hover:text-white transition-colors"
+            className="border border-navy/20 dark:border-white/20 text-navy dark:text-white px-8 py-4 text-sm text-center w-full sm:w-auto hover:bg-navy hover:text-white dark:hover:bg-white dark:hover:text-navy transition-colors"
           >
-            Get in Touch
+            {t('contact_btn')}
           </Link>
         </div>
       </div>

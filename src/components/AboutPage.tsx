@@ -4,14 +4,16 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { Quote } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export default function AboutPage() {
+  const t = useTranslations('About');
   return (
     <>
       {/* PERSONAL STORY */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 
           {/* LEFT SIDE */}
@@ -79,39 +81,27 @@ export default function AboutPage() {
             className="w-full"
           >
             <div className="text-gold text-xs font-bold tracking-widest uppercase mb-3">
-              About
+              {t('eyebrow').replace('About the Candidate', 'About')}
             </div>
 
-            <h2 className="font-bold text-3xl sm:text-4xl text-navy mb-8">
-              About Me.
+            <h2 className="font-bold text-3xl sm:text-4xl text-navy dark:text-white mb-8 transition-colors duration-300">
+              {t('title_page')}
             </h2>
 
-            <div className="space-y-5 text-sm sm:text-[15px] text-gray-700 leading-relaxed mb-10">
-              <p>
-                I was born and raised in Nigeria, where I developed a deep appreciation for community, hard work, and the belief that where you come from does not determine where you can go.
-              </p>
-              <p>
-                In 2019, my family and I moved to Canada, settling first in the Greater Toronto Area. Two years later, my wife was presented with a career opportunity in Ottawa. As we explored the city and considered where we wanted to raise our children and build our future, the answer became clear: Ward 22.
-              </p>
-              <p>
-                We chose this community deliberately — not by default.
-              </p>
-              <p>
-                Professionally, I work in finance and hold an Executive MBA from the Ivey Business School. My career has taught me how to analyze complex problems, plan for the long term, and make responsible decisions that stand up to scrutiny.
-              </p>
-              <p>
-                But more than any credential, I am a husband, a father, and a neighbour. Our children are growing up here. Our friendships are here. Our future is here.
-              </p>
-              <p>
-                Like so many families, we came to Canada to build a life filled with opportunity, purpose, and possibility. We found those opportunities here, and in Ward 22, we found something even more important — a place to call home.
-              </p>
+            <div className="space-y-5 text-sm sm:text-[15px] text-gray-700 dark:text-gray-300 leading-relaxed mb-10 transition-colors duration-300">
+              <p>{t('p1')}</p>
+              <p>{t('p2')}</p>
+              <p>{t('p3')}</p>
+              <p>{t('p4')}</p>
+              <p>{t('p5')}</p>
+              <p>{t('p6')}</p>
             </div>
 
             {/* QUOTE */}
-            <div className="bg-navy  p-6 sm:p-8 mb-10">
+            <div className="bg-navy dark:bg-gray-900 p-6 sm:p-8 mb-10 transition-colors duration-300">
               <Quote size={26} className="text-gold/40 mb-3" />
               <p className="text-white italic font-bold text-lg sm:text-xl">
-                "Canada gave our family an opportunity. Ward 22 gave us home."
+                {t('quote_page')}
               </p>
             </div>
 
@@ -144,16 +134,16 @@ export default function AboutPage() {
          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10 px-4">
             <Link
               href="/#involved"
-              className="bg-gold text-navy px-8 py-4 font-bold text-sm text-center w-full sm:w-auto"
+              className="bg-gold text-navy px-8 py-4 font-bold text-sm text-center w-full sm:w-auto hover:bg-gold/90 transition-colors"
             >
-              Join Campaign
+              {t('join_btn')}
             </Link>
 
             <Link
               href="/#contact"
-              className="border border-navy/20 text-navy px-8 py-4 text-sm text-center w-full sm:w-auto hover:bg-navy hover:text-white transition-colors"
+              className="border border-navy/20 dark:border-white/20 text-navy dark:text-white px-8 py-4 text-sm text-center w-full sm:w-auto hover:bg-navy hover:text-white dark:hover:bg-white dark:hover:text-navy transition-colors"
             >
-              Get in Touch
+              {t('contact_btn')}
             </Link>
           </div>
       </section>

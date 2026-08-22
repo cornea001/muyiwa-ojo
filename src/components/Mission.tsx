@@ -1,7 +1,8 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Landmark, GraduationCap, HeartPulse, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 const textRevealVariants = {
   hidden: { opacity: 0, y: "100%" },
   visible: (i: number) => ({
@@ -17,25 +18,27 @@ const textRevealVariants = {
 export default function Mission() {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const t = useTranslations('Mission');
+  
   const missions = [
     {
-      title: "ECONOMIC EMPOWERMENT",
-      desc: "Building a resilient and sustainable local economy that brings benefits to every individual in the ward.",
+      title: t('m1_title'),
+      desc: t('m1_desc'),
       icon: <Landmark size={32} className="text-gold" />,
     },
     {
-      title: "QUALITY EDUCATION",
-      desc: "Supporting education to transform local schools into powerful catalysts for community progress and success.",
+      title: t('m2_title'),
+      desc: t('m2_desc'),
       icon: <GraduationCap size={32} className="text-gold" />,
     },
     {
-      title: "HEALTH & WELLBEING",
-      desc: "Committed to advocating for robust healthcare access and community services for the wellbeing of every resident.",
+      title: t('m3_title'),
+      desc: t('m3_desc'),
       icon: <HeartPulse size={32} className="text-gold" />,
     },
   ];
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-white dark:bg-gray-950 relative overflow-hidden transition-colors duration-300">
       {/* Background Parallax */}
       <motion.div
         style={{ y }}
@@ -51,11 +54,11 @@ export default function Mission() {
             transition={{ duration: 0.6, type: "spring" }}
             className="block text-gold font-body font-bold text-sm tracking-[0.2em] uppercase mb-4"
           >
-            Mission & Vision
+            {t('eyebrow')}
           </motion.span>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-navy leading-tight uppercase overflow-hidden flex flex-wrap justify-center gap-x-2 md:gap-x-3">
-            {["Visionary", "Leadership,", "United", "Progress"].map(
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-navy dark:text-white leading-tight uppercase overflow-hidden flex flex-wrap justify-center gap-x-2 md:gap-x-3 transition-colors duration-300">
+            {[t('word1'), t('word2'), t('word3'), t('word4')].map(
               (word, i) => (
                 <span key={i} className="overflow-hidden inline-block pb-2">
                   <motion.span
@@ -106,16 +109,16 @@ export default function Mission() {
                 }}
                 className="flex items-start gap-6 group cursor-pointer"
               >
-                <div className="w-16 h-16 bg-cream flex-shrink-0 flex items-center justify-center text-navy group-hover:bg-navy group-hover:text-gold transition-colors duration-500 border border-gray-100">
+                <div className="w-16 h-16 bg-cream dark:bg-gray-900 flex-shrink-0 flex items-center justify-center text-navy dark:text-gray-100 group-hover:bg-navy group-hover:text-gold dark:group-hover:bg-gray-800 transition-colors duration-500 border border-gray-100 dark:border-gray-800">
                   <div className="group-hover:scale-110 transition-transform duration-500">
                     {item.icon}
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-xl font-display font-bold text-navy uppercase mb-2 group-hover:text-gold transition-colors duration-500">
+                  <h4 className="text-xl font-display font-bold text-navy dark:text-white uppercase mb-2 group-hover:text-gold dark:group-hover:text-gold transition-colors duration-500">
                     {item.title}
                   </h4>
-                  <p className="text-navy/70 font-body leading-relaxed">
+                  <p className="text-navy/70 dark:text-gray-300 font-body leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -136,16 +139,16 @@ export default function Mission() {
 
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-display font-bold text-white uppercase leading-tight mb-8">
-              Empower Change, Ignite Progress.
+              {t('banner1')}
               <br />
-              <span className="text-gold">Join the Campaign today.</span>
+              <span className="text-gold">{t('banner2')}</span>
             </h3>
             <Link
               href="?modal=join"
               scroll={false}
               className="inline-flex items-center gap-2 bg-gold text-white px-8 py-4 text-sm font-bold font-display uppercase tracking-widest hover:bg-white hover:text-navy transition-colors duration-300"
             >
-              Join Now <ArrowRight size={16} />
+              {t('join_btn')} <ArrowRight size={16} />
             </Link>
           </div>
         </motion.div>
