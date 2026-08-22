@@ -167,5 +167,19 @@
     "amount": "Montant",
     "processing": "Traitement en cours...",
     "pay": "Payer"
+  },
+  "Marquee": {
+    "line1_1": "RIVERSIDE SUD",
+    "line1_2": "QUARTIER 22",
+    "line1_3": "PROGRÈS",
+    "line1_4": "LA COMMUNAUTÉ D'ABORD",
+    "line1_5": "SOLUTIONS PRATIQUES",
+    "line1_6": "MUYIWA OJO",
+    "line2_1": "LEADERSHIP DÉVOUÉ",
+    "line2_2": "VOTRE VOIX",
+    "line2_3": "TRANSPARENCE",
+    "line2_4": "MEILLEUR TRANSPORT",
+    "line2_5": "RUES PLUS SÛRES",
+    "line2_6": "ÉCONOMIE FORTE"
   }
 }

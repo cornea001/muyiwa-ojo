@@ -167,5 +167,19 @@
     "amount": "Amount",
     "processing": "Processing...",
     "pay": "Pay"
+  },
+  "Marquee": {
+    "line1_1": "RIVERSIDE SOUTH",
+    "line1_2": "WARD 22",
+    "line1_3": "PROGRESS",
+    "line1_4": "COMMUNITY FIRST",
+    "line1_5": "PRACTICAL SOLUTIONS",
+    "line1_6": "MUYIWA OJO",
+    "line2_1": "DEDICATED LEADERSHIP",
+    "line2_2": "YOUR VOICE",
+    "line2_3": "TRANSPARENCY",
+    "line2_4": "BETTER TRANSIT",
+    "line2_5": "SAFER STREETS",
+    "line2_6": "STRONG ECONOMY"
   }
 }
