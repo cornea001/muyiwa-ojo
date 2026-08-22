@@ -127,7 +127,7 @@ export default function Hero() {
                   <span className="block text-gold font-display font-bold uppercase tracking-[0.2em] text-[0.65rem] sm:text-xs mb-3 md:mb-4">
                     {t('eyebrow')}
                   </span>
-                  <h2 className="font-display text-4xl sm:text-5xl md:text-[4.5rem] leading-[1.15] text-white font-bold capitalize">
+                  <h2 className="font-display text-3xl sm:text-5xl md:text-[4.5rem] leading-[1.15] text-white font-bold capitalize">
                     {slide.titleTop}
                     {slide.breakText ? <br /> : " "}
                     <span

@@ -76,7 +76,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.svg" alt="Muyiwa Ojo Logo" width={180} height={40} className="h-10 w-auto" />
             <div className="hidden sm:block">
-              <div className="font-display font-bold text-xl text-navy uppercase leading-none tracking-tight">
+              <div className="font-display font-bold text-xl text-navy dark:text-white uppercase leading-none tracking-tight transition-colors duration-300">
                 Muyiwa Ojo
               </div>
               <div className="text-[10px] font-bold uppercase tracking-widest text-gold mt-1">
