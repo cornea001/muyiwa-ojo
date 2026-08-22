@@ -6,6 +6,8 @@ import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import CheckoutPage from "@/components/CheckoutPage";
 import convertToSubcurrency from "@/../lib/convertToSubcurrency";
+import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY!
@@ -14,6 +16,9 @@ const stripePromise = loadStripe(
 const donationAmounts = [25, 50, 100, 250, 500, 1000, 1200];
 
 export default function DonationPage() {
+  const t = useTranslations("Donate");
+  const { theme } = useTheme();
+  
   const [amount, setAmount] = useState("");
   const [selectedPreset, setSelectedPreset] = useState<number | null>(null);
 
@@ -92,8 +97,8 @@ export default function DonationPage() {
 
   return (
     <main className="max-w-xl mx-auto p-10 pt-36">
-      <h1 className="text-4xl font-bold text-center mb-8">
-        Support Muyiwa
+      <h1 className="text-4xl font-bold text-center mb-8 text-navy dark:text-white transition-colors duration-300">
+        {t("title")}
       </h1>
 
       {!clientSecret ? (
@@ -102,17 +107,17 @@ export default function DonationPage() {
           {/* PRESET AMOUNTS */}
           <div>
             <div className="flex items-center justify-between mb-3">
-              <h2 className="font-semibold">
-                Select Donation Amount
+              <h2 className="font-semibold text-navy dark:text-gray-200 transition-colors duration-300">
+                {t("select_amount")}
               </h2>
 
               {/* CLEAR BUTTON */}
               {selectedPreset !== null && (
                 <button
                   onClick={clearSelection}
-                  className="text-xs font-semibold text-red-600 hover:underline"
+                  className="text-xs font-semibold text-red-600 dark:text-red-400 hover:underline transition-colors duration-300"
                 >
-                  Clear selection
+                  {t("clear_selection")}
                 </button>
               )}
             </div>
@@ -123,10 +128,10 @@ export default function DonationPage() {
                   key={value}
                   type="button"
                   onClick={() => handlePresetClick(value)}
-                  className={`p-4 border font-bold font-display uppercase text-sm tracking-wider transition-all ${
+                  className={`p-4 border font-bold font-display uppercase text-sm tracking-wider transition-all duration-300 ${
                     selectedPreset === value
-                      ? "bg-navy text-white border-navy"
-                      : "bg-white text-navy border-navy/20 hover:border-navy"
+                      ? "bg-navy text-white border-navy dark:bg-white dark:text-navy dark:border-white"
+                      : "bg-white text-navy border-navy/20 hover:border-navy dark:bg-gray-900 dark:text-white dark:border-gray-700 dark:hover:border-gray-500"
                   }`}
                 >
                   ${value}
@@ -138,42 +143,42 @@ export default function DonationPage() {
           {/* CUSTOM AMOUNT */}
           {selectedPreset === null && (
             <div>
-              <label className="block mb-2 font-semibold">
-                Other Amount
+              <label className="block mb-2 font-semibold text-navy dark:text-gray-200 transition-colors duration-300">
+                {t("other_amount")}
               </label>
 
               <input
                 type="number"
                 min="1"
                 step="0.01"
-                placeholder="Enter custom amount"
+                placeholder={t("custom_placeholder")}
                 aria-label="Custom donation amount"
                 value={amount}
                 onChange={(e) => handleCustomChange(e.target.value)}
-                className="w-full p-4 border border-navy/20 focus:outline-none focus:ring-2 focus:ring-gold"
+                className="w-full p-4 border border-navy/20 dark:border-gray-700 bg-white dark:bg-gray-900 text-navy dark:text-white focus:outline-none focus:ring-2 focus:ring-gold transition-colors duration-300"
               />
             </div>
           )}
 
           {/* REBATE */}
           {isValidAmount && rebate > 0 && (
-            <div className="p-4 rounded-lg bg-gold/10 border border-gold/30 text-sm">
-              <p className="font-semibold text-navy">
-                💡 Rebate Estimate
+            <div className="p-4 rounded-lg bg-gold/10 border border-gold/30 text-sm transition-colors duration-300">
+              <p className="font-semibold text-navy dark:text-gold transition-colors duration-300">
+                {t("rebate_title")}
               </p>
-              <p className="mt-1 text-gray-700">
-                You can get up to{" "}
-                <span className="font-bold text-black">
+              <p className="mt-1 text-gray-700 dark:text-gray-300 transition-colors duration-300">
+                {t("rebate_desc1")}{" "}
+                <span className="font-bold text-black dark:text-white transition-colors duration-300">
                   ${rebate.toFixed(2)}
                 </span>{" "}
-                rebate from this contribution.
+                {t("rebate_desc2")}
               </p>
             </div>
           )}
 
           {paymentError && (
-            <p role="alert" className="text-red-600 text-sm font-body border border-red-200 bg-red-50 px-4 py-3">
-              {paymentError}
+            <p role="alert" className="text-red-600 dark:text-red-400 text-sm font-body border border-red-200 dark:border-red-900/50 bg-red-50 dark:bg-red-900/20 px-4 py-3 transition-colors duration-300">
+              {t("error")}
             </p>
           )}
 
@@ -181,9 +186,9 @@ export default function DonationPage() {
           <button
             onClick={handleContinue}
             disabled={loading || !numericAmount || numericAmount < 1}
-            className="w-full bg-navy text-white p-4 font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            className="w-full bg-navy dark:bg-white text-white dark:text-navy p-4 font-display font-bold uppercase tracking-widest hover:bg-gold dark:hover:bg-gold hover:text-navy transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
           >
-            {loading ? "Loading..." : `Donate $${numericAmount || 0}`}
+            {loading ? t("btn_loading") : `${t("btn_donate")} $${numericAmount || 0}`}
           </button>
 
         </div>
@@ -192,7 +197,7 @@ export default function DonationPage() {
           stripe={stripePromise}
           options={{
             clientSecret,
-            appearance: { theme: "stripe" },
+            appearance: { theme: theme === 'dark' ? 'night' : 'stripe' },
           }}
         >
           <CheckoutPage amount={numericAmount} />

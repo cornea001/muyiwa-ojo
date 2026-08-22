@@ -8,6 +8,7 @@ import {
   useElements,
   useStripe,
 } from "@stripe/react-stripe-js";
+import { useTranslations } from "next-intl";
 
 interface CheckoutPageProps {
   amount: number;
@@ -18,6 +19,7 @@ export default function CheckoutPage({
 }: CheckoutPageProps) {
   const stripe = useStripe();
   const elements = useElements();
+  const t = useTranslations("Donate");
 
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] =
@@ -63,18 +65,19 @@ export default function CheckoutPage({
   };
 
   return (
+  return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-4 rounded-md shadow"
+      className="bg-white dark:bg-gray-900 p-4 rounded-md shadow transition-colors duration-300"
     >
-      <div className="mb-4 text-xl font-bold">
-        Amount: ${amount.toFixed(2)}
+      <div className="mb-4 text-xl font-bold dark:text-white transition-colors duration-300">
+        {t("amount")}: ${amount.toFixed(2)}
       </div>
 
       <PaymentElement />
 
       {errorMessage && (
-        <div className="text-red-500 mt-3">
+        <div className="text-red-500 dark:text-red-400 mt-3 transition-colors duration-300">
           {errorMessage}
         </div>
       )}
@@ -82,11 +85,11 @@ export default function CheckoutPage({
       <button
         type="submit"
         disabled={!stripe || loading}
-        className="w-full bg-black text-white p-4 rounded-md mt-4"
+        className="w-full bg-black dark:bg-white text-white dark:text-black font-display font-bold uppercase tracking-widest p-4 rounded-md mt-4 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading
-          ? "Processing..."
-          : `Pay $${amount.toFixed(2)}`}
+          ? t("processing")
+          : `${t("pay")} $${amount.toFixed(2)}`}
       </button>
     </form>
   );
