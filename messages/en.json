@@ -151,5 +151,21 @@
     "name3": "J. Bélanger",
     "role3": "Small Business Owner",
     "initials3": "JB"
+  },
+  "Donate": {
+    "title": "Support Muyiwa",
+    "select_amount": "Select Donation Amount",
+    "clear_selection": "Clear selection",
+    "other_amount": "Other Amount",
+    "custom_placeholder": "Enter custom amount",
+    "rebate_title": "💡 Rebate Estimate",
+    "rebate_desc1": "You can get up to",
+    "rebate_desc2": "rebate from this contribution.",
+    "error": "Something went wrong. Please try again.",
+    "btn_loading": "Loading...",
+    "btn_donate": "Donate",
+    "amount": "Amount",
+    "processing": "Processing...",
+    "pay": "Pay"
   }
 }
