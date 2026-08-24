@@ -20,7 +20,7 @@ export default function Community() {
   ];
 
   return (
-    <section id="community" className="py-28 bg-navy dark:bg-gray-950 relative overflow-hidden group transition-colors duration-300">
+    <section id="community" className="py-28 bg-navy dark:bg-navy relative overflow-hidden group transition-colors duration-300">
       {/* Background */}
       <div className="absolute inset-0 bg-navy/80 mix-blend-multiply z-0" />
       <div className="absolute inset-0 z-0">
@@ -59,7 +59,7 @@ export default function Community() {
               transition={{ delay: i * 0.1, duration: 0.6 }}
               className="bg-white/5 border border-white/10 p-6 hover:bg-white/8 hover:border-gold/25 transition-all duration-300"
             >
-              <div className="text-3xl mb-4 text-white dark:text-gray-100">{item.icon}</div>
+              <div className="text-3xl mb-4 text-white dark:text-white">{item.icon}</div>
               <h3 className="text-white font-display font-bold text-lg mb-2">
                 {item.label}
               </h3>

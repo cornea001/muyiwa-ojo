@@ -67,7 +67,7 @@ export default function CheckoutPage({
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white dark:bg-gray-900 p-4 rounded-md shadow transition-colors duration-300"
+      className="bg-white dark:bg-navy p-4 rounded-md shadow transition-colors duration-300"
     >
       <div className="mb-4 text-xl font-bold dark:text-white transition-colors duration-300">
         {t("amount")}: ${amount.toFixed(2)}

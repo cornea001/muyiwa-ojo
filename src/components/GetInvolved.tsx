@@ -16,7 +16,7 @@ export default function GetInvolved() {
   };
 
   return (
-    <section id="involved" className="py-24 bg-cream dark:bg-gray-900 relative transition-colors duration-300">
+    <section id="involved" className="py-24 bg-cream dark:bg-navy relative transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
         {/* Title */}
         <div className="text-center mb-16">

@@ -47,7 +47,7 @@ export default function Priorities() {
   ]
 
   return (
-  <section id="priorities" className="py-24 bg-cream dark:bg-gray-900 transition-colors duration-300">
+  <section id="priorities" className="py-24 bg-cream dark:bg-navy transition-colors duration-300">
   <div className="max-w-7xl mx-auto px-6">
   {/* Top Split Section */}
   <div className="flex flex-col lg:flex-row gap-12 lg:items-center mb-20">
@@ -78,7 +78,7 @@ export default function Priorities() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
-        className="text-navy/70 dark:text-gray-300 text-lg font-body leading-relaxed border-l-4 border-gold pl-6 transition-colors duration-300"
+        className="text-navy/70 dark:text-cream/80 text-lg font-body leading-relaxed border-l-4 border-gold pl-6 transition-colors duration-300"
       >
         {t('desc')}
       </motion.p>
@@ -112,12 +112,12 @@ export default function Priorities() {
  transition={{ delay: i * 0.1, duration: 0.5 }}
  className="h-full"
  >
- <SpotlightCard className="group bg-white dark:bg-gray-800 p-8 border border-gray-100 dark:border-gray-700 hover:border-gold/30 dark:hover:border-gold/30 transition-all duration-300 relative h-full ">
+ <SpotlightCard className="group bg-white dark:bg-navy-light p-8 border border-gray-100 dark:border-navy-light hover:border-gold/30 dark:hover:border-gold/30 transition-all duration-300 relative h-full ">
  <div className="flex justify-between items-start mb-6">
- <div className="w-16 h-16 bg-cream dark:bg-gray-900 rounded-full flex items-center justify-center text-navy dark:text-gray-100 group-hover:bg-gold dark:group-hover:bg-gold group-hover:text-white transition-colors duration-300">
+ <div className="w-16 h-16 bg-cream dark:bg-navy rounded-full flex items-center justify-center text-navy dark:text-white group-hover:bg-gold dark:group-hover:bg-gold group-hover:text-white transition-colors duration-300">
  <Icon size={28} />
  </div>
- <span className="font-display text-4xl font-bold text-gray-100 dark:text-gray-700 group-hover:text-gold/20 dark:group-hover:text-gold/20 transition-colors duration-300">
+ <span className="font-display text-4xl font-bold text-gray-100 dark:text-navy/70 group-hover:text-gold/20 dark:group-hover:text-gold/20 transition-colors duration-300">
  {p.num}
  </span>
  </div>
@@ -125,7 +125,7 @@ export default function Priorities() {
  <h3 className="font-display text-2xl font-bold text-navy dark:text-white uppercase mb-4 group-hover:text-gold dark:group-hover:text-gold transition-colors duration-300">
  {p.title}
  </h3>
- <p className="text-navy/70 dark:text-gray-300 font-body transition-colors duration-300">
+ <p className="text-navy/70 dark:text-cream/80 font-body transition-colors duration-300">
  {p.desc}
  </p>
  </SpotlightCard>
@@ -141,7 +141,7 @@ export default function Priorities() {
  viewport={{ once: true }}
  className="text-center"
  >
- <p className="text-navy dark:text-gray-100 font-body text-lg font-medium transition-colors duration-300">
+ <p className="text-navy dark:text-white font-body text-lg font-medium transition-colors duration-300">
  {t('footer')}<Link href="/#involved" className="text-gold font-bold hover:underline">{t('footer_link')}</Link>
  </p>
  </motion.div>

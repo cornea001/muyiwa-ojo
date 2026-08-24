@@ -29,10 +29,10 @@ export default function Marquee() {
   const dup2 = [...keywordsLine2, ...keywordsLine2, ...keywordsLine2, ...keywordsLine2, ...keywordsLine2, ...keywordsLine2];
 
   return (
-    <section className="bg-navy dark:bg-gray-950 py-6 sm:py-8 overflow-hidden relative flex flex-col gap-4 border-y border-gold/20 transition-colors duration-300">
+    <section className="bg-navy dark:bg-navy-dark py-6 sm:py-8 overflow-hidden relative flex flex-col gap-4 border-y border-gold/20 transition-colors duration-300">
       {/* Heavy gradient masks for a smooth fade-in/fade-out at the screen edges */}
-      <div className="absolute inset-y-0 left-0 w-24 sm:w-48 bg-gradient-to-r from-navy dark:from-gray-950 to-transparent z-10 pointer-events-none transition-colors duration-300" />
-      <div className="absolute inset-y-0 right-0 w-24 sm:w-48 bg-gradient-to-l from-navy dark:from-gray-950 to-transparent z-10 pointer-events-none transition-colors duration-300" />
+      <div className="absolute inset-y-0 left-0 w-24 sm:w-48 bg-gradient-to-r from-navy dark:from-navy-dark to-transparent z-10 pointer-events-none transition-colors duration-300" />
+      <div className="absolute inset-y-0 right-0 w-24 sm:w-48 bg-gradient-to-l from-navy dark:from-navy-dark to-transparent z-10 pointer-events-none transition-colors duration-300" />
 
       {/* Subtle background noise/texture for premium feel */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />

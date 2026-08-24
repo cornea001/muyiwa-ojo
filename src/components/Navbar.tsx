@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <>
       {/* 1. TOPBAR (Dark) */}
-      <div className="hidden lg:block bg-navy dark:bg-gray-900 text-white/80 border-b border-white/10 text-xs font-body tracking-wide relative z-50">
+      <div className="hidden lg:block bg-navy dark:bg-navy text-white/80 border-b border-white/10 text-xs font-body tracking-wide relative z-50">
         <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between">
           <div className="flex items-center gap-6">
             <a href="tel:3435760956" className="flex items-center gap-2 hover:text-gold transition-colors">
@@ -68,7 +68,7 @@ export default function Navbar() {
       {/* 2. MAIN HEADER (Sticky, White) */}
       <nav
         className={`w-full z-40 transition-all duration-300 ${
-          scrolled ? 'fixed top-0 bg-white dark:bg-gray-950 shadow-md py-3' : 'absolute top-0 lg:top-10 bg-white/95 dark:bg-gray-950/95 py-3'
+          scrolled ? 'fixed top-0 bg-white dark:bg-navy-dark shadow-md py-3' : 'absolute top-0 lg:top-10 bg-white/95 dark:bg-navy-dark/95 py-3'
         } ${scrolled && !mobileOpen ? '' : 'lg:absolute'}`}
         style={{ position: scrolled ? 'fixed' : 'absolute' }}
       >
@@ -89,25 +89,25 @@ export default function Navbar() {
           {/* DESKTOP NAV */}
           <div className="hidden lg:flex items-center gap-8">
             {pathname !== '/' && (
-              <Link href="/" className="text-sm font-bold text-navy dark:text-gray-100 hover:text-gold transition-colors font-display uppercase tracking-wider">
+              <Link href="/" className="text-sm font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider">
                 {t('home')}
               </Link>
             )}
-            <Link href="/about" className={`text-sm font-bold hover:text-gold transition-colors font-display uppercase tracking-wider ${pathname === '/about' ? 'text-gold' : 'text-navy dark:text-gray-100'}`}>
+            <Link href="/about" className={`text-sm font-bold hover:text-gold transition-colors font-display uppercase tracking-wider ${pathname === '/about' ? 'text-gold' : 'text-navy dark:text-white'}`}>
               {t('about')}
             </Link>
-            <Link href="/running" className={`text-sm font-bold hover:text-gold transition-colors font-display uppercase tracking-wider ${pathname === '/running' ? 'text-gold' : 'text-navy dark:text-gray-100'}`}>
+            <Link href="/running" className={`text-sm font-bold hover:text-gold transition-colors font-display uppercase tracking-wider ${pathname === '/running' ? 'text-gold' : 'text-navy dark:text-white'}`}>
               {t('running')}
             </Link>
             <button
               onClick={scrollToInvolved}
-              className="text-sm font-bold text-navy dark:text-gray-100 hover:text-gold transition-colors font-display uppercase tracking-wider"
+              className="text-sm font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider"
             >
               {t('volunteer')}
             </button>
             <button
               onClick={scrollToFooter}
-              className="text-sm font-bold text-navy dark:text-gray-100 hover:text-gold transition-colors font-display uppercase tracking-wider"
+              className="text-sm font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider"
             >
               Contact
             </button>
@@ -150,7 +150,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className={`lg:hidden fixed inset-0 z-50 flex flex-col justify-center items-center shadow-xl backdrop-blur-xl ${scrolled ? 'bg-white/95 dark:bg-gray-950/95' : 'bg-navy dark:bg-gray-900'}`}
+            className={`lg:hidden fixed inset-0 z-50 flex flex-col justify-center items-center shadow-xl backdrop-blur-xl ${scrolled ? 'bg-white/95 dark:bg-navy-dark/95' : 'bg-navy dark:bg-navy'}`}
           >
             <button
               onClick={() => setMobileOpen(false)}

@@ -30,7 +30,7 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="py-28 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <section className="py-28 bg-white dark:bg-navy-dark transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
 
         <motion.div
@@ -54,20 +54,20 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.12, duration: 0.6 }}
-              className="bg-cream dark:bg-gray-900 p-7 border border-navy/6 dark:border-gray-800 hover:shadow-sm transition-all duration-300 flex flex-col"
+              className="bg-cream dark:bg-navy p-7 border border-navy/6 dark:border-navy-light hover:shadow-sm transition-all duration-300 flex flex-col"
             >
               {/* Quote Icon */}
               <div className="mb-6 text-gold opacity-50">
                 <Quote size={48} />
               </div>
-              <p className="text-navy/75 dark:text-gray-300 text-[15px] leading-relaxed flex-1 mb-6 transition-colors duration-300">{testimonial.quote}</p>
-              <div className="flex items-center gap-3 pt-5 border-t border-navy/8 dark:border-gray-800 transition-colors duration-300">
-                <div className="w-10 h-10 bg-navy dark:bg-gray-800 flex items-center justify-center text-gold font-bold text-xs flex-shrink-0 transition-colors duration-300">
+              <p className="text-navy/75 dark:text-cream/80 text-[15px] leading-relaxed flex-1 mb-6 transition-colors duration-300">{testimonial.quote}</p>
+              <div className="flex items-center gap-3 pt-5 border-t border-navy/8 dark:border-navy-light transition-colors duration-300">
+                <div className="w-10 h-10 bg-navy dark:bg-navy-light flex items-center justify-center text-gold font-bold text-xs flex-shrink-0 transition-colors duration-300">
                   {testimonial.initials}
                 </div>
                 <div>
-                  <div className="text-navy dark:text-gray-100 font-semibold text-sm transition-colors duration-300">{testimonial.name}</div>
-                  <div className="text-gray dark:text-gray-400 text-xs transition-colors duration-300">{testimonial.role}</div>
+                  <div className="text-navy dark:text-white font-semibold text-sm transition-colors duration-300">{testimonial.name}</div>
+                  <div className="text-gray dark:text-cream/60 text-xs transition-colors duration-300">{testimonial.role}</div>
                 </div>
               </div>
             </motion.div>
