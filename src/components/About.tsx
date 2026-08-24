@@ -69,9 +69,9 @@ export default function About() {
            <p>{t('p2')}</p>
            <p>{t('p3')}</p>
            <p>{t('p4')}</p>
-           <p>{t('p5')}</p>
-           <p>{t('p6')}</p>
-           <p>{t('p7')}</p>
+           {t('p5') && <p>{t('p5')}</p>}
+           {t('p6') && <p>{t('p6')}</p>}
+           {t('p7') && <p>{t('p7')}</p>}
           </div>
 
           {/* Blockquote */}

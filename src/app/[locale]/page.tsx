@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero'
+import About from '@/components/About'
 import Marquee from '@/components/Marquee'
 import Mission from '@/components/Mission'
 import StatsBar from '@/components/StatsBar'
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-cream">
       <Hero />
+      <About />
       <Mission />
       <StatsBar />
       <Priorities />
