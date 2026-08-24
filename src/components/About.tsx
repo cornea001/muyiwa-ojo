@@ -91,14 +91,17 @@ export default function About() {
           className="grid grid-cols-2 lg:grid-cols-4 gap-3"
         >
           {[
-            { icon: <Briefcase size={16} />, label: t('trait1') },
-            { icon: <GraduationCap size={16} />, label: t('trait2') },
-            { icon: <CheckCircle size={16} />, label: t('trait3') },
-            { icon: <MapPin size={16} />, label: t('trait4') },
+            { icon: <Briefcase size={20} />, label: t('trait1') },
+            { icon: <GraduationCap size={20} />, label: t('trait2') },
+            { icon: <CheckCircle size={20} />, label: t('trait3') },
+            { icon: <MapPin size={20} />, label: t('trait4') },
           ].map((trait) => (
-            <div key={trait.label} className="flex items-center gap-3 bg-cream dark:bg-navy-light p-4 transition-colors duration-300">
-              <div className="text-gold flex-shrink-0">{trait.icon}</div>
-              <span className="text-navy dark:text-cream text-sm font-semibold transition-colors duration-300">{trait.label}</span>
+            <div 
+              key={trait.label} 
+              className="group flex flex-col justify-center gap-4 bg-navy/5 dark:bg-white/5 backdrop-blur-lg border border-navy/10 dark:border-white/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-navy/10 dark:hover:bg-white/10 cursor-default"
+            >
+              <div className="text-gold flex-shrink-0 transition-transform duration-300 group-hover:scale-110">{trait.icon}</div>
+              <span className="text-navy dark:text-cream text-sm font-semibold transition-colors duration-300 leading-snug">{trait.label}</span>
             </div>
           ))}
         </motion.div>
