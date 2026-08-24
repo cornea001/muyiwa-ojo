@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import '../globals.css'
 import Navbar from '@/components/Navbar'
 import CustomCursor from '@/components/CustomCursor'
-import SmoothScroll from '@/components/SmoothScroll'
 import JoinModal from '@/components/JoinModal'
 import { Suspense } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
@@ -57,21 +56,19 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`overflow-x-hidden w-full ${manrope.variable} ${poppins.variable}`}>
+    <html lang={locale} className={`scroll-smooth overflow-x-hidden w-full ${manrope.variable} ${poppins.variable}`}>
       <body className="bg-white dark:bg-navy-dark overflow-x-hidden w-full text-navy dark:text-cream transition-colors duration-300">
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <SmoothScroll>
-              <CustomCursor />
-              <Navbar />
-              <main>
-                {children}
-              </main>
-              <Suspense fallback={null}>
-                <JoinModal />
-              </Suspense>
-              <BackToTop />
-            </SmoothScroll>
+            <CustomCursor />
+            <Navbar />
+            <main>
+              {children}
+            </main>
+            <Suspense fallback={null}>
+              <JoinModal />
+            </Suspense>
+            <BackToTop />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

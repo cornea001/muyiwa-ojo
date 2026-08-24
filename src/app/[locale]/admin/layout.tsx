@@ -23,7 +23,6 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
 
   const navItems = [
     { label: 'Overview', path: '/admin', icon: LayoutDashboard },
-    { label: 'Content', path: '/admin/content', icon: FileText },
     { label: 'Settings', path: '/admin/settings', icon: Settings },
   ]
 
@@ -114,7 +113,6 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
             </button>
             <h1 className="font-display font-bold text-lg md:text-xl text-navy dark:text-white tracking-wide transition-colors">
               {pathname === '/admin' || pathname === '/fr/admin' || pathname === '/en/admin' ? 'Dashboard Overview' : 
-               pathname.includes('/admin/content') ? 'Content Management' : 
                'Admin Dashboard'}
             </h1>
           </div>
