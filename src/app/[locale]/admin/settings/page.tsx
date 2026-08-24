@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Save, Shield, Key, Bell, CreditCard } from 'lucide-react'
+import { useState } from 'react'
 
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<'security' | 'notifications'>('security')

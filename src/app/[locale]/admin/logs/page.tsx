@@ -3,7 +3,29 @@
 import { motion } from 'framer-motion'
 import { Globe, MapPin, Monitor, Download, Filter } from 'lucide-react'
 
+import { useState, useEffect } from 'react'
+
 export default function LogsPage() {
+  const [logs, setLogs] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function fetchLogs() {
+      try {
+        const res = await fetch('/api/analytics/logs')
+        if (res.ok) {
+          const data = await res.json()
+          setLogs(data)
+        }
+      } catch (error) {
+        console.error("Failed to fetch logs:", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchLogs()
+  }, [])
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -17,25 +39,6 @@ export default function LogsPage() {
     show: { opacity: 1, y: 0, transition: { duration: 0.3 } }
   }
 
-  // Generate some mock logs
-  const generateLogs = () => {
-    const locations = ['Ottawa, ON', 'Toronto, ON', 'Montreal, QC', 'Vancouver, BC', 'Gatineau, QC']
-    const devices = ['Desktop', 'Mobile', 'Tablet']
-    const ips = ['192.168.1.42', '174.114.2.88', '99.231.55.12', '142.122.9.11', '67.224.90.33']
-    const pages = ['/', '/about', '/donate', '/privacy']
-    
-    return Array.from({ length: 20 }).map((_, i) => ({
-      id: 1000 - i,
-      ip: ips[Math.floor(Math.random() * ips.length)],
-      location: locations[Math.floor(Math.random() * locations.length)],
-      device: devices[Math.floor(Math.random() * devices.length)],
-      page: pages[Math.floor(Math.random() * pages.length)],
-      time: i === 0 ? 'Just now' : `${i * 2 + Math.floor(Math.random() * 5)} mins ago`
-    }))
-  }
-
-  const logs = generateLogs()
-
   return (
     <motion.div 
       variants={container}
@@ -45,8 +48,11 @@ export default function LogsPage() {
     >
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
-          <h2 className="font-display font-bold text-2xl text-navy dark:text-white">Activity Logs</h2>
-          <p className="text-sm text-navy/60 dark:text-white/60 mt-1">Showing the latest 20 visitor logs.</p>
+          <h2 className="font-display font-bold text-2xl text-navy dark:text-white flex items-center gap-3">
+            Activity Logs
+            {loading && <div className="w-4 h-4 border-2 border-gold border-t-transparent rounded-full animate-spin"></div>}
+          </h2>
+          <p className="text-sm text-navy/60 dark:text-white/60 mt-1">Showing the latest {logs.length} visitor logs.</p>
         </div>
         
         <div className="flex items-center gap-3">
@@ -72,6 +78,13 @@ export default function LogsPage() {
               </tr>
             </thead>
             <tbody>
+              {!loading && logs.length === 0 && (
+                <tr>
+                  <td colSpan={5} className="px-6 py-8 text-center text-sm text-navy/50 dark:text-white/50">
+                    No recent activity logs found.
+                  </td>
+                </tr>
+              )}
               {logs.map((log) => (
                 <motion.tr 
                   key={log.id}
@@ -110,7 +123,7 @@ export default function LogsPage() {
         
         <div className="p-4 border-t border-gray-100 dark:border-white/5 flex items-center justify-between">
           <p className="text-xs text-navy/50 dark:text-white/50 font-bold uppercase tracking-wider">
-            Showing 1 to 20 of 18,201 logs
+            Showing {logs.length} logs
           </p>
           <div className="flex gap-2">
             <button className="px-3 py-1.5 border border-gray-200 dark:border-white/10 text-xs font-bold uppercase tracking-widest hover:bg-gold hover:border-gold hover:text-navy transition-colors opacity-50 cursor-not-allowed">

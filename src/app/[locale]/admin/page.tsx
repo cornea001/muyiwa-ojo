@@ -1,40 +1,67 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Eye, Users, Globe, Activity, ArrowUpRight, Monitor, MapPin } from 'lucide-react'
+import { Eye, Users, Globe, Activity, ArrowUpRight, Monitor, MapPin, RefreshCw } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 export default function AdminDashboard() {
-  
+  const [overview, setOverview] = useState({ 
+    pageViews: 0, pageViewsTrend: 0, 
+    requests: 0, requestsTrend: 0, 
+    uniques: 0, uniquesTrend: 0 
+  })
+  const [logs, setLogs] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const [overviewRes, logsRes] = await Promise.all([
+          fetch('/api/analytics/overview'),
+          fetch('/api/analytics/logs')
+        ])
+        
+        if (overviewRes.ok) {
+          const overviewData = await overviewRes.json()
+          setOverview(overviewData)
+        }
+        
+        if (logsRes.ok) {
+          const logsData = await logsRes.json()
+          setLogs(logsData.slice(0, 5)) // Only show top 5 on overview
+        }
+      } catch (error) {
+        console.error("Failed to fetch analytics:", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    
+    fetchData()
+  }, [])
+
   const stats = [
     {
-      title: 'Total Views',
-      value: '24,592',
-      trend: '+12.5%',
+      title: 'Total Views (30d)',
+      value: loading ? '-' : overview.pageViews.toLocaleString(),
+      trend: `${overview.pageViewsTrend > 0 ? '+' : ''}${overview.pageViewsTrend}%`,
       icon: Eye,
-      trendUp: true
+      trendUp: overview.pageViewsTrend >= 0
     },
     {
-      title: 'Unique Visitors',
-      value: '18,201',
-      trend: '+8.2%',
+      title: 'Unique Visitors (30d)',
+      value: loading ? '-' : overview.uniques.toLocaleString(),
+      trend: `${overview.uniquesTrend > 0 ? '+' : ''}${overview.uniquesTrend}%`,
       icon: Users,
-      trendUp: true
+      trendUp: overview.uniquesTrend >= 0
     },
     {
-      title: 'Avg. Session',
-      value: '2m 14s',
-      trend: '-1.5%',
+      title: 'Total Requests (30d)',
+      value: loading ? '-' : overview.requests.toLocaleString(),
+      trend: `${overview.requestsTrend > 0 ? '+' : ''}${overview.requestsTrend}%`,
       icon: Activity,
-      trendUp: false
+      trendUp: overview.requestsTrend >= 0
     }
-  ]
-
-  const recentVisitors = [
-    { ip: '192.168.1.42', location: 'Ottawa, ON', device: 'Mobile', time: '2 mins ago' },
-    { ip: '174.114.2.88', location: 'Ottawa, ON', device: 'Desktop', time: '5 mins ago' },
-    { ip: '99.231.55.12', location: 'Toronto, ON', device: 'Desktop', time: '12 mins ago' },
-    { ip: '142.122.9.11', location: 'Montreal, QC', device: 'Mobile', time: '18 mins ago' },
-    { ip: '67.224.90.33', location: 'Ottawa, ON', device: 'Tablet', time: '24 mins ago' },
   ]
 
   const container = {
@@ -71,9 +98,12 @@ export default function AdminDashboard() {
                 <p className="text-navy/50 dark:text-white/50 text-sm font-bold uppercase tracking-wider mb-1">
                   {stat.title}
                 </p>
-                <h3 className="text-3xl font-display font-bold text-navy dark:text-white">
-                  {stat.value}
-                </h3>
+                <div className="flex items-center gap-3">
+                  <h3 className="text-3xl font-display font-bold text-navy dark:text-white">
+                    {stat.value}
+                  </h3>
+                  {loading && <RefreshCw size={16} className="animate-spin text-gold" />}
+                </div>
               </div>
               <div className="w-10 h-10 bg-gold/10 text-gold flex items-center justify-center">
                 <stat.icon size={20} />
@@ -124,15 +154,15 @@ export default function AdminDashboard() {
         {/* Live Traffic */}
         <motion.div variants={item} className="bg-white dark:bg-navy p-6 border border-gray-100 dark:border-white/5 flex flex-col">
           <div className="flex justify-between items-center mb-6">
-            <h3 className="font-display font-bold text-lg text-navy dark:text-white">Live Visitors</h3>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span className="text-sm font-bold text-green-500">24 Active</span>
-            </div>
+            <h3 className="font-display font-bold text-lg text-navy dark:text-white">Recent Visitors (24h)</h3>
+            {loading && <RefreshCw size={16} className="animate-spin text-gold" />}
           </div>
           
           <div className="flex-1 flex flex-col gap-4">
-            {recentVisitors.map((v, i) => (
+            {!loading && logs.length === 0 && (
+              <p className="text-sm text-navy/50 dark:text-white/50 py-4 text-center">No recent visitors</p>
+            )}
+            {logs.map((v, i) => (
               <div key={i} className="flex items-start justify-between p-3 bg-cream dark:bg-navy-dark border border-gray-100 dark:border-white/5 hover:border-gold/30 transition-colors">
                 <div className="space-y-1">
                   <p className="text-sm font-bold text-navy dark:text-white flex items-center gap-2">

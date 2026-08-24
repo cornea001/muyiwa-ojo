@@ -1,0 +1,3 @@
+{
+  "query": "query { viewer { zones(filter: { zoneTag: \"41d760c52c4dbc48292312b3b2da2e70\" }) { httpRequests1dGroups(limit: 1, filter: { date_geq: \"2026-08-01\" }) { sum { pageViews, requests, bytes, cachedBytes } uniq { uniques } } } } }"
+}
