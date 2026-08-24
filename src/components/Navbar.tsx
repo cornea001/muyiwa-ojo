@@ -81,48 +81,54 @@ export default function Navbar() {
                 Muyiwa Ojo
               </div>
               <div className="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-gold mt-1 whitespace-nowrap">
-                Ward 22 Candidate
+                Ward 22 &middot; Ottawa
               </div>
             </div>
           </Link>
 
           {/* DESKTOP NAV */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-5">
             {pathname !== '/' && (
-              <Link href="/" className="text-sm font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider">
+              <Link href="/" className="text-[10px] xl:text-xs font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap">
                 {t('home')}
               </Link>
             )}
-            <Link href="/about" className={`text-sm font-bold hover:text-gold transition-colors font-display uppercase tracking-wider ${pathname === '/about' ? 'text-gold' : 'text-navy dark:text-white'}`}>
+            <Link href="/about" className={`text-[10px] xl:text-xs font-bold hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap ${pathname === '/about' ? 'text-gold' : 'text-navy dark:text-white'}`}>
               {t('about')}
             </Link>
-            <Link href="/running" className={`text-sm font-bold hover:text-gold transition-colors font-display uppercase tracking-wider ${pathname === '/running' ? 'text-gold' : 'text-navy dark:text-white'}`}>
-              {t('running')}
+            <Link href="/#priorities" className="text-[10px] xl:text-xs font-bold hover:text-gold transition-colors font-display uppercase tracking-wider text-navy dark:text-white whitespace-nowrap">
+              {t('priorities')}
+            </Link>
+            <Link href="/#community" className="text-[10px] xl:text-xs font-bold hover:text-gold transition-colors font-display uppercase tracking-wider text-navy dark:text-white whitespace-nowrap">
+              {t('community')}
+            </Link>
+            <Link href="/#news" className="text-[10px] xl:text-xs font-bold hover:text-gold transition-colors font-display uppercase tracking-wider text-navy dark:text-white whitespace-nowrap">
+              {t('news')}
             </Link>
             <button
               onClick={scrollToInvolved}
-              className="text-sm font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider"
+              className="text-[10px] xl:text-xs font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap"
             >
               {t('volunteer')}
             </button>
             <button
               onClick={scrollToFooter}
-              className="text-sm font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider"
+              className="text-[10px] xl:text-xs font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap"
             >
-              Contact
+              {t('contact')}
             </button>
-            <div className="flex items-center gap-4 ml-4">
+            <div className="flex items-center gap-2 xl:gap-4 ml-2">
               <ThemeSwitcher />
               <LanguageSwitcher />
             </div>
           </div>
           
           {/* DONATE BUTTON */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block ml-2 xl:ml-4">
             <MagneticButton>
               <button
                 onClick={() => router.push('/donate')}
-                className="bg-navy dark:bg-gray-100 text-white dark:text-navy px-8 py-3.5 text-sm font-bold font-display uppercase tracking-widest hover:bg-gold dark:hover:bg-gold transition-colors"
+                className="bg-gold text-navy px-5 xl:px-8 py-2.5 xl:py-3.5 text-[10px] xl:text-xs font-bold font-display uppercase tracking-widest hover:bg-navy hover:text-white dark:hover:bg-white dark:hover:text-navy transition-colors whitespace-nowrap"
               >
                 {t('donate')}
               </button>
@@ -170,19 +176,35 @@ export default function Navbar() {
               )}
               
               <Link 
-                href="/running" 
-                onClick={() => setMobileOpen(false)}
-                className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? (pathname === '/running' ? 'text-gold' : 'text-navy dark:text-white') : (pathname === '/running' ? 'text-gold' : 'text-white')}`}
-              >
-                {t('running')}
-              </Link>
-              
-              <Link 
                 href="/about" 
                 onClick={() => setMobileOpen(false)}
                 className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? (pathname === '/about' ? 'text-gold' : 'text-navy dark:text-white') : (pathname === '/about' ? 'text-gold' : 'text-white')}`}
               >
                 {t('about')}
+              </Link>
+              
+              <Link 
+                href="/#priorities" 
+                onClick={() => setMobileOpen(false)}
+                className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? 'text-navy dark:text-white' : 'text-white'}`}
+              >
+                {t('priorities')}
+              </Link>
+
+              <Link 
+                href="/#community" 
+                onClick={() => setMobileOpen(false)}
+                className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? 'text-navy dark:text-white' : 'text-white'}`}
+              >
+                {t('community')}
+              </Link>
+
+              <Link 
+                href="/#news" 
+                onClick={() => setMobileOpen(false)}
+                className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? 'text-navy dark:text-white' : 'text-white'}`}
+              >
+                {t('news')}
               </Link>
               
               <button
@@ -196,7 +218,7 @@ export default function Navbar() {
                 onClick={() => { scrollToFooter(); setMobileOpen(false); }}
                 className={`text-2xl text-center font-bold font-display uppercase tracking-wider ${scrolled ? 'text-navy dark:text-white' : 'text-white'}`}
               >
-                Contact
+                {t('contact')}
               </button>
 
               <button

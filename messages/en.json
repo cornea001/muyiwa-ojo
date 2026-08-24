@@ -54,7 +54,11 @@
     "p4_title": "Infrastructure That Keeps Pace With Growth",
     "p4_desc": "Ensure Ward 22 receives its fair share of investment as Riverside South and Findlay Creek continue to grow.",
     "footer": "Learn About My Vision - ",
-    "footer_link": "View Full Platform"
+    "footer_link": "View Full Platform",
+    "p5_title": "Priority 5",
+    "p5_desc": "Desc 5",
+    "p6_title": "Priority 6",
+    "p6_desc": "Desc 6"
   },
   "Community": {
     "eyebrow": "Community Connection",
@@ -118,7 +122,8 @@
     "paid_for": "Paid for by Muyiwa Ojo Ward 22",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "disclaimer": "Authorized by the Official Agent for the Muyiwa Ojo Campaign · Ward 22, Ottawa · Municipal Elections Act (Ontario)"
+    "disclaimer": "Authorized by the Official Agent for the Muyiwa Ojo Campaign · Ward 22, Ottawa · Municipal Elections Act (Ontario)",
+    "link_running": "Why I'm Running"
   },
   "About": {
     "eyebrow": "Meet Muyiwa",

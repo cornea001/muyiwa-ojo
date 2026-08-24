@@ -4,8 +4,6 @@ import { Parallax, Navigation, Pagination, Autoplay } from "swiper/modules";
 import {
   ArrowDown,
   Facebook,
-  Twitter,
-  Link as LinkIcon,
   Instagram,
   Heart,
   User,
@@ -21,6 +19,7 @@ import "swiper/css/parallax";
 
 export default function Hero() {
   const t = useTranslations('Hero');
+  const navT = useTranslations('Navbar');
 
   const slides = [
     {
@@ -158,23 +157,31 @@ export default function Hero() {
                 {/* Buttons */}
                 <div
                   data-swiper-parallax="-500"
-                  className="max-md:!transform-none flex flex-col sm:flex-row items-stretch sm:items-center gap-3 md:gap-6"
+                  className="max-md:!transform-none flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 md:gap-4"
                 >
                   <MagneticButton>
                     <Link
                       href="?modal=join"
                       scroll={false}
-                      className="flex justify-center items-center gap-2 bg-gold text-navy px-6 md:px-8 py-3 md:py-4 font-display font-bold text-xs md:text-sm tracking-widest hover:bg-white transition-colors duration-300"
+                      className="flex justify-center items-center gap-2 bg-white text-navy px-5 md:px-6 py-3 md:py-3.5 font-display font-bold text-xs md:text-sm tracking-widest hover:bg-gold transition-colors duration-300"
                     >
                       <Heart size={16} fill="currentColor" /> {t('join_btn')}
                     </Link>
                   </MagneticButton>
                   <MagneticButton>
                     <Link
-                      href="/about"
-                      className="flex justify-center items-center gap-2 border border-white/30 text-white px-6 md:px-8 py-3 md:py-4 font-display font-medium text-xs md:text-sm tracking-widest hover:bg-white/10 transition-colors duration-300"
+                      href="/running"
+                      className="flex justify-center items-center gap-2 border border-white/30 text-white px-5 md:px-6 py-3 md:py-3.5 font-display font-medium text-xs md:text-sm tracking-widest hover:bg-white/10 transition-colors duration-300"
                     >
                       <User size={16} /> {t('learn_btn')}
+                    </Link>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <Link
+                      href="/donate"
+                      className="flex justify-center items-center gap-2 bg-gold text-navy px-5 md:px-6 py-3 md:py-3.5 font-display font-bold text-xs md:text-sm tracking-widest hover:bg-white transition-colors duration-300"
+                    >
+                      {navT('donate')}
                     </Link>
                   </MagneticButton>
                 </div>
@@ -195,13 +202,6 @@ export default function Hero() {
             <Facebook size={16} />
           </a>
           <a
-            href="#"
-            aria-label="Twitter"
-            className="text-white/50 hover:text-white transition-colors"
-          >
-            <Twitter size={16} />
-          </a>
-          <a
             href="https://www.instagram.com/iam_ojo"
             target="_blank"
             rel="noreferrer"
@@ -209,13 +209,6 @@ export default function Hero() {
             className="text-white/50 hover:text-white transition-colors"
           >
             <Instagram size={16} />
-          </a>
-          <a
-            href="#"
-            aria-label="LinkedIn"
-            className="text-white/50 hover:text-white transition-colors"
-          >
-            <LinkIcon size={16} />
           </a>
         </div>
 
