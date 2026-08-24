@@ -79,7 +79,10 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
     return pathname.includes(path)
   }
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    // Import logout action dynamically or use a regular import at the top
+    const { logout } = await import('@/app/actions/auth')
+    await logout()
     router.push('/')
   }
 
@@ -99,13 +102,19 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         )}
       </AnimatePresence>
 
-      {/* Sidebar */}
-      <motion.aside
-        initial={{ x: isMobile ? -300 : 0 }}
-        animate={{ x: sidebarOpen ? 0 : -300 }}
-        transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
-        className="fixed lg:relative flex flex-col w-64 h-full bg-navy text-white z-50 shadow-2xl shrink-0"
-      >
+      {pathname.endsWith('/login') ? (
+        <main className="flex-1 w-full h-full">
+          {children}
+        </main>
+      ) : (
+        <>
+          {/* Sidebar */}
+          <motion.aside
+            initial={{ x: isMobile ? -300 : 0 }}
+            animate={{ x: sidebarOpen ? 0 : -300 }}
+            transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
+            className="fixed lg:relative flex flex-col w-64 h-full bg-navy text-white z-50 shadow-2xl shrink-0"
+          >
         <div className="flex items-center justify-between h-20 px-6 border-b border-white/10 shrink-0">
           <Link href="/admin" className="flex items-center gap-3">
             <img src="/logo.svg" alt="Logo" className="h-6 w-auto opacity-90" />
@@ -183,6 +192,8 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         </div>
 
       </main>
+      </>
+      )}
 
     </div>
   )
