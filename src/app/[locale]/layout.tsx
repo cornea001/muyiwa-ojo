@@ -57,7 +57,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={`overflow-x-hidden w-full ${inter.variable} ${outfit.variable}`}>
-      <body className="bg-white dark:bg-gray-950 overflow-x-hidden w-full text-navy dark:text-gray-100 transition-colors duration-300">
+      <body className="bg-white dark:bg-navy-dark overflow-x-hidden w-full text-navy dark:text-cream transition-colors duration-300">
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <SmoothScroll>

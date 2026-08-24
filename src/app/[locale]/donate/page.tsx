@@ -107,7 +107,7 @@ export default function DonationPage() {
           {/* PRESET AMOUNTS */}
           <div>
             <div className="flex items-center justify-between mb-3">
-              <h2 className="font-semibold text-navy dark:text-gray-200 transition-colors duration-300">
+              <h2 className="font-semibold text-navy dark:text-cream transition-colors duration-300">
                 {t("select_amount")}
               </h2>
 
@@ -131,7 +131,7 @@ export default function DonationPage() {
                   className={`p-4 border font-bold font-display uppercase text-sm tracking-wider transition-all duration-300 ${
                     selectedPreset === value
                       ? "bg-navy text-white border-navy dark:bg-white dark:text-navy dark:border-white"
-                      : "bg-white text-navy border-navy/20 hover:border-navy dark:bg-gray-900 dark:text-white dark:border-gray-700 dark:hover:border-gray-500"
+                      : "bg-white text-navy border-navy/20 hover:border-navy dark:bg-navy-dark dark:text-white dark:border-navy-light dark:hover:border-navy"
                   }`}
                 >
                   ${value}
@@ -143,7 +143,7 @@ export default function DonationPage() {
           {/* CUSTOM AMOUNT */}
           {selectedPreset === null && (
             <div>
-              <label className="block mb-2 font-semibold text-navy dark:text-gray-200 transition-colors duration-300">
+              <label className="block mb-2 font-semibold text-navy dark:text-cream transition-colors duration-300">
                 {t("other_amount")}
               </label>
 
@@ -155,7 +155,7 @@ export default function DonationPage() {
                 aria-label="Custom donation amount"
                 value={amount}
                 onChange={(e) => handleCustomChange(e.target.value)}
-                className="w-full p-4 border border-navy/20 dark:border-gray-700 bg-white dark:bg-gray-900 text-navy dark:text-white focus:outline-none focus:ring-2 focus:ring-gold transition-colors duration-300"
+                className="w-full p-4 border border-navy/20 dark:border-navy-light bg-white dark:bg-navy-dark text-navy dark:text-white focus:outline-none focus:ring-2 focus:ring-gold transition-colors duration-300"
               />
             </div>
           )}
@@ -166,7 +166,7 @@ export default function DonationPage() {
               <p className="font-semibold text-navy dark:text-gold transition-colors duration-300">
                 {t("rebate_title")}
               </p>
-              <p className="mt-1 text-gray-700 dark:text-gray-300 transition-colors duration-300">
+              <p className="mt-1 text-navy/70 dark:text-cream/80 transition-colors duration-300">
                 {t("rebate_desc1")}{" "}
                 <span className="font-bold text-black dark:text-white transition-colors duration-300">
                   ${rebate.toFixed(2)}

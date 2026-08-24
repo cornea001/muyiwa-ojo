@@ -5,11 +5,11 @@ export default function PrivacyPage() {
   const t = useTranslations('Privacy')
   
   return (
-    <main className="max-w-3xl mx-auto px-6 py-36 font-body text-navy dark:text-gray-200 transition-colors duration-300">
+    <main className="max-w-3xl mx-auto px-6 py-36 font-body text-navy dark:text-cream transition-colors duration-300">
       <h1 className="font-display font-bold text-4xl uppercase tracking-tight mb-2 text-navy dark:text-white transition-colors duration-300">{t('title')}</h1>
-      <p className="text-navy/50 dark:text-gray-400 text-sm mb-10 transition-colors duration-300">{t('last_updated')}</p>
+      <p className="text-navy/50 dark:text-cream/60 text-sm mb-10 transition-colors duration-300">{t('last_updated')}</p>
 
-      <section className="space-y-8 text-[15px] leading-relaxed text-navy/80 dark:text-gray-300 transition-colors duration-300">
+      <section className="space-y-8 text-[15px] leading-relaxed text-navy/80 dark:text-cream/80 transition-colors duration-300">
         <div>
           <h2 className="font-display font-bold text-xl uppercase text-navy dark:text-white mb-3 transition-colors duration-300">{t('section1_title')}</h2>
           <p>{t('section1_body')}</p>

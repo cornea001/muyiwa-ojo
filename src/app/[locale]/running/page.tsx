@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl'
 export default function RunningPage() {
   const t = useTranslations('Running');
   return (
-    <section  className="py-16 sm:py-24 bg-cream dark:bg-gray-950 transition-colors duration-300">
+    <section  className="py-16 sm:py-24 bg-cream dark:bg-navy-dark transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-12">
@@ -15,15 +15,15 @@ export default function RunningPage() {
             {t('title')}
           </h2>
 
-          <p className="text-gray-600 dark:text-gray-400 transition-colors duration-300">
+          <p className="text-gray-600 dark:text-cream/60 transition-colors duration-300">
             {t('subtitle')}
           </p>
         </div>
 
         {/* Card */}
-        <div className="bg-white dark:bg-gray-900 border border-navy/10 dark:border-gray-800 overflow-hidden transition-colors duration-300">
+        <div className="bg-white dark:bg-navy border border-navy/10 dark:border-white/5 overflow-hidden transition-colors duration-300">
           {/* Header */}
-          <div className="bg-navy dark:bg-gray-800 px-6 sm:px-10 py-6 flex items-center gap-4 transition-colors duration-300">
+          <div className="bg-navy dark:bg-navy-light px-6 sm:px-10 py-6 flex items-center gap-4 transition-colors duration-300">
             <div className="relative w-10 h-10 sm:w-12 sm:h-12 overflow-hidden border border-gold/40 flex-shrink-0">
               <Image
                 src="/portrait2.avif"
@@ -46,7 +46,7 @@ export default function RunningPage() {
           </div>
 
           {/* Content */}
-          <div className="px-6 sm:px-10 py-10 space-y-5 text-[15px] text-gray-700 dark:text-gray-300 leading-relaxed transition-colors duration-300">
+          <div className="px-6 sm:px-10 py-10 space-y-5 text-[15px] text-gray-700 dark:text-cream/80 leading-relaxed transition-colors duration-300">
             <p>{t('p1')}</p>
             <p>{t('p2')}</p>
             <p>{t('p3')}</p>
@@ -68,12 +68,11 @@ export default function RunningPage() {
           </div>
 
           {/* Footer */}
-          <div className="px-6 sm:px-10 py-5 border-t border-navy/10 dark:border-gray-800 flex flex-col sm:flex-row sm:justify-between gap-2 transition-colors duration-300">
-            <div className="font-bold text-navy dark:text-white transition-colors duration-300">
+          <div className="px-6 sm:px-10 py-5 border-t border-navy/10 dark:border-white/5 flex flex-col sm:flex-row sm:justify-between gap-2 transition-colors duration-300">
+            <div className="font-bold text-navy dark:text-cream transition-colors duration-300">
               {t('footer_name')}
             </div>
-
-            <div className="text-gray-500 dark:text-gray-400 text-xs transition-colors duration-300">
+            <div className="text-navy/50 dark:text-cream/50 text-xs transition-colors duration-300">
               {t('footer_year')}
             </div>
           </div>
