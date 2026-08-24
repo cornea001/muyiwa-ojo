@@ -38,7 +38,7 @@ export default function Mission() {
     },
   ];
   return (
-    <section className="py-24 bg-white dark:bg-gray-950 relative overflow-hidden transition-colors duration-300">
+    <section className="py-24 bg-white dark:bg-navy-dark relative overflow-hidden transition-colors duration-300">
       {/* Background Parallax */}
       <motion.div
         style={{ y }}
@@ -109,7 +109,7 @@ export default function Mission() {
                 }}
                 className="flex items-start gap-6 group cursor-pointer"
               >
-                <div className="w-16 h-16 bg-cream dark:bg-gray-900 flex-shrink-0 flex items-center justify-center text-navy dark:text-gray-100 group-hover:bg-navy group-hover:text-gold dark:group-hover:bg-gray-800 transition-colors duration-500 border border-gray-100 dark:border-gray-800">
+                <div className="w-16 h-16 bg-cream dark:bg-navy-dark flex-shrink-0 flex items-center justify-center text-navy dark:text-cream group-hover:bg-navy group-hover:text-gold dark:group-hover:bg-navy-light transition-colors duration-500 border border-gray-100 dark:border-navy/20">
                   <div className="group-hover:scale-110 transition-transform duration-500">
                     {item.icon}
                   </div>
@@ -118,7 +118,7 @@ export default function Mission() {
                   <h4 className="text-xl font-display font-bold text-navy dark:text-white uppercase mb-2 group-hover:text-gold dark:group-hover:text-gold transition-colors duration-500">
                     {item.title}
                   </h4>
-                  <p className="text-navy/70 dark:text-gray-300 font-body leading-relaxed">
+                  <p className="text-navy/70 dark:text-cream/80 font-body leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

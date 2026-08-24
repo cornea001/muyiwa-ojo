@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <>
       {/* PERSONAL STORY */}
-      <section className="py-16 sm:py-24 bg-white dark:bg-gray-950 transition-colors duration-300">
+      <section className="py-16 sm:py-24 bg-white dark:bg-navy-dark transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 
           {/* LEFT SIDE */}
@@ -88,7 +88,7 @@ export default function AboutPage() {
               {t('title_page')}
             </h2>
 
-            <div className="space-y-5 text-sm sm:text-[15px] text-gray-700 dark:text-gray-300 leading-relaxed mb-10 transition-colors duration-300">
+            <div className="space-y-5 text-sm sm:text-[15px] text-gray-700 dark:text-cream/80 leading-relaxed mb-10 transition-colors duration-300">
               <p>{t('p1')}</p>
               <p>{t('p2')}</p>
               <p>{t('p3')}</p>
@@ -98,7 +98,7 @@ export default function AboutPage() {
             </div>
 
             {/* QUOTE */}
-            <div className="bg-navy dark:bg-gray-900 p-6 sm:p-8 mb-10 transition-colors duration-300">
+            <div className="bg-navy dark:bg-navy-light p-6 sm:p-8 mb-10 transition-colors duration-300">
               <Quote size={26} className="text-gold/40 mb-3" />
               <p className="text-white italic font-bold text-lg sm:text-xl">
                 {t('quote_page')}
