@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import About from '@/components/About'
+import StatsBar from '@/components/StatsBar'
 import WhyRunning from '@/components/WhyRunning'
 import Priorities from '@/components/Priorities'
 import CommunityConnection from '@/components/CommunityConnection'
@@ -15,6 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-cream">
       <Hero />
       <About />
+      <StatsBar />
       <WhyRunning />
       <Priorities />
       <CommunityConnection />
@@ -27,4 +29,3 @@ export default function Home() {
     </main>
   )
 }
-

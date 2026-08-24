@@ -16,6 +16,10 @@ export default function Navbar() {
   const pathname = usePathname()
   const t = useTranslations('Navbar')
 
+  // Hide Navbar on admin routes
+  if (pathname.includes('/admin')) return null
+
+
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40)
     handler() // Check immediately on mount in case we restored scroll position

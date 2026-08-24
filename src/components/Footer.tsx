@@ -70,7 +70,7 @@ export default function Footer() {
                   href="/#community"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
-                  Community
+                  {t('link_community')}
                 </Link>
               </li>
               <li>
@@ -78,7 +78,7 @@ export default function Footer() {
                   href="/#news"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
-                  News & Events
+                  {t('link_news')}
                 </Link>
               </li>
               <li>
@@ -191,11 +191,11 @@ export default function Footer() {
             <span>{t('rights')}</span>
             <span className="hidden sm:inline">·</span>
             <Link href="/privacy" className="hover:text-gold transition-colors">
-              Privacy Policy
+              {t('privacy')}
             </Link>
             <span className="hidden sm:inline">·</span>
             <Link href="/terms" className="hover:text-gold transition-colors">
-              Terms & Conditions
+              {t('terms')}
             </Link>
             <span className="hidden sm:inline">·</span>
             <span>{t('legal')}</span>

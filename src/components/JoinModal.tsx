@@ -9,6 +9,8 @@ export default function JoinModal() {
   const router = useRouter();
   const pathname = usePathname();
 
+  if (pathname.includes('/admin')) return null;
+
   const isOpen = searchParams.get("modal") === "join";
   const [status, setStatus] = useState<FormStatus>("idle");
   const [formData, setFormData] = useState({

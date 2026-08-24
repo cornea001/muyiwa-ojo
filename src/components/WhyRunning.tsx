@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { Quote } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-import StatsBar from './StatsBar'
 
 export default function WhyRunning() {
   const t = useTranslations('WhyRunning')
@@ -23,7 +22,7 @@ export default function WhyRunning() {
           </motion.span>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start mb-24">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           
           {/* Blockquote Side */}
           <motion.div
@@ -57,9 +56,6 @@ export default function WhyRunning() {
           </motion.div>
 
         </div>
-
-        {/* Stats integrated at the bottom of the section */}
-        <StatsBar />
 
       </div>
     </section>
