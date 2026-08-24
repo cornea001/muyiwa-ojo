@@ -87,3 +87,5 @@ Ensure your `.env.local` contains valid keys:
 
 ### Resend Setup (Contact Form)
 Set your `RESEND_API_KEY` in `.env.local` for the contact form to properly dispatch emails.
+
+muyiwaojo2026!
