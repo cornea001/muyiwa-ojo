@@ -30,7 +30,7 @@ export default function About() {
             <div className="relative bg-navy  aspect-square  overflow-hidden">
               {/* Real photo */}
               <Image
-                src="/portrait.avif"
+                src="/portrait2.avif"
                 alt="Muyiwa Ojo — Candidate for Ward 22"
                 fill
                 className="object-cover object-top"

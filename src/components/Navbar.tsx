@@ -74,61 +74,61 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           
-          <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.svg" alt="Muyiwa Ojo Logo" width={180} height={40} className="h-10 w-auto" />
+          <Link href="/" className="flex items-center justify-between gap-3">
+            <Image src="/logo.svg" alt="Muyiwa Ojo Logo" width={160} height={36} className="h-9 w-auto" />
             <div>
               <div className="font-display font-bold text-base sm:text-xl text-navy dark:text-white uppercase leading-none tracking-tight transition-colors duration-300 whitespace-nowrap">
                 Muyiwa Ojo
               </div>
-              <div className="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-gold mt-1 whitespace-nowrap">
+              <div className="text-[8px] sm:text-[10px] font-bold uppercase tracking-widest text-gold whitespace-nowrap">
                 Ward 22 &middot; Ottawa
               </div>
             </div>
           </Link>
 
           {/* DESKTOP NAV */}
-          <div className="hidden lg:flex items-center gap-2 xl:gap-5">
+          <div className="hidden lg:flex items-center gap-1.5 xl:gap-4">
             {pathname !== '/' && (
-              <Link href="/" className="text-[10px] xl:text-xs font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap">
+              <Link href="/" className="text-[10px] xl:text-[11px] font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap">
                 {t('home')}
               </Link>
             )}
-            <Link href="/about" className={`text-[10px] xl:text-xs font-bold hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap ${pathname === '/about' ? 'text-gold' : 'text-navy dark:text-white'}`}>
+            <Link href="/about" className={`text-[10px] xl:text-[11px] font-bold hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap ${pathname === '/about' ? 'text-gold' : 'text-navy dark:text-white'}`}>
               {t('about')}
             </Link>
-            <Link href="/#priorities" className="text-[10px] xl:text-xs font-bold hover:text-gold transition-colors font-display uppercase tracking-wider text-navy dark:text-white whitespace-nowrap">
+            <Link href="/#priorities" className="text-[10px] xl:text-[11px] font-bold hover:text-gold transition-colors font-display uppercase tracking-wider text-navy dark:text-white whitespace-nowrap">
               {t('priorities')}
             </Link>
-            <Link href="/#community" className="text-[10px] xl:text-xs font-bold hover:text-gold transition-colors font-display uppercase tracking-wider text-navy dark:text-white whitespace-nowrap">
+            <Link href="/#community" className="text-[10px] xl:text-[11px] font-bold hover:text-gold transition-colors font-display uppercase tracking-wider text-navy dark:text-white whitespace-nowrap">
               {t('community')}
             </Link>
-            <Link href="/#news" className="text-[10px] xl:text-xs font-bold hover:text-gold transition-colors font-display uppercase tracking-wider text-navy dark:text-white whitespace-nowrap">
+            <Link href="/#news" className="text-[10px] xl:text-[11px] font-bold hover:text-gold transition-colors font-display uppercase tracking-wider text-navy dark:text-white whitespace-nowrap">
               {t('news')}
             </Link>
             <button
               onClick={scrollToInvolved}
-              className="text-[10px] xl:text-xs font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap"
+              className="text-[10px] xl:text-[11px] font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap"
             >
               {t('volunteer')}
             </button>
             <button
               onClick={scrollToFooter}
-              className="text-[10px] xl:text-xs font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap"
+              className="text-[10px] xl:text-[11px] font-bold text-navy dark:text-white hover:text-gold transition-colors font-display uppercase tracking-wider whitespace-nowrap"
             >
               {t('contact')}
             </button>
-            <div className="flex items-center gap-2 xl:gap-4 ml-2">
+            <div className="flex items-center gap-1.5 xl:gap-3 ml-1 xl:ml-2">
               <ThemeSwitcher />
               <LanguageSwitcher />
             </div>
           </div>
           
           {/* DONATE BUTTON */}
-          <div className="hidden lg:block ml-2 xl:ml-4">
+          <div className="hidden lg:block ml-1 xl:ml-3">
             <MagneticButton>
               <button
                 onClick={() => router.push('/donate')}
-                className="bg-gold text-navy px-5 xl:px-8 py-2.5 xl:py-3.5 text-[10px] xl:text-xs font-bold font-display uppercase tracking-widest hover:bg-navy hover:text-white dark:hover:bg-white dark:hover:text-navy transition-colors whitespace-nowrap"
+                className="bg-gold text-navy px-4 xl:px-6 py-2.5 xl:py-3 text-[10px] xl:text-[11px] font-bold font-display uppercase tracking-widest hover:bg-navy hover:text-white dark:hover:bg-white dark:hover:text-navy transition-colors whitespace-nowrap"
               >
                 {t('donate')}
               </button>

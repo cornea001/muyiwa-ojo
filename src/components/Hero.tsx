@@ -36,7 +36,7 @@ export default function Hero() {
       imageClass:
         "w-full h-full md:w-auto md:h-full max-w-none max-h-full object-cover object-top md:object-contain md:object-right-bottom",
     },
-    {
+    /* {
       titleTop: t('title2_top'),
       titleOutline: t('title2_bottom'),
       breakText: true,
@@ -49,7 +49,7 @@ export default function Hero() {
         "absolute max-md:!transform-none bottom-16 inset-x-0 mx-auto md:mx-0 md:inset-x-auto md:right-0 w-full md:w-auto h-[35%] md:h-full md:inset-y-0 z-10 pointer-events-none flex justify-center items-end",
       imageClass:
         "w-full h-full md:w-auto md:h-full max-w-none max-h-full object-cover object-top md:object-contain md:object-right-bottom",
-    },
+    }, */
   ];
 
   return (
@@ -215,9 +215,9 @@ export default function Hero() {
         {/* Bottom Bar Container */}
         <div className="absolute bottom-0 left-0 right-0 z-30 h-14 lg:h-16 border-t border-white/10 bg-navy/60 backdrop-blur-md flex justify-between items-stretch">
           {/* Pagination Box */}
-          <div className="w-28 lg:w-32 bg-black/40 border-r border-white/10 flex items-center justify-center text-white/50 font-display font-bold text-sm lg:text-lg tracking-widest">
+          {/* <div className="w-28 lg:w-32 bg-black/40 border-r border-white/10 flex items-center justify-center text-white/50 font-display font-bold text-sm lg:text-lg tracking-widest">
             <div className="swiper-pagination-custom"></div>
-          </div>
+          </div> */}
           {/* Scroll Indicator */}
           <div className="flex-1 flex items-center justify-center">
             <a
@@ -229,14 +229,14 @@ export default function Hero() {
             </a>
           </div>
           {/* Nav Arrows */}
-          <div className="flex border-l border-white/10">
+          {/* <div className="flex border-l border-white/10">
             <button className="swiper-button-prev-custom w-14 lg:w-20 border-r border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/5 transition-colors">
               &larr;
             </button>
             <button className="swiper-button-next-custom w-14 lg:w-20 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/5 transition-colors">
               &rarr;
             </button>
-          </div>
+          </div> */}
         </div>
       </Swiper>
 
