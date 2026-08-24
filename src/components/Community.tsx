@@ -57,7 +57,7 @@ export default function Community() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="bg-white/5 border border-white/10 p-6 hover:bg-white/8 hover:border-gold/25 transition-all duration-300"
+              className="bg-white/5 backdrop-blur-md border border-white/10 shadow-lg shadow-navy/5 p-6 hover:-translate-y-2 hover:bg-white/10 hover:shadow-2xl hover:border-gold/30 transition-all duration-500"
             >
               <div className="text-3xl mb-4 text-white dark:text-white">{item.icon}</div>
               <h3 className="text-white font-display font-bold text-lg mb-2">

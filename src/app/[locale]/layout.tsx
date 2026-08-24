@@ -9,15 +9,16 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import BackToTop from '@/components/BackToTop'
-import { Inter, Outfit } from 'next/font/google'
+import { Poppins, Manrope } from 'next/font/google'
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-body',
   display: 'swap',
 })
 
-const outfit = Outfit({
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
@@ -56,7 +57,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`overflow-x-hidden w-full ${inter.variable} ${outfit.variable}`}>
+    <html lang={locale} className={`overflow-x-hidden w-full ${manrope.variable} ${poppins.variable}`}>
       <body className="bg-white dark:bg-navy-dark overflow-x-hidden w-full text-navy dark:text-cream transition-colors duration-300">
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>

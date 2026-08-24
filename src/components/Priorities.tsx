@@ -112,7 +112,7 @@ export default function Priorities() {
  transition={{ delay: i * 0.1, duration: 0.5 }}
  className="h-full"
  >
- <SpotlightCard className="group bg-white dark:bg-navy-light p-8 border border-gray-100 dark:border-navy-light hover:border-gold/30 dark:hover:border-gold/30 transition-all duration-300 relative h-full ">
+ <SpotlightCard className="group bg-white/70 dark:bg-navy-light/40 backdrop-blur-md p-8 border border-white/20 dark:border-white/10 shadow-lg shadow-navy/5 hover:shadow-2xl hover:shadow-gold/10 dark:hover:shadow-gold/10 hover:-translate-y-2 transition-all duration-500 relative h-full ">
  <div className="flex justify-between items-start mb-6">
  <div className="w-16 h-16 bg-cream dark:bg-navy rounded-full flex items-center justify-center text-navy dark:text-white group-hover:bg-gold dark:group-hover:bg-gold group-hover:text-white transition-colors duration-300">
  <Icon size={28} />
