@@ -23,6 +23,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
 
   const navItems = [
     { label: 'Overview', path: '/admin', icon: LayoutDashboard },
+    { label: 'Activity Logs', path: '/admin/logs', icon: FileText },
     { label: 'Settings', path: '/admin/settings', icon: Settings },
   ]
 

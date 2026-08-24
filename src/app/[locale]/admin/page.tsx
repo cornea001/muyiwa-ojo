@@ -153,7 +153,10 @@ export default function AdminDashboard() {
             ))}
           </div>
           
-          <button className="w-full mt-6 py-3 border border-gray-200 dark:border-white/10 text-navy dark:text-white text-sm font-bold tracking-widest uppercase hover:bg-gold hover:text-navy hover:border-gold transition-colors">
+          <button 
+            onClick={() => window.location.href = '/admin/logs'}
+            className="w-full mt-6 py-3 border border-gray-200 dark:border-white/10 text-navy dark:text-white text-sm font-bold tracking-widest uppercase hover:bg-gold hover:text-navy hover:border-gold transition-colors"
+          >
             View All Logs
           </button>
         </motion.div>
