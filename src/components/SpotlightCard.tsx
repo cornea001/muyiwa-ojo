@@ -7,12 +7,14 @@ interface SpotlightCardProps {
   children: ReactNode
   className?: string
   spotlightColor?: string
+  onClick?: () => void
 }
 
 export default function SpotlightCard({
   children,
   className = '',
   spotlightColor = 'rgba(212, 165, 55, 0.15)', // Default gold
+  onClick
 }: SpotlightCardProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -33,6 +35,7 @@ export default function SpotlightCard({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
       className={`relative overflow-hidden ${className}`}
     >
       <motion.div

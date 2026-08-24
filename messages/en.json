@@ -38,7 +38,15 @@
     "m5_desc": "A councillor who listens first and shows up every single day.",
     "banner1": "The vision for Ward 22 is simple: a ward where every family can live safely, move freely, raise their children with opportunity, and access the services and spaces they deserve.",
     "banner2": "",
-    "join_btn": "Read The Vision"
+    "join_btn": "Read The Vision",
+    "t_aug": "August 2026",
+    "t_aug_title": "Phase 2 Canvassing Begins — Volunteers Welcome",
+    "t_jul": "July 2026",
+    "t_jul_title": "Platform Announced — Built From 5,000 Ward 22 Conversations",
+    "t_jun": "June 1, 2026",
+    "t_jun_title": "Canvassing Begins in Riverside South and Findlay Creek",
+    "t_may": "May 1, 2026",
+    "t_may_title": "Nomination Filed — Ward 22 City Council Candidate"
   },
   "Priorities": {
     "eyebrow": "Campaign Priorities",
@@ -47,18 +55,45 @@
     "desc": "Built from conversations with over 5,000 Ward 22 residents across Riverside South and Findlay Creek.",
     "p1_title": "Safer Streets & Stronger Neighbourhoods",
     "p1_desc": "Make Ward 22 safer for families, pedestrians, cyclists, and drivers by addressing speeding, improving road safety, enhancing street lighting, and investing in safer parks, pathways, and public spaces.",
+    "p1_bullets": [
+      "Traffic calming in high-risk areas",
+      "Safer intersections and crosswalks",
+      "Improved pathway and park lighting",
+      "Stronger community safety partnerships",
+      "Safer routes for children and seniors"
+    ],
+    "p1_quote": "Every resident deserves to feel safe in their neighbourhood, whether walking to school, cycling to a park, or driving home.",
     "p2_title": "Youth Empowerment & Future Opportunities",
     "p2_desc": "Prepare the next generation of leaders by creating pathways for youth success through education, innovation, leadership, arts, entrepreneurship, STEM, AI, and skilled trades.",
+    "p2_bullets": [
+      "Ward 22 Youth Advisory Council",
+      "Leadership development programs",
+      "STEM and AI learning opportunities",
+      "Arts and cultural initiatives",
+      "Entrepreneurship and mentorship programs",
+      "School and community partnerships"
+    ],
+    "p2_quote": "Investing in our youth today builds a stronger, safer, and more successful Ward 22 tomorrow.",
     "p3_title": "Better Transit & Smarter Traffic Solutions",
     "p3_desc": "Fight for reliable transit service and practical traffic solutions that reduce congestion, improve connectivity, and minimize disruptions from Bank Street construction.",
+    "p3_bullets": [
+      "More reliable OC Transpo service",
+      "Better connections to transit hubs",
+      "Reduced traffic bottlenecks",
+      "Improved commuter mobility",
+      "Planning that keeps people moving"
+    ],
+    "p3_quote": "Residents should spend less time stuck in traffic and more time with their families.",
     "p4_title": "Infrastructure That Keeps Pace With Growth",
     "p4_desc": "Ensure Ward 22 receives its fair share of investment as Riverside South and Findlay Creek continue to grow.",
-    "footer": "Learn About My Vision - ",
-    "footer_link": "View Full Platform",
-    "p5_title": "Priority 5",
-    "p5_desc": "Desc 5",
-    "p6_title": "Priority 6",
-    "p6_desc": "Desc 6"
+    "p4_bullets": [
+      "Recreation facilities and parks",
+      "Sports fields and community spaces",
+      "Grocery and commercial access",
+      "Walking and cycling infrastructure",
+      "Improved city services"
+    ],
+    "p4_quote": "Growth must be matched by the infrastructure and services residents need to thrive."
   },
   "Community": {
     "eyebrow": "Community Connection",
@@ -78,28 +113,18 @@
     "c6_desc": "Active on Facebook and Instagram — connecting with Ward 22 residents daily across Riverside South and Findlay Creek."
   },
   "GetInvolved": {
-    "eyebrow": "Get Involved",
-    "title_top": "Together, we turn aspirations",
-    "title_bottom": "into reality.",
-    "donate_title": "Donate",
-    "donate_desc": "Contributions are receipted and eligible for the Ottawa Rebate Program.",
-    "donate_btn": "Donate Now",
-    "volunteer_title": "Volunteer",
-    "volunteer_desc": "Sign up to canvass streets, drop hangers, phone bank, or help at events.",
-    "volunteer_btn": "Join Us",
-    "lawn_sign_title": "Lawn Sign",
-    "lawn_sign_desc": "Request a sign for your property in Riverside South or Findlay Creek.",
-    "lawn_sign_btn": "Request Sign",
-    "spread_word_title": "Spread the Word",
-    "spread_word_desc": "Share posts, tell neighbours, introduce Muyiwa to your networks.",
-    "lawn_title": "Lawn Sign",
-    "lawn_desc": "Request a sign for your property in Riverside South or Findlay Creek.",
-    "attend_title": "Attend an Event",
-    "attend_desc": "Join canvassing sessions and community gatherings across Ward 22.",
-    "spread_title": "Spread the Word",
-    "spread_desc": "Share posts, tell neighbours, introduce Muyiwa to your networks.",
-    "join_title": "Join the Team",
-    "join_desc": "Become a neighbourhood ambassador — organize in your area."
+    "title1": "Volunteer",
+    "desc1": "Sign up to canvass streets, drop hangers, phone bank, or help at events.",
+    "title2": "Lawn Sign",
+    "desc2": "Request a sign for your property in Riverside South or Findlay Creek.",
+    "title3": "Attend an Event",
+    "desc3": "Join canvassing sessions and community gatherings across Ward 22.",
+    "title4": "Spread the Word",
+    "desc4": "Share posts, tell neighbours, introduce Muyiwa to your networks.",
+    "title5": "Join the Team",
+    "desc5": "Become a neighbourhood ambassador — organize in your area.",
+    "title6": "Donate",
+    "desc6": "Contributions are receipted and eligible for the Ottawa Rebate Program."
   },
   "Footer": {
     "final_message": "\"Ward 22 deserves a councillor who is present, practical, accountable, and committed to serving every resident. This community is our home. Let's build it right, together.\"",
@@ -123,7 +148,11 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "disclaimer": "Authorized by the Official Agent for the Muyiwa Ojo Campaign · Ward 22, Ottawa · Municipal Elections Act (Ontario)",
-    "link_running": "Why I'm Running"
+    "link_running": "Why I'm Running",
+    "final_msg": "Ward 22 deserves a councillor who is present, practical, accountable, and committed to serving every resident. This community is our home. Let's build it right, together.",
+    "legal": "Municipal Elections Act (Ontario)",
+    "auth": "Authorized by the Official Agent for the Muyiwa Ojo Campaign · Ward 22, Ottawa · Municipal Elections Act (Ontario)",
+    "rights": "© 2026 Muyiwa Ojo Campaign · Paid for by Muyiwa Ojo Ward 22 · Authorized by Official Agent"
   },
   "About": {
     "eyebrow": "Meet Muyiwa",
@@ -302,19 +331,7 @@
     "back": "Back to Home"
   },
   "NewsEvents": {
-    "title": "News & Events",
-    "event1_date": "August 2026",
-    "event1_type": "Campaign Update",
-    "event1_title": "Phase 2 Canvassing Begins — Volunteers Welcome",
-    "event2_date": "July 2026",
-    "event2_type": "Platform Launch",
-    "event2_title": "Platform Announced — Built From 5,000 Ward 22 Conversations",
-    "event3_date": "June 1, 2026",
-    "event3_type": "Campaign Launch",
-    "event3_title": "Canvassing Begins in Riverside South and Findlay Creek",
-    "event4_date": "May 1, 2026",
-    "event4_type": "Milestone",
-    "event4_title": "Nomination Filed — Ward 22 City Council Candidate"
+    "eyebrow": "News & Events"
   },
   "EmailSignup": {
     "first_name": "First Name",
@@ -329,5 +346,61 @@
     "join": "Join the Campaign",
     "volunteer": "Volunteer",
     "donate": "Donate Today"
+  },
+  "WhyRunning": {
+    "eyebrow": "Why I'm Running",
+    "p1": "Like many of you, we chose Ward 22 because of what it promised: safe streets, strong schools, and a place where families could put down roots and thrive. In many ways, it has delivered on that promise.",
+    "p2": "My professional background has given me the tools to analyse problems, plan for the long term, and make decisions that stand up to scrutiny. But my decision to run wasn't made at a desk. It came from living here.",
+    "p3": "It came from conversations with neighbours. From seeing families navigate crowded parks and growing communities. From hearing residents talk about traffic, housing, local services, and the future they want for Ward 22.",
+    "p4": "I am not running because I have all the answers. I am running because I believe the best solutions come from the people who live here. My role is to listen, bring people together, and ensure residents have a strong voice at City Hall.",
+    "quote": "Ward 22 deserves a councillor who is present, practical, accountable, and committed to serving every resident. This community is our home. Together, we can build a Ward 22 that keeps pace with growth."
+  },
+  "StatsBar": {
+    "stat1_val": "5,000+",
+    "stat1_desc": "Doors knocked since June 2026",
+    "stat2_val": "44K+",
+    "stat2_desc": "Ward 22 residents and growing",
+    "stat3_val": "May 1",
+    "stat3_desc": "Nomination filed 2026",
+    "stat4_val": "4",
+    "stat4_desc": "Priorities built from listening",
+    "cta": "Learn About My Vision"
+  },
+  "CommunityConnection": {
+    "eyebrow": "Community Connection",
+    "t1": "Door-to-Door Canvassing",
+    "d1": "Over 5,000 doors reached across Riverside South and Findlay Creek since June 1, 2026 — listening before forming any platform commitments.",
+    "t2": "FCCA Board Service",
+    "d2": "Served on the Findlay Creek Community Association board — direct Ward 22 community governance experience.",
+    "t3": "Political Party Riding Board",
+    "d3": "Currently serving on a riding association board — bringing organizational and political experience to the campaign.",
+    "t4": "Resident Survey",
+    "d4": "5,000 door hangers distributed with community survey — resident feedback directly shaped the platform.",
+    "t5": "Volunteer Mobilization",
+    "d5": "Growing volunteer team of Ward 22 residents canvassing streets and turning out the vote on October 26, 2026.",
+    "t6": "Social Media Engagement",
+    "d6": "Active on Facebook and Instagram — connecting with Ward 22 residents daily across Riverside South and Findlay Creek."
+  },
+  "DonationAppeal": {
+    "title": "Donation Appeal",
+    "why_matter_title": "WHY DONATIONS MATTER",
+    "why_matter_desc": "Every contribution funds door-to-door outreach, campaign materials, community events, lawn signs, and digital advertising — bringing Ward 22 residents into this campaign.",
+    "rebate_title": "OTTAWA CONTRIBUTION REBATE — DONORS RECEIVE MONEY BACK",
+    "rebate_desc": "Only individuals who normally reside in Ontario may contribute. Maximum individual contribution: $1,200. All contributions officially receipted under the Municipal Elections Act (Ontario).",
+    "col1": "Donation",
+    "col2": "City Rebate",
+    "col3": "Net Cost to Donor",
+    "col4": "Notes",
+    "r1_n": "Most donors give at this level",
+    "r2_n": "Strong individual contribution",
+    "r3_n": "Maximum rebate reached",
+    "r4_n": "Maximum allowed contribution"
+  },
+  "Newsletter": {
+    "fname": "First Name",
+    "lname": "Last Name",
+    "email": "Email Address",
+    "postal": "Postal Code",
+    "cta": "Stay Connected — Join the Campaign"
   }
 }

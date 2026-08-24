@@ -1,11 +1,26 @@
-import { Phone, Mail, Globe, Instagram, Facebook, MapPin } from "lucide-react";
-import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { Phone, Mail, Globe, Instagram, Facebook, MapPin, Quote } from "lucide-react"
+import { Link } from "@/i18n/routing"
+import { useTranslations } from "next-intl"
+
 export default function Footer() {
-  const t = useTranslations('Footer');
+  const t = useTranslations('Footer')
+  
   return (
-    <footer id="footer" className="bg-navy dark:bg-navy-dark pt-20 transition-colors duration-300">
+    <footer id="footer" className="bg-navy dark:bg-navy-dark pt-12 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6">
+        
+        {/* Final Campaign Message */}
+        <div className="bg-white/5 border border-white/10 p-10 md:p-16 text-center mb-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-overlay"></div>
+          <Quote size={40} className="text-gold mx-auto mb-6 opacity-80" />
+          <h3 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-8 relative z-10 max-w-4xl mx-auto">
+            "{t('final_msg')}"
+          </h3>
+          <p className="text-gold font-body font-bold tracking-widest uppercase text-sm relative z-10">
+            — Muyiwa Ojo &middot; Candidate for Ottawa City Council &middot; Ward 22
+          </p>
+        </div>
+
         {/* Footer Top */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Column 1: Brand */}
@@ -44,18 +59,26 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/running"
-                  className="text-white/70 hover:text-gold transition-colors font-body text-sm"
-                >
-                  {t('link_running')}
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/#priorities"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
                   {t('link_priorities')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#community"
+                  className="text-white/70 hover:text-gold transition-colors font-body text-sm"
+                >
+                  Community
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#news"
+                  className="text-white/70 hover:text-gold transition-colors font-body text-sm"
+                >
+                  News & Events
                 </Link>
               </li>
               <li>
@@ -78,7 +101,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/#involved"
+                  href="/donate"
                   className="text-white/70 hover:text-gold transition-colors font-body text-sm"
                 >
                   {t('link_donate')}
@@ -160,26 +183,26 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 font-body text-xs text-center md:text-left">
-            Copyright © {new Date().getFullYear()} {t('copyright')}
-            <br />
-            <span className="mt-1 block">{t('paid_for')}</span>
+        <div className="border-t border-white/10 py-8 flex flex-col items-center gap-6 text-center">
+          <p className="text-white/60 font-body text-sm leading-relaxed max-w-3xl">
+            {t('auth')}
           </p>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy" className="text-white/40 hover:text-gold font-body text-xs transition-colors">
-              {t('privacy')}
+          <div className="flex flex-wrap justify-center items-center gap-4 lg:gap-6 text-white/40 font-body text-xs">
+            <span>{t('rights')}</span>
+            <span className="hidden sm:inline">·</span>
+            <Link href="/privacy" className="hover:text-gold transition-colors">
+              Privacy Policy
             </Link>
-            <span className="text-white/20">·</span>
-            <Link href="/terms" className="text-white/40 hover:text-gold font-body text-xs transition-colors">
-              {t('terms')}
+            <span className="hidden sm:inline">·</span>
+            <Link href="/terms" className="hover:text-gold transition-colors">
+              Terms & Conditions
             </Link>
+            <span className="hidden sm:inline">·</span>
+            <span>{t('legal')}</span>
           </div>
-          <p className="text-white/40 font-body text-xs text-center md:text-right max-w-sm">
-            {t('disclaimer')}
-          </p>
         </div>
       </div>
     </footer>
-  );
+  )
 }
+

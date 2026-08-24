@@ -1,11 +1,13 @@
 import Hero from '@/components/Hero'
 import About from '@/components/About'
-import Marquee from '@/components/Marquee'
-import Mission from '@/components/Mission'
-import StatsBar from '@/components/StatsBar'
+import WhyRunning from '@/components/WhyRunning'
 import Priorities from '@/components/Priorities'
-import Testimonials from '@/components/Testimonials'
+import CommunityConnection from '@/components/CommunityConnection'
+import Mission from '@/components/Mission'
+import NewsEvents from '@/components/NewsEvents'
 import GetInvolved from '@/components/GetInvolved'
+import DonationAppeal from '@/components/DonationAppeal'
+import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -13,13 +15,16 @@ export default function Home() {
     <main className="min-h-screen bg-cream">
       <Hero />
       <About />
-      <Mission />
-      <StatsBar />
+      <WhyRunning />
       <Priorities />
-      <Marquee />
-      <Testimonials />
+      <CommunityConnection />
+      <Mission />
+      <NewsEvents />
       <GetInvolved />
+      <DonationAppeal />
+      <Newsletter />
       <Footer />
     </main>
   )
 }
+

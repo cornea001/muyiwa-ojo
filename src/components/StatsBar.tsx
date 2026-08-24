@@ -1,67 +1,32 @@
 'use client'
-import { useEffect, useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
+
+import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { Users, FileCheck, MapPin, Target } from 'lucide-react'
-const stats = [
-{ num: 22, suffix: '', label: 'Ottawa Ward', icon: MapPin },
-  { num: 1, suffix: '', label: 'Voice on Council', icon: Users },
-  { num: 100, suffix: '%', label: 'Focus on Residents', icon: Target },
-  { num: 365, suffix: '', label: 'Days a Year of Work', icon: FileCheck },
-]
-function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {
-  const [count, setCount] = useState(0)
-  const ref = useRef<HTMLSpanElement>(null)
-  const inView = useInView(ref, { once: true })
-  useEffect(() => {
-    if (!inView) return
-    const duration = 1800
-    const start = performance.now()
-    const frame = (now: number) => {
-      const progress = Math.min((now - start) / duration, 1)
-      const eased = 1 - Math.pow(1 - progress, 3)
-      setCount(Math.round(eased * target))
-      if (progress < 1) requestAnimationFrame(frame)
-    }
-    requestAnimationFrame(frame)
-  }, [inView, target])
-  return <span ref={ref}>{count}{suffix}</span>
-}
+import { Link } from '@/i18n/routing'
+import MagneticButton from './MagneticButton'
+
 export default function StatsBar() {
+  const t = useTranslations('StatsBar')
+  
+  const stats = [
+    { val: t('stat1_val'), desc: t('stat1_desc'), icon: Users },
+    { val: t('stat2_val'), desc: t('stat2_desc'), icon: MapPin },
+    { val: t('stat3_val'), desc: t('stat3_desc'), icon: FileCheck },
+    { val: t('stat4_val'), desc: t('stat4_desc'), icon: Target },
+  ]
+
   return (
-<section className="bg-navy py-20 relative overflow-hidden">
-      {/* Background accent */}
+    <div className="bg-navy relative overflow-hidden border border-navy/10 dark:border-white/10 mt-12">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-overlay"></div>
       
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        
-        {/* Title */}
-        <div className="text-center mb-16">
-          <motion.span 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-className="block text-gold font-body font-bold text-sm tracking-[0.2em] uppercase mb-2"
-          >
-Become a Volunteer
-          </motion.span>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-display font-bold text-white leading-tight uppercase"
-          >
-            Our campaign is powered by contributions <br/>
-            <span className="text-gold">from supporters</span>
-          </motion.h2>
-        </div>
-        {/* Counter Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 border-t border-white/10 pt-12">
+      <div className="relative z-10 px-6 py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 mb-16">
           {stats.map((stat, i) => {
             const Icon = stat.icon
             return (
               <motion.div
-                key={stat.label}
+                key={stat.val}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -73,17 +38,29 @@ Become a Volunteer
                     <Icon size={24} />
                   </div>
                 </div>
-                <div className="font-display font-bold text-5xl md:text-6xl text-white leading-none mb-2 group-hover:scale-105 transition-transform duration-300">
-                  <AnimatedCounter target={stat.num} suffix={stat.suffix} />
+                <div className="font-display font-bold text-4xl md:text-5xl text-white leading-none mb-3 group-hover:scale-105 transition-transform duration-300">
+                  {stat.val}
                 </div>
-                <div className="text-white/60 font-body text-sm font-semibold tracking-wider uppercase">
-                  {stat.label}
+                <div className="text-white/70 font-body text-xs md:text-sm font-semibold tracking-wider uppercase leading-snug">
+                  {stat.desc}
                 </div>
               </motion.div>
             )
           })}
         </div>
+
+        <div className="flex justify-center border-t border-white/10 pt-12">
+          <MagneticButton>
+            <Link
+              href="/#priorities"
+              className="bg-gold text-navy px-8 py-4 font-display font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300"
+            >
+              {t('cta')}
+            </Link>
+          </MagneticButton>
+        </div>
       </div>
-</section>
+    </div>
   )
 }
+

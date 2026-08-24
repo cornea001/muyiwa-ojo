@@ -1,8 +1,10 @@
-"use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { Landmark, GraduationCap, HeartPulse, ArrowRight } from "lucide-react";
-import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+'use client'
+
+import { motion, useScroll, useTransform } from "framer-motion"
+import { Landmark, GraduationCap, HeartPulse, Shield, UserCheck, ArrowRight } from "lucide-react"
+import { Link } from "@/i18n/routing"
+import { useTranslations } from "next-intl"
+
 const textRevealVariants = {
   hidden: { opacity: 0, y: "100%" },
   visible: (i: number) => ({
@@ -14,37 +16,58 @@ const textRevealVariants = {
       ease: [0.215, 0.61, 0.355, 1],
     },
   }),
-};
+}
+
 export default function Mission() {
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  const t = useTranslations('Mission');
+  const { scrollYProgress } = useScroll()
+  const y = useTransform(scrollYProgress, [0, 1], [0, 300])
+  const t = useTranslations('Mission')
   
   const missions = [
     {
       title: t('m1_title'),
       desc: t('m1_desc'),
-      icon: <Landmark size={32} className="text-gold" />,
+      icon: <Shield size={32} className="text-gold" />,
     },
     {
       title: t('m2_title'),
       desc: t('m2_desc'),
-      icon: <GraduationCap size={32} className="text-gold" />,
+      icon: <Landmark size={32} className="text-gold" />,
     },
     {
       title: t('m3_title'),
       desc: t('m3_desc'),
+      icon: <GraduationCap size={32} className="text-gold" />,
+    },
+    {
+      title: t('m4_title'),
+      desc: t('m4_desc'),
       icon: <HeartPulse size={32} className="text-gold" />,
     },
-  ];
+    {
+      title: t('m5_title'),
+      desc: t('m5_desc'),
+      icon: <UserCheck size={32} className="text-gold" />,
+    },
+  ]
+
+  const timeline = [
+    { date: t('t_may'), desc: t('t_may_title') },
+    { date: t('t_jun'), desc: t('t_jun_title') },
+    { date: t('t_jul'), desc: t('t_jul_title') },
+    { date: t('t_aug'), desc: t('t_aug_title') },
+  ]
+
   return (
     <section className="py-24 bg-white dark:bg-navy-dark relative overflow-hidden transition-colors duration-300">
       {/* Background Parallax */}
       <motion.div
         style={{ y }}
-        className="absolute top-0 right-[-100px] w-96 h-96 bg-gold/5 -full blur-[100px] pointer-events-none"
+        className="absolute top-0 right-[-100px] w-96 h-96 bg-gold/5 blur-[100px] pointer-events-none"
       />
+      
       <div className="max-w-7xl mx-auto px-6 relative z-10">
+        
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.span
@@ -76,8 +99,10 @@ export default function Mission() {
             )}
           </h2>
         </div>
+
         {/* Split Layout: Image & Mission Points */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch mb-20">
+          
           {/* Left Side: Image */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -103,7 +128,7 @@ export default function Mission() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
-                  delay: idx * 0.15,
+                  delay: idx * 0.1,
                   duration: 0.7,
                   ease: [0.22, 1, 0.36, 1],
                 }}
@@ -126,6 +151,31 @@ export default function Mission() {
             ))}
           </div>
         </div>
+
+        {/* Timeline Section */}
+        <div className="mb-24">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {timeline.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1, duration: 0.6 }}
+                className="relative pl-6 border-l border-gold/30 hover:border-gold transition-colors duration-300"
+              >
+                <div className="absolute top-0 -left-[5px] w-[9px] h-[9px] bg-gold" />
+                <h4 className="text-gold font-bold font-display uppercase tracking-widest text-sm mb-2">
+                  {item.date}
+                </h4>
+                <p className="text-navy dark:text-white font-body text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         {/* Joining Banner */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -152,7 +202,9 @@ export default function Mission() {
             </Link>
           </div>
         </motion.div>
+
       </div>
     </section>
-  );
+  )
 }
+
