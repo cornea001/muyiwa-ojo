@@ -2,14 +2,17 @@ import { NextResponse } from 'next/server'
 import webPush from 'web-push'
 import { kvGet, kvSet } from '@/lib/kv'
 
-const publicVapidKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!
-const privateVapidKey = process.env.VAPID_PRIVATE_KEY!
-const subject = process.env.VAPID_SUBJECT!
-
-webPush.setVapidDetails(subject, publicVapidKey, privateVapidKey)
-
 export async function POST(req: Request) {
   try {
+    const publicVapidKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY
+    const privateVapidKey = process.env.VAPID_PRIVATE_KEY
+    const subject = process.env.VAPID_SUBJECT
+
+    if (publicVapidKey && privateVapidKey && subject) {
+      webPush.setVapidDetails(subject, publicVapidKey, privateVapidKey)
+    } else {
+      console.warn('VAPID keys not fully configured.')
+    }
     const { title, body } = await req.json()
     
     const subs = await kvGet('push_subscriptions')
