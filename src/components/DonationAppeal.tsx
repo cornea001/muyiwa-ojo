@@ -65,7 +65,7 @@ export default function DonationAppeal() {
             transition={{ delay: 0.3 }}
             className="lg:col-span-7"
           >
-            <div className="bg-white/5 border border-white/10 p-8">
+            <div className="bg-white/5 border border-white/10 p-4 sm:p-8">
               <div className="flex items-start gap-4 mb-6">
                 <Info size={24} className="text-gold flex-shrink-0 mt-1" />
                 <div>
@@ -78,23 +78,23 @@ export default function DonationAppeal() {
                 </div>
               </div>
 
-              <div className="overflow-x-auto">
-                <table className="w-full text-left font-body text-sm">
+              <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0">
+                <table className="w-full text-left font-body text-xs sm:text-sm min-w-[280px]">
                   <thead>
-                    <tr className="border-b border-white/10 text-white/50 uppercase tracking-wider">
-                      <th className="pb-4 font-semibold">{t('col1')}</th>
-                      <th className="pb-4 font-semibold">{t('col2')}</th>
-                      <th className="pb-4 font-semibold">{t('col3')}</th>
-                      <th className="pb-4 font-semibold hidden sm:table-cell">{t('col4')}</th>
+                    <tr className="border-b border-white/10 text-white/50 uppercase tracking-wider text-[10px] sm:text-xs">
+                      <th className="pb-3 sm:pb-4 font-semibold">{t('col1')}</th>
+                      <th className="pb-3 sm:pb-4 font-semibold">{t('col2')}</th>
+                      <th className="pb-3 sm:pb-4 font-semibold">{t('col3')}</th>
+                      <th className="pb-3 sm:pb-4 font-semibold hidden sm:table-cell">{t('col4')}</th>
                     </tr>
                   </thead>
                   <tbody>
                     {rebateData.map((row, i) => (
                       <tr key={i} className="border-b border-white/5 last:border-0 text-white/80 hover:bg-white/5 transition-colors">
-                        <td className="py-4 font-bold text-white">{row.amount}</td>
-                        <td className="py-4 text-gold">{row.rebate}</td>
-                        <td className="py-4 font-bold text-white">{row.net}</td>
-                        <td className="py-4 text-white/50 hidden sm:table-cell">{row.notes}</td>
+                        <td className="py-3 sm:py-4 font-bold text-white text-xs sm:text-sm">{row.amount}</td>
+                        <td className="py-3 sm:py-4 text-gold text-xs sm:text-sm">{row.rebate}</td>
+                        <td className="py-3 sm:py-4 font-bold text-white text-xs sm:text-sm">{row.net}</td>
+                        <td className="py-3 sm:py-4 text-white/50 hidden sm:table-cell text-xs sm:text-sm">{row.notes}</td>
                       </tr>
                     ))}
                   </tbody>

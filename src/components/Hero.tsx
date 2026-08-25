@@ -53,7 +53,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative h-[105svh] md:h-[calc(100svh-40px)] w-full bg-navy overflow-hidden group/hero">
+    <section className="relative h-[120svh] sm:h-[110svh] md:h-[calc(100svh-40px)] w-full bg-navy overflow-hidden group/hero">
       <Swiper
         speed={1500}
         parallax={true}
@@ -110,7 +110,7 @@ export default function Hero() {
               />
             </div>
             {/* Content Container */}
-            <div className="max-w-7xl mx-auto px-6 md:px-24 h-full flex items-start md:items-center pt-20 md:pt-12 relative z-20">
+            <div className="max-w-7xl mx-auto px-6 md:px-24 h-full flex items-start md:items-center pt-24 md:pt-12 relative z-20">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -126,7 +126,7 @@ export default function Hero() {
                   <span className="block text-gold font-display font-bold uppercase tracking-[0.2em] text-[0.65rem] sm:text-xs mb-3 md:mb-4">
                     {t('eyebrow')}
                   </span>
-                  <h2 className="font-display text-[28px] sm:text-5xl md:text-[4.5rem] leading-[1.15] text-white font-bold capitalize">
+                  <h2 className="font-display text-[clamp(1.6rem,6.5vw,4.5rem)] leading-[1.15] text-white font-bold capitalize whitespace-nowrap">
                     {slide.titleTop}
                     {slide.breakText ? <br /> : " "}
                     <span

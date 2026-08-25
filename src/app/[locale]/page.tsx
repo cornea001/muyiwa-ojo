@@ -4,6 +4,7 @@ import StatsBar from '@/components/StatsBar'
 import WhyRunning from '@/components/WhyRunning'
 import Priorities from '@/components/Priorities'
 import CommunityConnection from '@/components/CommunityConnection'
+import CommunityInvolvement from '@/components/CommunityInvolvement'
 import Mission from '@/components/Mission'
 import NewsEvents from '@/components/NewsEvents'
 import GetInvolved from '@/components/GetInvolved'
@@ -16,8 +17,9 @@ export default function Home() {
     <main className="min-h-screen bg-cream">
       <Hero />
       <About />
-      <StatsBar />
+      <CommunityInvolvement />
       <WhyRunning />
+      <StatsBar />
       <Priorities />
       <CommunityConnection />
       <Mission />

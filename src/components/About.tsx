@@ -82,26 +82,34 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* Traits — full width below */}
+        {/* Traits — redesigned premium bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-3"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border border-navy/10 dark:border-white/10 divide-y sm:divide-y-0 sm:divide-x divide-navy/10 dark:divide-white/10"
         >
           {[
-            { icon: <Briefcase size={20} />, label: t('trait1') },
-            { icon: <GraduationCap size={20} />, label: t('trait2') },
-            { icon: <CheckCircle size={20} />, label: t('trait3') },
-            { icon: <MapPin size={20} />, label: t('trait4') },
+            { icon: <Briefcase size={18} />, num: '01', label: t('trait1') },
+            { icon: <GraduationCap size={18} />, num: '02', label: t('trait2') },
+            { icon: <CheckCircle size={18} />, num: '03', label: t('trait3') },
+            { icon: <MapPin size={18} />, num: '04', label: t('trait4') },
           ].map((trait) => (
-            <div 
-              key={trait.label} 
-              className="group flex flex-col justify-center gap-4 bg-navy/5 dark:bg-white/5 backdrop-blur-lg border border-navy/10 dark:border-white/10 p-6 transition-all duration-300 hover:-translate-y-1 hover:bg-navy/10 dark:hover:bg-white/10 cursor-default"
+            <div
+              key={trait.label}
+              className="group relative flex items-start gap-4 p-6 bg-navy/3 dark:bg-white/3 hover:bg-navy/8 dark:hover:bg-white/8 transition-all duration-300 cursor-default overflow-hidden"
             >
-              <div className="text-gold flex-shrink-0 transition-transform duration-300 group-hover:scale-110">{trait.icon}</div>
-              <span className="text-navy dark:text-cream text-sm font-semibold transition-colors duration-300 leading-snug">{trait.label}</span>
+              {/* Accent line on hover */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              {/* Number */}
+              <span className="font-display text-[2rem] font-bold text-navy/10 dark:text-white/10 leading-none select-none flex-shrink-0 group-hover:text-gold/20 transition-colors duration-300">
+                {trait.num}
+              </span>
+              <div className="flex flex-col gap-2 pt-1">
+                <div className="text-gold transition-transform duration-300 group-hover:scale-110 origin-left">{trait.icon}</div>
+                <span className="text-navy dark:text-cream text-[13px] font-semibold transition-colors duration-300 leading-snug">{trait.label}</span>
+              </div>
             </div>
           ))}
         </motion.div>
