@@ -25,35 +25,23 @@ export default function Hero() {
     {
       titleTop: t('title1_top'),
       titleOutline: t('title1_bottom'),
-      breakText: true,
-      solidBottom: false,
       desc: t('desc1'),
       bgImage: "/bg-rally.avif",
       bgClass: "bg-top",
       portraitImage: "/portrait.avif",
-      imageContainerClass:
-        "absolute max-md:!transform-none bottom-16 inset-x-0 mx-auto md:mx-0 md:inset-x-auto md:right-0 w-full md:w-auto h-[35%] md:h-full md:inset-y-0 z-10 pointer-events-none flex justify-center items-end",
-      imageClass:
-        "w-full h-full md:w-auto md:h-full max-w-none max-h-full object-cover object-top md:object-contain md:object-right-bottom",
     },
     /* {
       titleTop: t('title2_top'),
       titleOutline: t('title2_bottom'),
-      breakText: true,
-      solidBottom: false,
       desc: t('desc2'),
       bgImage: "/bg-neighborhood.avif",
       bgClass: "bg-bottom",
       portraitImage: "/portrait2.avif",
-      imageContainerClass:
-        "absolute max-md:!transform-none bottom-16 inset-x-0 mx-auto md:mx-0 md:inset-x-auto md:right-0 w-full md:w-auto h-[35%] md:h-full md:inset-y-0 z-10 pointer-events-none flex justify-center items-end",
-      imageClass:
-        "w-full h-full md:w-auto md:h-full max-w-none max-h-full object-cover object-top md:object-contain md:object-right-bottom",
     }, */
   ];
 
   return (
-    <section className="relative h-[120svh] sm:h-[110svh] md:h-[calc(100svh-40px)] w-full bg-navy overflow-hidden group/hero">
+    <section className="relative h-auto md:h-[calc(100svh-40px)] w-full bg-navy overflow-hidden group/hero">
       <Swiper
         speed={1500}
         parallax={true}
@@ -78,47 +66,27 @@ export default function Hero() {
         {slides.map((slide, idx) => (
           <SwiperSlide
             key={idx}
-            className="relative overflow-hidden h-full w-full group"
+            className="relative overflow-hidden w-full group flex flex-col md:block"
           >
             {/* Parallax Background */}
             <div
               className={`absolute inset-0 bg-cover ${slide.bgClass || "bg-bottom"}`}
               style={{ backgroundImage: `url(${slide.bgImage})` }}
             >
-              {/* Overlay matching the image vibe */}
               <div className="absolute inset-0 bg-navy/70 mix-blend-multiply" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
             </div>
-            {/* Foreground Portrait */}
-            <div
-              className={slide.imageContainerClass}
-              data-swiper-parallax="20%"
-            >
-              <motion.img
-                initial={{ opacity: 0, x: 60 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
-                src={slide.portraitImage}
-                alt="Muyiwa Ojo"
-                className={slide.imageClass}
-                style={{
-                  WebkitMaskImage:
-                    "linear-gradient(to top, transparent 0%, black 15%)",
-                  maskImage:
-                    "linear-gradient(to top, transparent 0%, black 15%)",
-                }}
-              />
-            </div>
-            {/* Content Container */}
-            <div className="max-w-7xl mx-auto px-6 md:px-24 h-full flex items-start md:items-center pt-24 md:pt-12 relative z-20">
+
+            {/* Content */}
+            <div className="max-w-7xl mx-auto px-6 md:px-24 w-full flex items-start md:items-center pt-24 md:pt-0 md:h-full relative z-20 pb-8 md:pb-0">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="max-w-[100%] md:max-w-3xl relative z-30 mt-4 md:mt-0"
+                className="w-full md:max-w-3xl relative z-30 mt-4 md:mt-0"
               >
-                {/* Title & Eyebrow */}
+                {/* Eyebrow + Title */}
                 <div
                   data-swiper-parallax="-300"
                   className="max-md:!transform-none mb-4 md:mb-6"
@@ -133,7 +101,7 @@ export default function Hero() {
                     </span>
                   </h2>
                 </div>
-                {/* Text */}
+                {/* Description */}
                 <div
                   data-swiper-parallax="-400"
                   className="max-md:!transform-none mb-6 md:mb-10"
@@ -175,6 +143,29 @@ export default function Hero() {
                 </div>
               </motion.div>
             </div>
+
+            {/* Portrait — in-flow on mobile, absolute on desktop */}
+            <div
+              className="relative md:absolute md:inset-y-0 md:right-0 md:bottom-16 w-full md:w-auto mt-8 md:mt-0 h-72 sm:h-80 md:h-full z-10 pointer-events-none flex justify-center items-end"
+              data-swiper-parallax="20%"
+            >
+              <motion.img
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
+                src={slide.portraitImage}
+                alt="Muyiwa Ojo"
+                className="w-full h-full md:w-auto md:h-full max-w-none max-h-full object-cover object-top md:object-contain md:object-right-bottom"
+                style={{
+                  WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%)",
+                  maskImage: "linear-gradient(to top, transparent 0%, black 15%)",
+                }}
+              />
+            </div>
+
+            {/* Bottom padding spacer on mobile to clear the bottom bar */}
+            <div className="h-16 md:hidden" />
+
           </SwiperSlide>
         ))}
 
@@ -200,13 +191,8 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Bottom Bar Container */}
+        {/* Bottom Bar */}
         <div className="absolute bottom-0 left-0 right-0 z-30 h-14 lg:h-16 border-t border-white/10 bg-navy/60 backdrop-blur-md flex justify-between items-stretch">
-          {/* Pagination Box */}
-          {/* <div className="w-28 lg:w-32 bg-black/40 border-r border-white/10 flex items-center justify-center text-white/50 font-display font-bold text-sm lg:text-lg tracking-widest">
-            <div className="swiper-pagination-custom"></div>
-          </div> */}
-          {/* Scroll Indicator */}
           <div className="flex-1 flex items-center justify-center">
             <a
               href="#priorities"
@@ -216,19 +202,9 @@ export default function Hero() {
               <ArrowDown size={14} className="text-white animate-bounce" />
             </a>
           </div>
-          {/* Nav Arrows */}
-          {/* <div className="flex border-l border-white/10">
-            <button className="swiper-button-prev-custom w-14 lg:w-20 border-r border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/5 transition-colors">
-              &larr;
-            </button>
-            <button className="swiper-button-next-custom w-14 lg:w-20 flex items-center justify-center text-white/50 hover:text-white hover:bg-white/5 transition-colors">
-              &rarr;
-            </button>
-          </div> */}
         </div>
       </Swiper>
 
-      {/* Global CSS override */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
