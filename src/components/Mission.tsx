@@ -182,7 +182,7 @@ export default function Mission() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="bg-navy p-12 text-center relative overflow-hidden group hover:shadow-[0_20px_50px_rgba(11,31,58,0.5)] transition-shadow duration-500"
+          className="bg-navy p-8 md:p-12 text-center relative overflow-hidden group hover:shadow-[0_20px_50px_rgba(11,31,58,0.5)] transition-shadow duration-500"
         >
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay group-hover:scale-110 transition-transform duration-[20s] ease-linear"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/10 to-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 -translate-x-full group-hover:translate-x-full ease-in-out" />

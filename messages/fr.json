@@ -331,7 +331,19 @@
     "back": "Retour à l'accueil"
   },
   "NewsEvents": {
-    "eyebrow": "Actualités et Événements"
+    "eyebrow": "Actualités et Événements",
+    "title": "Dernières Nouvelles",
+    "view_all": "Voir tous les événements",
+    "rsvp": "S'inscrire",
+    "e1_date": "26 oct. 2026",
+    "e1_title": "Jour des élections",
+    "e1_desc": "Les bureaux de vote ouvrent dans tout le quartier 22. Faites entendre votre voix.",
+    "e2_date": "15 sep. 2026",
+    "e2_title": "Assemblée communautaire",
+    "e2_desc": "Rejoignez Muyiwa pour une conversation sur les priorités de notre communauté.",
+    "e3_date": "30 août 2026",
+    "e3_title": "BBQ de lancement de campagne",
+    "e3_desc": "Rencontrez l'équipe, récupérez un panneau de pelouse et profitez d'un repas."
   },
   "EmailSignup": {
     "first_name": "Prénom",

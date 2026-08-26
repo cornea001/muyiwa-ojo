@@ -331,7 +331,19 @@
     "back": "Back to Home"
   },
   "NewsEvents": {
-    "eyebrow": "News & Events"
+    "eyebrow": "News & Events",
+    "title": "Latest Updates",
+    "view_all": "View All Events",
+    "rsvp": "RSVP",
+    "e1_date": "Oct 26, 2026",
+    "e1_title": "Election Day",
+    "e1_desc": "Polls open across Ward 22. Make your voice heard.",
+    "e2_date": "Sep 15, 2026",
+    "e2_title": "Community Townhall",
+    "e2_desc": "Join Muyiwa for a conversation about our community priorities.",
+    "e3_date": "Aug 30, 2026",
+    "e3_title": "Campaign Kick-off BBQ",
+    "e3_desc": "Meet the team, grab a lawn sign, and enjoy some food."
   },
   "EmailSignup": {
     "first_name": "First Name",
