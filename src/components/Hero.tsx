@@ -127,27 +127,8 @@ export default function Hero() {
                     {t('eyebrow')}
                   </span>
                   <h2 className="font-display text-[clamp(2.5rem,8vw,4.5rem)] leading-[1.15] text-white font-bold capitalize whitespace-nowrap">
-                    {slide.titleTop}
-                    {slide.breakText ? (
-                      <>
-                        <br className="hidden md:block" />
-                        <span className="md:hidden"> </span>
-                      </>
-                    ) : (
-                      " "
-                    )}
-                    <span
-                      className={
-                        slide.solidBottom
-                          ? "whitespace-nowrap text-white"
-                          : "text-transparent whitespace-nowrap"
-                      }
-                      style={
-                        slide.solidBottom
-                          ? {}
-                          : { WebkitTextStroke: "2px rgba(255,255,255,0.9)" }
-                      }
-                    >
+                    {slide.titleTop}{" "}
+                    <span className="text-white whitespace-nowrap">
                       {slide.titleOutline}
                     </span>
                   </h2>
