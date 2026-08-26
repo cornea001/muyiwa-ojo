@@ -155,11 +155,7 @@ export default function Hero() {
                 transition={{ duration: 1, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
                 src={slide.portraitImage}
                 alt="Muyiwa Ojo"
-                className="w-full h-full md:w-auto md:h-full max-w-none max-h-full object-cover object-top md:object-contain md:object-right-bottom"
-                style={{
-                  WebkitMaskImage: "linear-gradient(to top, transparent 0%, black 15%)",
-                  maskImage: "linear-gradient(to top, transparent 0%, black 15%)",
-                }}
+                className="portrait-img w-full h-full md:w-auto md:h-full max-w-none max-h-full object-cover object-top md:object-contain md:object-right-bottom"
               />
             </div>
 
@@ -217,6 +213,20 @@ export default function Hero() {
             }
             .swiper-pagination-current { color: white; font-weight: bold; }
             .swiper-pagination-total { color: rgba(255,255,255,0.5); font-weight: normal; }
+
+            /* Desktop only: fade from left + bottom */
+            @media (min-width: 768px) {
+              .portrait-img {
+                -webkit-mask-image:
+                  linear-gradient(to right, transparent 0%, black 35%),
+                  linear-gradient(to top, transparent 0%, black 15%);
+                -webkit-mask-composite: destination-in;
+                mask-image:
+                  linear-gradient(to right, transparent 0%, black 35%),
+                  linear-gradient(to top, transparent 0%, black 15%);
+                mask-composite: intersect;
+              }
+            }
           `,
         }}
       />
