@@ -13,9 +13,9 @@ export async function POST(req: Request) {
     const result = await resend.emails.send({
       from: 'Muyiwa Ojo Campaign <info@muyiwaojo.ca>',
       to: 'info@muyiwaojo.ca',
-      subject: 'New Newsletter Sign-up',
+      subject: 'New Email Sign-up',
       html: `
-        <h2>New Newsletter Sign-up</h2>
+        <h2>New Email Sign-up</h2>
         <p><b>First Name:</b> ${firstName || '—'}</p>
         <p><b>Last Name:</b> ${lastName || '—'}</p>
         <p><b>Email:</b> ${email}</p>
@@ -29,7 +29,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error('NEWSLETTER ERROR:', error)
+    console.error('EMAIL SIGNUP ERROR:', error)
     return NextResponse.json({ error: 'Failed to subscribe' }, { status: 500 })
   }
 }

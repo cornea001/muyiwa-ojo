@@ -25,34 +25,34 @@ export default function JoinModal() {
     extra: "",
   });
   useEffect(() => {
-    if (isOpen) {
-      const scrollY = window.scrollY
-      document.body.style.position = 'fixed'
-      document.body.style.top = `-${scrollY}px`
-      document.body.style.width = '100%'
-      document.body.dataset.scrollY = String(scrollY)
-    } else {
-      const scrollY = document.body.dataset.scrollY || '0'
-      document.body.style.position = ''
-      document.body.style.top = ''
-      document.body.style.width = ''
-      window.scrollTo(0, parseInt(scrollY))
-      // Reset form if closed
-      setTimeout(() => {
+    if (!isOpen) {
+      // Reset form after close animation
+      const t = setTimeout(() => {
         setStatus('idle')
         setFormData({
           name: '', address: '', contact: '', issues: '', improvements: '', support_level: '', lawn_sign: '', volunteer: '', extra: ''
         })
       }, 500)
+      return () => clearTimeout(t)
     }
+
+    const scrollY = window.scrollY
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${scrollY}px`
+    document.body.style.width = '100%'
+    document.body.style.overflow = 'hidden'
+
+    // Restore scroll in cleanup — clearing fixed without this jumps to top
     return () => {
       document.body.style.position = ''
       document.body.style.top = ''
       document.body.style.width = ''
+      document.body.style.overflow = ''
+      window.scrollTo(0, scrollY)
     }
   }, [isOpen]);
   const close = () => {
-    router.push(pathname, { scroll: false });
+    router.replace(pathname, { scroll: false });
   };
   const handleChange = (
     e: React.ChangeEvent<

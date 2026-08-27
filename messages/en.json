@@ -346,11 +346,15 @@
     "e3_desc": "Meet the team, grab a lawn sign, and enjoy some food."
   },
   "EmailSignup": {
+    "heading": "Stay Connected",
     "first_name": "First Name",
     "last_name": "Last Name",
     "email": "Email Address",
     "postal_code": "Postal Code",
-    "submit": "Stay Connected — Join the Campaign"
+    "submit": "Stay Connected — Join the Campaign",
+    "submitting": "Submitting...",
+    "success_title": "You're signed up!",
+    "success_body": "We'll keep you informed about the campaign."
   },
   "FinalMessage": {
     "quote": "\"Ward 22 deserves a councillor who is present, practical and accountable. This community is our home. Let's build it right, together.\"",
@@ -407,12 +411,5 @@
     "r2_n": "Strong individual contribution",
     "r3_n": "Maximum rebate reached",
     "r4_n": "Maximum allowed contribution"
-  },
-  "Newsletter": {
-    "fname": "First Name",
-    "lname": "Last Name",
-    "email": "Email Address",
-    "postal": "Postal Code",
-    "cta": "Stay Connected — Join the Campaign"
   }
 }

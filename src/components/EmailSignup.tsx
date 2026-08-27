@@ -6,8 +6,8 @@ import { Mail, ArrowRight, CheckCircle, Loader2 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import MagneticButton from '@/components/MagneticButton'
 
-export default function Newsletter() {
-  const t = useTranslations('Newsletter')
+export default function EmailSignup() {
+  const t = useTranslations('EmailSignup')
 
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
@@ -22,7 +22,7 @@ export default function Newsletter() {
     setErrorMsg('')
 
     try {
-      const res = await fetch('/api/newsletter', {
+      const res = await fetch('/api/email-signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ firstName, lastName, email, postal }),
@@ -56,7 +56,7 @@ export default function Newsletter() {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-navy dark:text-white uppercase mb-6"
         >
-          {t('cta')}
+          {t('heading')}
         </motion.h2>
 
         {status === 'success' ? (
@@ -67,10 +67,10 @@ export default function Newsletter() {
           >
             <CheckCircle size={48} className="text-gold" />
             <p className="font-display font-bold text-xl text-navy dark:text-white uppercase">
-              You're signed up!
+              {t('success_title')}
             </p>
             <p className="text-navy/60 dark:text-cream/60 font-body">
-              We'll keep you informed about the campaign.
+              {t('success_body')}
             </p>
           </motion.div>
         ) : (
@@ -85,7 +85,7 @@ export default function Newsletter() {
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-xs font-bold text-navy/50 dark:text-cream/50 uppercase tracking-widest mb-2">
-                  {t('fname')}
+                  {t('first_name')}
                 </label>
                 <input
                   type="text"
@@ -96,7 +96,7 @@ export default function Newsletter() {
               </div>
               <div>
                 <label className="block text-xs font-bold text-navy/50 dark:text-cream/50 uppercase tracking-widest mb-2">
-                  {t('lname')}
+                  {t('last_name')}
                 </label>
                 <input
                   type="text"
@@ -122,7 +122,7 @@ export default function Newsletter() {
               </div>
               <div>
                 <label className="block text-xs font-bold text-navy/50 dark:text-cream/50 uppercase tracking-widest mb-2">
-                  {t('postal')}
+                  {t('postal_code')}
                 </label>
                 <input
                   type="text"
@@ -144,9 +144,9 @@ export default function Newsletter() {
                 className="w-full bg-navy dark:bg-white text-white dark:text-navy px-8 py-4 font-display font-bold uppercase tracking-widest hover:bg-gold dark:hover:bg-gold hover:text-white dark:hover:text-white transition-colors duration-300 flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? (
-                  <><Loader2 size={18} className="animate-spin" /> Submitting...</>
+                  <><Loader2 size={18} className="animate-spin" /> {t('submitting')}</>
                 ) : (
-                  <>{t('cta')} <ArrowRight size={18} /></>
+                  <>{t('submit')} <ArrowRight size={18} /></>
                 )}
               </button>
             </MagneticButton>

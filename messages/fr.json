@@ -346,11 +346,15 @@
     "e3_desc": "Rencontrez l'équipe, récupérez un panneau de pelouse et profitez d'un repas."
   },
   "EmailSignup": {
+    "heading": "Restez connecté",
     "first_name": "Prénom",
     "last_name": "Nom de famille",
     "email": "Adresse courriel",
     "postal_code": "Code postal",
-    "submit": "Restez connecté — Rejoignez la campagne"
+    "submit": "Restez connecté — Rejoignez la campagne",
+    "submitting": "Envoi...",
+    "success_title": "Vous êtes inscrit!",
+    "success_body": "Nous vous tiendrons informé de la campagne."
   },
   "FinalMessage": {
     "quote": "\"Le quartier 22 mérite un conseiller présent, pratique, responsable et dévoué au service de chaque résident. Cette communauté est notre foyer. Construisons-la bien, ensemble.\"",
@@ -407,12 +411,5 @@
     "r2_n": "Forte contribution individuelle",
     "r3_n": "Remise maximale atteinte",
     "r4_n": "Contribution maximale autorisée"
-  },
-  "Newsletter": {
-    "fname": "Prénom",
-    "lname": "Nom de famille",
-    "email": "Adresse courriel",
-    "postal": "Code postal",
-    "cta": "Restez connecté — Rejoignez la campagne"
   }
 }

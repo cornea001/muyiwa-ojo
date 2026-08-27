@@ -9,7 +9,7 @@ import Mission from '@/components/Mission'
 import NewsEvents from '@/components/NewsEvents'
 import GetInvolved from '@/components/GetInvolved'
 import DonationAppeal from '@/components/DonationAppeal'
-import Newsletter from '@/components/Newsletter'
+import EmailSignup from '@/components/EmailSignup'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
       <NewsEvents />
       <GetInvolved />
       <DonationAppeal />
-      <Newsletter />
+      <EmailSignup />
       <Footer />
     </main>
   )
