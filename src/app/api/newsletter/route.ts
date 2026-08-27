@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     }
 
     const result = await resend.emails.send({
-      from: 'Muyiwa Ojo Campaign <onboarding@resend.dev>',
+      from: 'Muyiwa Ojo Campaign <info@muyiwaojo.ca>',
       to: 'info@muyiwaojo.ca',
       subject: 'New Newsletter Sign-up',
       html: `
