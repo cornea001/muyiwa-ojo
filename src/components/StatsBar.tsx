@@ -38,7 +38,7 @@ export default function StatsBar() {
                     <Icon size={24} />
                   </div>
                 </div>
-                <div className="font-display font-bold text-4xl md:text-5xl text-white leading-none mb-3 group-hover:scale-105 transition-transform duration-300">
+                <div className="font-display font-bold text-2xl md:text-4xl lg:text-5xl text-white leading-tight mb-3 group-hover:scale-105 transition-transform duration-300">
                   {stat.val}
                 </div>
                 <div className="text-white/70 font-body text-xs md:text-sm font-semibold tracking-wider uppercase leading-snug">
