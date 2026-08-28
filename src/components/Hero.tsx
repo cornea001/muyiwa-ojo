@@ -78,7 +78,7 @@ export default function Hero() {
             </div>
 
             {/* Content */}
-            <div className="max-w-7xl mx-auto px-6 md:px-24 w-full flex items-start md:items-center pt-24 md:pt-0 md:h-full relative z-20 pb-8 md:pb-0">
+            <div className="max-w-7xl mx-auto px-6 md:px-24 w-full flex items-start md:items-center pt-24 md:pt-0 md:h-full relative z-20 pb-0">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -121,24 +121,33 @@ export default function Hero() {
                       scroll={false}
                       className="flex justify-center items-center gap-2 bg-white text-navy px-5 md:px-6 py-3 md:py-3.5 font-display font-bold text-xs md:text-sm tracking-widest hover:bg-gold transition-colors duration-300"
                     >
-                      <Heart size={16} fill="currentColor" /> {t('join_btn')}
+                      <Heart size={16} fill="currentColor" /> {t('share_btn')}
                     </Link>
                   </MagneticButton>
                   <MagneticButton>
                     <Link
-                      href="/running"
-                      className="flex justify-center items-center gap-2 border border-white/30 text-white px-5 md:px-6 py-3 md:py-3.5 font-display font-medium text-xs md:text-sm tracking-widest hover:bg-white/10 transition-colors duration-300"
+                      href="?modal=volunteer"
+                      scroll={false}
+                      className="flex justify-center items-center gap-2 bg-gold text-navy px-5 md:px-6 py-3 md:py-3.5 font-display font-bold text-xs md:text-sm tracking-widest hover:bg-white transition-colors duration-300"
                     >
-                      <User size={16} /> {t('learn_btn')}
+                      <User size={16} /> {t('volunteer_btn')}
                     </Link>
                   </MagneticButton>
                   <MagneticButton>
                     <Link
                       href="/donate"
-                      className="flex justify-center items-center gap-2 bg-gold text-navy px-5 md:px-6 py-3 md:py-3.5 font-display font-bold text-xs md:text-sm tracking-widest hover:bg-white transition-colors duration-300"
+                      className="flex justify-center items-center gap-2 border border-white/30 text-white px-5 md:px-6 py-3 md:py-3.5 font-display font-medium text-xs md:text-sm tracking-widest hover:bg-white/10 transition-colors duration-300"
                     >
-                      {navT('donate')}
+                      {t('support_btn')}
                     </Link>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <a
+                      href="#about"
+                      className="flex justify-center items-center gap-2 text-white/70 hover:text-white px-3 py-3 font-display font-medium text-xs md:text-sm tracking-widest transition-colors duration-300 underline underline-offset-4"
+                    >
+                      {t('meet_btn')}
+                    </a>
                   </MagneticButton>
                 </div>
               </motion.div>
@@ -146,7 +155,7 @@ export default function Hero() {
 
             {/* Portrait — in-flow on mobile, absolute on desktop */}
             <div
-              className="relative md:absolute md:inset-y-0 md:right-0 md:bottom-16 w-full md:w-auto mt-8 md:mt-0 h-72 sm:h-80 md:h-full z-10 pointer-events-none flex justify-center items-end"
+              className="relative md:absolute md:inset-y-0 md:right-0 md:bottom-16 w-full md:w-auto mt-4 md:mt-0 h-72 sm:h-80 md:h-full z-10 pointer-events-none flex justify-center items-end"
               data-swiper-parallax="20%"
             >
               <motion.img

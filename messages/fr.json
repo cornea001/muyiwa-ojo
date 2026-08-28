@@ -12,13 +12,18 @@
   "Hero": {
     "title1_top": "L'écoute",
     "title1_bottom": "Avant Tout.",
-    "desc1": "Votre voisin dans le quartier 22 — à vos portes, dans vos rues, et à votre écoute. Candidat au Conseil municipal d'Ottawa pour s'assurer que les résidents ont une voix forte à l'hôtel de ville.",
+    "desc1": "Votre voisin dans le quartier 22 — à vos portes, dans vos rues, et à votre écoute en premier. Candidat au conseil municipal d'Ottawa pour s'assurer que les résidents ont une voix forte à l'hôtel de ville.",
     "title2_top": "Présent et",
     "title2_bottom": "Responsable.",
     "desc2": "Le quartier 22 mérite un conseiller présent, pratique et responsable — déterminé à s'assurer que les résidents ont une voix forte à l'hôtel de ville.",
     "join_btn": "Rejoindre la Campagne",
     "learn_btn": "Pourquoi je me présente",
-    "eyebrow": "Muyiwa Ojo pour Riverside South et Findlay Creek"
+    "eyebrow": "Muyiwa Ojo pour le Quartier 22 — Riverside South & Findlay Creek",
+    "positioning": "Not politics first. People first. I don't have all the answers. I listen first. I identify the problem. I work with residents. I find practical solutions. And I hold City Hall accountable for delivering them.",
+    "share_btn": "Partager votre préoccupation",
+    "volunteer_btn": "Bénévolat",
+    "support_btn": "Soutenir la campagne",
+    "meet_btn": "Rencontrez Muyiwa"
   },
   "Mission": {
     "eyebrow": "Vision de Campagne",
@@ -39,14 +44,14 @@
     "banner1": "La vision pour le quartier 22 est simple : un quartier où chaque famille peut vivre en sécurité, se déplacer librement, élever ses enfants avec des opportunités et accéder aux services et espaces qu'elle mérite.",
     "banner2": "",
     "join_btn": "Lire la vision",
-    "t_aug": "Août 2026",
-    "t_aug_title": "Début du porte-à-porte phase 2 — Bénévoles bienvenus",
-    "t_jul": "Juillet 2026",
-    "t_jul_title": "Plateforme annoncée — Construite à partir de milliers de conversations avec les résidents",
-    "t_jun": "1er Juin 2026",
-    "t_jun_title": "Début du porte-à-porte à Riverside South et Findlay Creek",
-    "t_may": "1er Mai 2026",
-    "t_may_title": "Candidature déposée — Candidat au Conseil municipal du quartier 22"
+    "t_aug": "Des milliers de conversations avec les résidents",
+    "t_aug_title": "S'engager avec notre communauté",
+    "t_jul": "4 priorités de campagne",
+    "t_jul_title": "Bâties à partir de l'écoute",
+    "t_jun": "5 000 accroche-portes distribués",
+    "t_jun_title": "Avec des sondages communautaires",
+    "t_may": "Plus de 5 000 portes visitées",
+    "t_may_title": "Depuis juin 2026"
   },
   "Priorities": {
     "eyebrow": "Priorités de Campagne",
@@ -64,7 +69,7 @@
     ],
     "p1_quote": "Chaque résident mérite de se sentir en sécurité dans son quartier, que ce soit en marchant vers l'école, en faisant du vélo vers un parc ou en conduisant vers la maison.",
     "p2_title": "Autonomisation des jeunes et opportunités d'avenir",
-    "p2_desc": "Offrir aux jeunes des occasions pratiques de construire l'avenir — grâce aux STIM et à l'IA, aux arts et à la créativité, à l'entrepreneuriat, au leadership, au mentorat, aux métiers spécialisés et aux occasions estivales, en partenariat avec les écoles, les entreprises et les organismes communautaires.",
+    "p2_desc": "Donner aux jeunes des occasions pratiques de bâtir l'avenir — par l'entremise des STIM et de l'IA, des arts et de la créativité, de l'entrepreneuriat, du leadership, du mentorat, des métiers spécialisés et des emplois d'été, en partenariat avec les écoles, les entreprises et les organismes communautaires.",
     "p2_bullets": [
       "Conseil consultatif des jeunes du quartier 22",
       "Programmes de développement du leadership",
@@ -73,9 +78,9 @@
       "Programmes d'entrepreneuriat et de mentorat",
       "Partenariats scolaires et communautaires"
     ],
-    "p2_quote": "Les jeunes ne devraient pas seulement être préparés pour l'avenir — ils devraient avoir la chance de le construire.",
+    "p2_quote": "Les jeunes ne doivent pas seulement être préparés pour l'avenir — ils doivent avoir l'opportunité de le construire.",
     "p3_title": "Meilleurs transports et solutions de circulation",
-    "p3_desc": "Défendre un service de transport en commun fiable et des solutions de circulation pratiques qui réduisent la congestion, améliorent la connectivité et répondent aux défis de transport quotidiens des résidents.",
+    "p3_desc": "Plaider pour un service de transport en commun fiable et des solutions de circulation pratiques qui réduisent la congestion, améliorent la connectivité et répondent aux défis quotidiens de transport auxquels sont confrontés les résidents.",
     "p3_bullets": [
       "Service OC Transpo plus fiable",
       "De meilleures connexions aux centres de transport en commun",
@@ -84,8 +89,8 @@
       "Une planification qui permet aux gens de continuer à bouger"
     ],
     "p3_quote": "Les résidents devraient passer moins de temps coincés dans la circulation et plus de temps avec leurs familles.",
-    "p4_title": "Une infrastructure qui suit la croissance",
-    "p4_desc": "Le quartier 22 grandit rapidement. Les services municipaux et les infrastructures doivent suivre — des parcs et loisirs aux liaisons piétonnes et cyclables, aux services quotidiens et à une défense plus forte à l'hôtel de ville.",
+    "p4_title": "Des infrastructures qui suivent le rythme de la croissance",
+    "p4_desc": "Le quartier 22 croît rapidement. Les services municipaux et les infrastructures doivent suivre le rythme — qu'il s'agisse de parcs et d'installations récréatives, de sentiers pédestres et cyclables, de services quotidiens, et d'une représentation plus forte à l'hôtel de ville.",
     "p4_bullets": [
       "Parcs et installations de loisirs",
       "Terrains de sport et espaces communautaires",
@@ -93,7 +98,11 @@
       "Services municipaux quotidiens",
       "Défense plus forte à l'hôtel de ville pour les infrastructures liées à la croissance"
     ],
-    "p4_quote": "La croissance doit être accompagnée des infrastructures et des services dont les résidents ont besoin pour prospérer."
+    "p4_quote": "La croissance doit être accompagnée des infrastructures et des services dont les résidents ont besoin pour prospérer.",
+    "p1_action": "Ce que cela signifie : Je travaillerai avec le personnel de la Ville et la police d'Ottawa pour mettre en œuvre des mesures de modération de la circulation dans les zones à haut risque, je plaiderai pour un meilleur éclairage dans nos parcs et je veillerai à ce que les passages pour piétons soient plus sûrs pour nos enfants et nos aînés.",
+    "p2_action": "Ce que cela signifie : Je soutiendrai un Conseil consultatif des jeunes du quartier 22, j'établirai des partenariats avec des entreprises locales pour le mentorat et les emplois d'été, et je plaiderai pour des espaces communautaires qui soutiennent les programmes STIM, artistiques et de leadership.",
+    "p3_action": "Ce que cela signifie : Je plaiderai pour une meilleure fiabilité d'OC Transpo, je proposerai des solutions aux goulots d'étranglement de la circulation dans nos quartiers et je veillerai à ce que les résidents disposent d'options de transport pratiques.",
+    "p4_action": "Ce que cela signifie : J'exigerai que notre quartier reçoive sa juste part du financement des infrastructures, je donnerai la priorité à de nouveaux parcs et installations de loisirs, et je veillerai à ce que les services essentiels soient en place avant la construction de nouveaux développements."
   },
   "Community": {
     "eyebrow": "Implication communautaire",
@@ -213,8 +222,8 @@
     "quote": "\"Le quartier 22 connaît une croissance rapide, et les résidents méritent un conseiller présent, pratique et responsable. J'ai frappé à des milliers de portes, écouté les résidents, et je veillerai à ce qu'ils aient une voix forte à l'hôtel de ville.\"",
     "stat1_val": "5 000+",
     "stat1_lbl": "Portes visitées depuis juin 2026",
-    "stat2_val": "Croissance rapide",
-    "stat2_lbl": "Quartier 22",
+    "stat2_val": "Un quartier 22",
+    "stat2_lbl": "en croissance rapide",
     "stat3_val": "1er mai",
     "stat3_lbl": "Candidature déposée en 2026",
     "stat4_val": "4",
@@ -336,14 +345,16 @@
     "view_all": "Voir tous les événements",
     "rsvp": "S'inscrire",
     "e1_date": "26 oct. 2026",
-    "e1_title": "Jour des élections",
-    "e1_desc": "Les bureaux de vote ouvrent dans tout le quartier 22. Faites entendre votre voix.",
-    "e2_date": "15 sep. 2026",
-    "e2_title": "Assemblée communautaire",
-    "e2_desc": "Rejoignez Muyiwa pour une conversation sur les priorités de notre communauté.",
-    "e3_date": "30 août 2026",
-    "e3_title": "BBQ de lancement de campagne",
-    "e3_desc": "Rencontrez l'équipe, récupérez un panneau de pelouse et profitez d'un repas."
+    "e1_title": "Jour du scrutin",
+    "e1_desc": "Les bureaux de vote seront ouverts de 10 h à 20 h.",
+    "e2_date": "16 oct. 2026",
+    "e2_title": "Jour de vote par anticipation",
+    "e2_desc": "Les bureaux de vote sont ouverts de 10 h à 20 h.",
+    "e3_date": "1 - 4 oct. 2026",
+    "e3_title": "Jours de vote par anticipation spéciaux",
+    "e3_desc": "Les bureaux de vote sont ouverts de 10 h à 20 h.",
+    "voting_info": "Informations sur le vote",
+    "key_dates": "Dates électorales clés"
   },
   "EmailSignup": {
     "heading": "Restez connecté",
@@ -380,20 +391,21 @@
     "p2": "Mon expérience professionnelle m'a donné les outils pour analyser les problèmes, planifier à long terme et prendre des décisions qui résistent à l'examen. Mais ma décision de me présenter n'a pas été prise derrière un bureau. Elle est née du fait de vivre ici.",
     "p3": "Elle est née de conversations avec des voisins. Du fait de voir des familles naviguer dans des parcs bondés et des communautés en pleine croissance. D'avoir entendu les résidents parler de la circulation, du logement, des services locaux et de l'avenir qu'ils souhaitent pour le quartier 22.",
     "p4": "Je ne me présente pas parce que j'ai toutes les réponses. Je me présente parce que je crois que les meilleures solutions viennent des personnes qui vivent ici. Mon rôle est d'écouter, de rassembler les gens et de veiller à ce que les résidents aient une voix forte à l'hôtel de ville.",
-    "quote": "Le quartier 22 mérite un conseiller qui est présent, pragmatique, responsable et déterminé à servir chaque résident. Cette communauté est notre foyer. Ensemble, nous pouvons bâtir un quartier 22 qui suit le rythme de la croissance."
+    "quote": "Le quartier 22 croît rapidement et les résidents méritent un conseiller présent, pragmatique et responsable. J'ai frappé à des milliers de portes, écouté les résidents, siégé au conseil d'administration de l'Association communautaire de Findlay Creek et travaillé avec des organismes communautaires. Je me concentrerai sur : Des rues plus sûres. Un meilleur transport en commun. De meilleures opportunités pour les jeunes. Des infrastructures qui suivent le rythme de la croissance.",
+    "read_story_btn": "Lire mon histoire complète"
   },
   "CommunityConnection": {
     "eyebrow": "Connexion Communautaire",
     "t1": "Porte-à-porte",
-    "d1": "5 000+ portes atteintes depuis juin 2026 à travers Riverside South et Findlay Creek — écouter avant de prendre des engagements électoraux.",
+    "d1": "Plus de 5 000 portes visitées depuis juin 2026 à travers Riverside South et Findlay Creek — écouter avant de prendre des engagements de plateforme.",
     "t2": "Service au conseil de la FCCA",
     "d2": "A siégé au conseil d'administration de l'Association communautaire de Findlay Creek — une expérience directe de la gouvernance communautaire du quartier 22.",
     "t3": "Leadership communautaire et politique",
     "d3": "Expérience au sein d'un conseil d'association politique locale, avec un accent sur l'organisation, l'engagement et la mobilisation communautaire.",
     "t4": "Sondage auprès des résidents",
-    "d4": "5 000 dépliants distribués avec un sondage communautaire pour recueillir les commentaires des résidents qui ont contribué à définir les priorités de la campagne.",
+    "d4": "5 000 accroche-portes distribués avec un sondage communautaire pour recueillir les commentaires des résidents qui ont contribué à éclairer les priorités de la campagne.",
     "t5": "Mobilisation des bénévoles",
-    "d5": "Accueil des résidents du quartier 22 qui souhaitent contribuer à bâtir une communauté plus forte.",
+    "d5": "Accueillir les résidents du quartier 22 qui veulent aider à bâtir une communauté plus forte.",
     "t6": "Réseaux sociaux",
     "d6": "Actif sur Facebook et Instagram — en contact quotidien avec les résidents du quartier 22 à travers Riverside South et Findlay Creek."
   },
@@ -402,14 +414,27 @@
     "why_matter_title": "POURQUOI LES DONS SONT IMPORTANTS",
     "why_matter_desc": "Chaque contribution finance le porte-à-porte, le matériel de campagne, les événements communautaires, les pancartes électorales et la publicité numérique — impliquant les résidents du quartier 22 dans cette campagne.",
     "rebate_title": "REMISE DE CONTRIBUTION D'OTTAWA — LES DONATEURS ADMISSIBLES PEUVENT RECEVOIR UNE REMISE",
-    "rebate_desc": "Les donateurs admissibles peuvent recevoir une remise de contribution de la Ville d'Ottawa. L'admissibilité et les montants de remise sont assujettis au Programme de remise de contributions de la Ville d'Ottawa. Seuls les individus résidant normalement en Ontario peuvent contribuer. Contribution individuelle maximale : 1 200 $. Toutes les contributions font l'objet d'un reçu officiel en vertu de la Loi sur les élections municipales (Ontario).",
+    "rebate_desc": "Les donateurs admissibles peuvent recevoir une remise de contribution de la Ville d'Ottawa. L'admissibilité et les montants des remises sont assujettis au Programme de remises des contributions de la Ville d'Ottawa. Seules les personnes qui résident habituellement en Ontario peuvent contribuer. Contribution individuelle maximale : 1 200 $. Toutes les contributions font l'objet d'un reçu officiel en vertu de la Loi sur les élections municipales (Ontario).",
     "col1": "Don",
     "col2": "Remise",
     "col3": "Coût net pour le donateur",
     "col4": "Notes",
-    "r1_n": "La plupart des donateurs donnent à ce niveau",
+    "r1_n": "Contribution admissible de 50 $ : remise de 25 $",
     "r2_n": "Forte contribution individuelle",
     "r3_n": "Remise maximale atteinte",
     "r4_n": "Contribution maximale autorisée"
+  },
+  "WhatWeHearing": {
+    "title": "Ce que nous entendons aux portes",
+    "traffic_title": "Circulation et routes",
+    "traffic_desc": "Les résidents s'inquiètent de la congestion, des excès de vitesse et de la sécurité routière.",
+    "transit_title": "Transport en commun",
+    "transit_desc": "Les résidents veulent un service fiable et de meilleures connexions.",
+    "growth_title": "Croissance et infrastructures",
+    "growth_desc": "Les résidents veulent que les services et les infrastructures de la ville suivent le rythme du développement.",
+    "youth_title": "Jeunesse et familles",
+    "youth_desc": "Les résidents veulent plus d'opportunités pour les jeunes.",
+    "safety_title": "Sécurité communautaire",
+    "safety_desc": "Les résidents veulent des rues, des parcs et des sentiers plus sûrs."
   }
 }

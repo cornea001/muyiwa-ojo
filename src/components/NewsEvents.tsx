@@ -27,7 +27,7 @@ export default function NewsEvents() {
               viewport={{ once: true }}
               className="block text-gold font-body font-bold text-sm tracking-[0.2em] uppercase mb-4"
             >
-              {t('eyebrow')}
+              {t('voting_info')}
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -36,24 +36,9 @@ export default function NewsEvents() {
               transition={{ delay: 0.1 }}
               className="text-3xl sm:text-4xl font-display font-bold text-navy dark:text-white uppercase transition-colors duration-300"
             >
-              {t('title')}
+              {t('key_dates')}
             </motion.h2>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <Link
-              href="?modal=join"
-              scroll={false}
-              className="inline-flex items-center gap-2 text-gold font-bold uppercase tracking-wider hover:text-navy dark:hover:text-white transition-colors duration-300 text-sm"
-            >
-              {t('view_all')} <ArrowRight size={16} />
-            </Link>
-          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
@@ -77,13 +62,9 @@ export default function NewsEvents() {
                   {ev.title}
                 </h3>
 
-                <p className="text-navy/70 dark:text-cream/80 font-body mb-8 flex-1 transition-colors duration-300">
+                <p className="text-navy/70 dark:text-cream/80 font-body mb-2 flex-1 transition-colors duration-300">
                   {ev.desc}
                 </p>
-
-                <div className="text-gold font-bold uppercase tracking-widest text-xs group-hover:text-navy dark:group-hover:text-white transition-colors duration-300 inline-flex items-center gap-2">
-                  {t('rsvp')} <ArrowRight size={14} />
-                </div>
 
               </SpotlightCard>
             </motion.div>

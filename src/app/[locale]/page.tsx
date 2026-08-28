@@ -6,6 +6,7 @@ import Priorities from '@/components/Priorities'
 import CommunityConnection from '@/components/CommunityConnection'
 import CommunityInvolvement from '@/components/CommunityInvolvement'
 import Mission from '@/components/Mission'
+import WhatWeHearing from '@/components/WhatWeHearing'
 import NewsEvents from '@/components/NewsEvents'
 import GetInvolved from '@/components/GetInvolved'
 import DonationAppeal from '@/components/DonationAppeal'
@@ -16,10 +17,9 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-cream">
       <Hero />
-      <About />
-      <CommunityInvolvement />
       <WhyRunning />
-      <StatsBar />
+      <About />
+      <WhatWeHearing />
       <Priorities />
       <CommunityConnection />
       <Mission />

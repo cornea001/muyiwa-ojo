@@ -34,7 +34,7 @@ export default function WhyRunning() {
           >
             <div className="sticky top-32">
               <Quote size={48} className="text-gold/30 mb-6" />
-              <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl text-navy dark:text-white leading-tight font-bold italic transition-colors duration-300">
+              <h3 className="font-display text-lg sm:text-xl lg:text-2xl text-navy dark:text-white leading-relaxed font-bold italic transition-colors duration-300">
                 "{t('quote')}"
               </h3>
               <div className="w-16 h-1 bg-gold mt-8"></div>
@@ -53,6 +53,14 @@ export default function WhyRunning() {
             <p>{t('p2')}</p>
             <p>{t('p3')}</p>
             <p className="font-semibold text-navy dark:text-white transition-colors duration-300">{t('p4')}</p>
+            <div className="pt-6">
+              <a
+                href="/running"
+                className="inline-flex items-center justify-center bg-navy text-white px-8 py-4 font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-colors duration-300"
+              >
+                {t('read_story_btn')}
+              </a>
+            </div>
           </motion.div>
 
         </div>

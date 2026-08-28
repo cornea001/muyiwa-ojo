@@ -18,7 +18,12 @@
     "desc2": "Ward 22 deserves a councillor who is present, practical and accountable — and committed to making sure residents have a strong voice at City Hall.",
     "join_btn": "Join the Campaign",
     "learn_btn": "Why I'm Running",
-    "eyebrow": "Muyiwa Ojo for Riverside South and Findlay Creek"
+    "eyebrow": "Muyiwa Ojo for Ward 22 — Riverside South & Findlay Creek",
+    "positioning": "Not politics first. People first. I don't have all the answers. I listen first. I identify the problem. I work with residents. I find practical solutions. And I hold City Hall accountable for delivering them.",
+    "share_btn": "Share Your Concern",
+    "volunteer_btn": "Volunteer",
+    "support_btn": "Support the Campaign",
+    "meet_btn": "Meet Muyiwa"
   },
   "Mission": {
     "eyebrow": "Campaign Vision",
@@ -39,14 +44,14 @@
     "banner1": "The vision for Ward 22 is simple: a ward where every family can live safely, move freely, raise their children with opportunity, and access the services and spaces they deserve.",
     "banner2": "",
     "join_btn": "Read The Vision",
-    "t_aug": "August 2026",
-    "t_aug_title": "Phase 2 Canvassing Begins — Volunteers Welcome",
-    "t_jul": "July 2026",
-    "t_jul_title": "Platform Announced — Built From Thousands of Resident Conversations",
-    "t_jun": "June 1, 2026",
-    "t_jun_title": "Canvassing Begins in Riverside South and Findlay Creek",
-    "t_may": "May 1, 2026",
-    "t_may_title": "Nomination Filed — Ward 22 City Council Candidate"
+    "t_aug": "Thousands of resident conversations",
+    "t_aug_title": "Engaging with our community",
+    "t_jul": "4 campaign priorities",
+    "t_jul_title": "Built from listening",
+    "t_jun": "5,000 door hangers distributed",
+    "t_jun_title": "With community surveys",
+    "t_may": "5,000+ doors reached",
+    "t_may_title": "Since June 2026"
   },
   "Priorities": {
     "eyebrow": "Campaign Priorities",
@@ -93,7 +98,11 @@
       "Everyday city services",
       "Stronger advocacy at City Hall for growth-related infrastructure"
     ],
-    "p4_quote": "Growth must be matched by the infrastructure and services residents need to thrive."
+    "p4_quote": "Growth must be matched by the infrastructure and services residents need to thrive.",
+    "p1_action": "What This Means: I will work with City staff and Ottawa Police to implement traffic calming in high-risk areas, advocate for better lighting in our parks, and ensure crosswalks are safer for our children and seniors.",
+    "p2_action": "What This Means: I will champion a Ward 22 Youth Advisory Council, establish partnerships with local businesses for mentorship and summer jobs, and advocate for community spaces that support STEM, arts, and leadership programs.",
+    "p3_action": "What This Means: I will advocate for better OC Transpo reliability, push for solutions to traffic bottlenecks in our neighbourhoods, and ensure residents have practical commuting options.",
+    "p4_action": "What This Means: I will demand that our ward gets its fair share of infrastructure funding, prioritize new parks and recreational facilities, and ensure essential services are in place before new developments are built."
   },
   "Community": {
     "eyebrow": "Community Involvement",
@@ -336,14 +345,16 @@
     "view_all": "View All Events",
     "rsvp": "RSVP",
     "e1_date": "Oct 26, 2026",
-    "e1_title": "Election Day",
-    "e1_desc": "Polls open across Ward 22. Make your voice heard.",
-    "e2_date": "Sep 15, 2026",
-    "e2_title": "Community Townhall",
-    "e2_desc": "Join Muyiwa for a conversation about our community priorities.",
-    "e3_date": "Aug 30, 2026",
-    "e3_title": "Campaign Kick-off BBQ",
-    "e3_desc": "Meet the team, grab a lawn sign, and enjoy some food."
+    "e1_title": "Voting Day",
+    "e1_desc": "Voting places will be open from 10 am to 8 pm.",
+    "e2_date": "Oct 16, 2026",
+    "e2_title": "Advance Voting Day",
+    "e2_desc": "Voting places are open from 10 am to 8 pm.",
+    "e3_date": "Oct 1 - 4, 2026",
+    "e3_title": "Special Advance Voting Days",
+    "e3_desc": "Voting places are open from 10 am to 8 pm.",
+    "voting_info": "Voting Information",
+    "key_dates": "Key Election Dates"
   },
   "EmailSignup": {
     "heading": "Stay Connected",
@@ -369,7 +380,8 @@
     "p2": "My professional background has given me the tools to analyse problems, plan for the long term, and make decisions that stand up to scrutiny. But my decision to run wasn't made at a desk. It came from living here.",
     "p3": "It came from conversations with neighbours. From seeing families navigate crowded parks and growing communities. From hearing residents talk about traffic, housing, local services, and the future they want for Ward 22.",
     "p4": "I am not running because I have all the answers. I am running because I believe the best solutions come from the people who live here. My role is to listen, bring people together, and ensure residents have a strong voice at City Hall.",
-    "quote": "Ward 22 is growing rapidly, and residents deserve a councillor who is present, practical and accountable. I have knocked on thousands of doors, listened to residents, and I will ensure residents have a strong voice at City Hall."
+    "quote": "Ward 22 is growing rapidly, and residents deserve a councillor who is present, practical and accountable. I have knocked on thousands of doors, listened to residents, served on the Findlay Creek Community Association Board and worked with community organizations. I will focus on: Safer streets. Better transit. Stronger opportunities for young people. Infrastructure that keeps pace with growth.",
+    "read_story_btn": "Read My Full Story"
   },
   "StatsBar": {
     "stat1_val": "5,000+",
@@ -407,9 +419,22 @@
     "col2": "City Rebate",
     "col3": "Net Cost to Donor",
     "col4": "Notes",
-    "r1_n": "Most donors give at this level",
+    "r1_n": "Eligible $50 contribution: $25 rebate",
     "r2_n": "Strong individual contribution",
     "r3_n": "Maximum rebate reached",
     "r4_n": "Maximum allowed contribution"
+  },
+  "WhatWeHearing": {
+    "title": "What We're Hearing at the Doors",
+    "traffic_title": "Traffic & Roads",
+    "traffic_desc": "Residents are raising concerns about congestion, speeding and road safety.",
+    "transit_title": "Transit",
+    "transit_desc": "Residents want reliable service and better connections.",
+    "growth_title": "Growth & Infrastructure",
+    "growth_desc": "Residents want city services and infrastructure to keep pace with development.",
+    "youth_title": "Youth & Families",
+    "youth_desc": "Residents want more opportunities for young people.",
+    "safety_title": "Community Safety",
+    "safety_desc": "Residents want safer streets, parks and pathways."
   }
 }

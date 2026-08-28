@@ -15,7 +15,8 @@ export default function Priorities() {
       title: t('p1_title'),
       desc: t('p1_desc'),
       bullets: t.raw('p1_bullets') as string[],
-      quote: t('p1_quote')
+      quote: t('p1_quote'),
+      action: t('p1_action')
     },
     {
       num: '02',
@@ -23,7 +24,8 @@ export default function Priorities() {
       title: t('p2_title'),
       desc: t('p2_desc'),
       bullets: t.raw('p2_bullets') as string[],
-      quote: t('p2_quote')
+      quote: t('p2_quote'),
+      action: t('p2_action')
     },
     {
       num: '03',
@@ -31,7 +33,8 @@ export default function Priorities() {
       title: t('p3_title'),
       desc: t('p3_desc'),
       bullets: t.raw('p3_bullets') as string[],
-      quote: t('p3_quote')
+      quote: t('p3_quote'),
+      action: t('p3_action')
     },
     {
       num: '04',
@@ -39,7 +42,8 @@ export default function Priorities() {
       title: t('p4_title'),
       desc: t('p4_desc'),
       bullets: t.raw('p4_bullets') as string[],
-      quote: t('p4_quote')
+      quote: t('p4_quote'),
+      action: t('p4_action')
     }
   ]
 
@@ -130,7 +134,7 @@ export default function Priorities() {
                     {p.desc}
                   </p>
 
-                  <ul className="flex-1 space-y-4 mb-8">
+                  <ul className="flex-1 space-y-4 mb-6">
                     {p.bullets && p.bullets.map((bullet, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-navy/70 dark:text-cream/80 font-body text-sm">
                         <CheckCircle size={16} className="text-gold mt-0.5 flex-shrink-0" />
@@ -138,6 +142,12 @@ export default function Priorities() {
                       </li>
                     ))}
                   </ul>
+
+                  <div className="bg-navy/5 dark:bg-white/5 p-4 mb-6 border border-navy/10 dark:border-white/10">
+                    <p className="text-navy dark:text-white font-body text-sm font-semibold">
+                      {p.action}
+                    </p>
+                  </div>
 
                   <blockquote className="border-l-2 border-gold pl-4 italic text-navy/60 dark:text-cream/60 font-body text-sm">
                     "{p.quote}"
